@@ -4,6 +4,6 @@ import Adafruit_DHT
 
 humidity, temperature = Adafruit_DHT.read_retry(11, 4)
 
-fTemp = (temperature * 1.8) + 32
-print fTemp
-print humidity
+tempF = (temperature * 1.8) + 32
+print (tempF)
+print (humidity)

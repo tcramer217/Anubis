@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -15,7 +16,7 @@ public class DHT11Controller {
     private DHT11ServiceImpl dht11Service;
 
     @RequestMapping("/dht")
-    public List<Double> getTemperature() throws IOException {
+    public List<Double> getTemperature() throws IOException, URISyntaxException {
         return dht11Service.getTemperature();
     }
 }
