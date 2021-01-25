@@ -1,0 +1,49 @@
+---
+logging:
+  file:
+    name: "target/anubis-admin.log"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+spring:
+  application:
+    name: anubis-admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+  profiles:
+    active:
+      - insecure
+
+server:
+  port: 9090
+---
+spring:
+  profiles: insecure
+
+---
+spring:
+  profiles: secure
+  security:
+    user:
+      name: "user"
+      password: "password"
+  boot:
+    admin:
+      client:
+        username: "user"       #These two are needed so that the client
+        password: "password"   #can register at the protected server api
+        instance:
+          metadata:
+            user.name: "user"         #These two are needed so that the server
+            user.password: "password" #can access the protected client endpoints
+
+
