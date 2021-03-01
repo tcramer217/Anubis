@@ -33,7 +33,7 @@ public class AnubisAdminApplication extends SpringBootServletInitializer {
         return application;
     }
 
-//    @Profile("insecure")
+    //    @Profile("insecure")
     @Configuration(proxyBeanMethods = false)
     public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter {
 
