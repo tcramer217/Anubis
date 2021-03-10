@@ -1,6 +1,6 @@
 package com.tcramer.anubis.home.auto.service;
 
-import com.tcramer.anubis.core.home.auto.model.DHT11Data;
+import com.tcramer.anubis.core.entity.sensor.DHT11Data;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -10,4 +10,6 @@ public interface DHT11Service {
     DHT11Data readTempHum() throws IOException, URISyntaxException;
 
     List<DHT11Data> getAll();
+
+    DHT11Data createTest();
 }

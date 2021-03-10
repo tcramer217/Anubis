@@ -1,6 +1,6 @@
 package com.tcramer.anubis.home.auto.tasks;
 
-import com.tcramer.anubis.core.home.auto.model.DHT11Data;
+import com.tcramer.anubis.core.entity.sensor.DHT11Data;
 import com.tcramer.anubis.home.auto.service.DHT11Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

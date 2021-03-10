@@ -1,4 +1,4 @@
-package com.tcramer.anubis.core.home.auto.exception;
+package com.tcramer.anubis.core.exception;
 
 import org.apache.commons.exec.ExecuteException;
 

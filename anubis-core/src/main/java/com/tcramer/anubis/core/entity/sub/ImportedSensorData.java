@@ -1,4 +1,4 @@
-package com.tcramer.anubis.core.home.auto.model.sub;
+package com.tcramer.anubis.core.entity.sub;
 
 import javax.persistence.Column;
 import javax.persistence.Inheritance;

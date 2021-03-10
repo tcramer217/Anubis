@@ -1,7 +1,7 @@
-package com.tcramer.anubis.core.home.auto.model;
+package com.tcramer.anubis.core.entity.sensor;
 
 
-import com.tcramer.anubis.core.home.auto.model.sub.ImportedSensorData;
+import com.tcramer.anubis.core.entity.sub.ImportedSensorData;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;

@@ -1,6 +1,6 @@
-package com.tcramer.anubis.core.home.auto.util;
+package com.tcramer.anubis.core.util;
 
-import com.tcramer.anubis.core.home.auto.exception.AnubisPythonExecutionException;
+import com.tcramer.anubis.core.exception.AnubisPythonExecutionException;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
 import org.apache.commons.exec.ExecuteException;

@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,6 +17,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration(proxyBeanMethods = false)
 @EnableAdminServer
 @SpringBootApplication
+@ComponentScan({"com.tcramer.anubis.core", "com.tcramer.anubis.admin"})
 public class AnubisAdminApplication extends SpringBootServletInitializer {
 
     private final AdminServerProperties adminServer;

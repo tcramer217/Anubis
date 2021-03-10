@@ -1,7 +1,7 @@
 ---
 logging:
   file:
-    name: "target/anubis-home-automation-api.log"
+    name: "target/anubis-family-api.log"
 
 management:
   endpoints:
@@ -14,7 +14,7 @@ management:
 
 spring:
   application:
-    name: anubis-home-automation-api
+    name: anubis-family-api
   boot:
     admin:
       client:

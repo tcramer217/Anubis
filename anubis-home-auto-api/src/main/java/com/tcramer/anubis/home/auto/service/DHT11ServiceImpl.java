@@ -1,8 +1,8 @@
 package com.tcramer.anubis.home.auto.service;
 
-import com.tcramer.anubis.core.home.auto.dao.DHT11Repo;
-import com.tcramer.anubis.core.home.auto.model.DHT11Data;
-import com.tcramer.anubis.core.home.auto.util.PythonExecUtil;
+import com.tcramer.anubis.core.dao.DHT11Repo;
+import com.tcramer.anubis.core.entity.sensor.DHT11Data;
+import com.tcramer.anubis.core.util.PythonExecUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,4 +36,8 @@ public class DHT11ServiceImpl implements DHT11Service {
         return repo.findAll();
     }
 
+    @Override
+    public DHT11Data createTest() {
+        return repo.save(new DHT11Data(1.1, 1.1));
+    }
 }
