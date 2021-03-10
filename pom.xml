@@ -5,10 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
+        <module>anubis-core</module>
         <module>anubis-admin</module>
         <module>anubis-home-auto-api</module>
         <module>anubis-family-api</module>
-        <module>anubis-core</module>
+        <module>anubis-family</module>
     </modules>
 
     <parent>
