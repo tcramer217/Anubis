@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AnubisDailyTasksComponent } from './anubis-daily-tasks.component';
+import { AnubisDailyTasksComponent } from '../app/anubis-daily-tasks/anubis-daily-tasks.component';
 
 describe('AnubisDailyTasksComponent', () => {
   let component: AnubisDailyTasksComponent;

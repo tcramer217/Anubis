@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { AnubisNavigationComponent } from './anubis-navigation.component';
+import { AnubisNavigationComponent } from '../app/anubis-navigation/anubis-navigation.component';
 
 describe('AnubisNavigationComponent', () => {
   let component: AnubisNavigationComponent;

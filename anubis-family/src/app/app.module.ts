@@ -11,6 +11,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AnubisNavigationComponent } from './anubis-navigation/anubis-navigation.component';
 import { AnubisDailyTasksComponent } from './anubis-daily-tasks/anubis-daily-tasks.component';
 import { AnubisWeeklyTasksComponent } from './anubis-weekly-tasks/anubis-weekly-tasks.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { AnubisWeeklyTasksComponent } from './anubis-weekly-tasks/anubis-weekly-
     AnubisWeeklyTasksComponent
   ],
   imports: [
+    AppMaterialModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule,
-    AppMaterialModule,
+    HttpClientModule,
     LayoutModule,
   ],
   providers: [],
