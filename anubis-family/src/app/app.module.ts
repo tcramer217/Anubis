@@ -1,22 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {AppMaterialModule} from './app-material.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+
+import { LayoutModule } from '@angular/cdk/layout';
+
+import { AnubisNavigationComponent } from './anubis-navigation/anubis-navigation.component';
+import { AnubisDailyTasksComponent } from './anubis-daily-tasks/anubis-daily-tasks.component';
+import { AnubisWeeklyTasksComponent } from './anubis-weekly-tasks/anubis-weekly-tasks.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnubisNavigationComponent,
+    AnubisDailyTasksComponent,
+    AnubisWeeklyTasksComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     AppMaterialModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
