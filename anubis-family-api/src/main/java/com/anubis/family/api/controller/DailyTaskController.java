@@ -2,10 +2,8 @@ package com.anubis.family.api.controller;
 
 import com.anubis.family.api.service.TaskService;
 import com.tcramer.anubis.core.entity.family.DailyTask;
-import com.tcramer.anubis.core.entity.family.Task;
 import com.tcramer.anubis.core.entity.family.WeeklyTask;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

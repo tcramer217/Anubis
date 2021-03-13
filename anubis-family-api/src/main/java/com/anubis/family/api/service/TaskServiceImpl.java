@@ -1,6 +1,5 @@
 package com.anubis.family.api.service;
 
-import com.tcramer.anubis.core.constants.TaskType;
 import com.tcramer.anubis.core.dao.TaskRepo;
 import com.tcramer.anubis.core.entity.family.DailyTask;
 import com.tcramer.anubis.core.entity.family.FamilyMember;

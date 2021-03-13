@@ -1,9 +1,7 @@
 package com.tcramer.anubis.core.constants;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public enum TaskType {
     DAILY(0, Name.DAILY, Discriminator.DAILY),
