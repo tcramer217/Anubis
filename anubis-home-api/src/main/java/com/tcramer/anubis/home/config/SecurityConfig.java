@@ -1,4 +1,4 @@
-package com.tcramer.anubis.home.auto.config;
+package com.tcramer.anubis.home.config;
 
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.security.config.annotation.web.builders.HttpSecurity;

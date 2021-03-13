@@ -1,4 +1,4 @@
-package com.tcramer.anubis.home.auto;
+package com.tcramer.anubis.home;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -12,32 +12,41 @@ import java.util.List;
 @RequestMapping("/api/task")
 public class DailyTaskController {
 
-    @Autowired
     TaskService<DailyTask> dailyTaskService;
-
-    @Autowired
     TaskService<WeeklyTask> weeklyTaskTaskService;
+
+    @GetMapping("/count")
+    public Integer getDailyTaskCount() {
+        return getDailyTaskService().getDailyTasks().size();
+    }
 
     @PostMapping("/daily")
     public DailyTask createDailyTask(@RequestBody DailyTask task) {
-        DailyTask dailyTask = dailyTaskService.createTask(task);
-        return dailyTask;
+        return getDailyTaskService().createTask(task);
     }
 
     @PostMapping("/weekly")
     public WeeklyTask createWeeklyTask(@RequestBody WeeklyTask task) {
-        WeeklyTask dailyTask = weeklyTaskTaskService.createTask(task);
-        return dailyTask;
+        return getWeeklyTaskTaskService().createTask(task);
     }
 
     @GetMapping
     public List<DailyTask> getTasks() {
-        return dailyTaskService.getAllTasks();
+        return getDailyTaskService().getAllTasks();
     }
 
     @GetMapping("/daily")
     public List<DailyTask> getDailyTasks() {
-        return dailyTaskService.getDailyTasks();
+        return getDailyTaskService().getDailyTasks();
     }
 
+    @Autowired
+    public TaskService<DailyTask> getDailyTaskService() {
+        return dailyTaskService;
+    }
+
+    @Autowired
+    public TaskService<WeeklyTask> getWeeklyTaskTaskService() {
+        return weeklyTaskTaskService;
+    }
 }

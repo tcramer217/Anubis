@@ -1,4 +1,4 @@
-package com.tcramer.anubis.home.auto.service;
+package com.tcramer.anubis.home.service;
 
 import com.tcramer.anubis.core.entity.sensor.DHT11Data;
 

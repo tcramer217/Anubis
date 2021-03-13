@@ -3,6 +3,7 @@ package com.anubis.family.api.service;
 import com.tcramer.anubis.core.entity.family.DailyTask;
 import com.tcramer.anubis.core.entity.family.FamilyMember;
 import com.tcramer.anubis.core.entity.family.Task;
+import com.tcramer.anubis.core.entity.family.WeeklyTask;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface TaskService<T extends Task> {
 
     List<DailyTask> getDailyTasks();
 
-    List<T> getWeeklyTasks();
+    List<WeeklyTask> getWeeklyTasks();
 
     List<T> getTasksForFamilyMember(FamilyMember familyMember);
 }
