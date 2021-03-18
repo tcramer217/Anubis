@@ -1,6 +1,6 @@
 package com.tcramer.anubis.home.controller;
 
-import com.tcramer.anubis.core.entity.sensor.DHT11Data;
+import com.anubis.core.entity.sensor.DHT11Data;
 import com.tcramer.anubis.home.service.DHT11Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

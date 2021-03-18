@@ -1,6 +1,6 @@
 package com.tcramer.anubis.home.service;
 
-import com.tcramer.anubis.core.entity.sensor.DHT11Data;
+import com.anubis.core.entity.sensor.DHT11Data;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
