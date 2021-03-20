@@ -1,5 +1,6 @@
 package com.anubis.family.api.controller;
 
+import com.anubis.core.constants.TaskType;
 import com.anubis.family.api.service.TaskService;
 import com.anubis.core.entity.family.Task;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,16 @@ public class TaskController {
     @PostMapping
     public Task createTask(@RequestBody Task task) {
         return getTaskService().createTask(task);
+    }
+
+    @GetMapping("/types")
+    public TaskType[] getTaskTypes() {
+        return TaskType.values();
+    }
+
+    @GetMapping("/types/name")
+    public List<String> getTaskTypeNames() {
+        return TaskType.Name.getNames();
     }
 
     public TaskService<Task> getTaskService() {

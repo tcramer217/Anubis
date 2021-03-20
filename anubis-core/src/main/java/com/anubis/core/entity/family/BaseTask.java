@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-//@DiscriminatorColumn(name = "task_type", discriminatorType = DiscriminatorType.STRING)
 public class BaseTask implements Created, Discriminated, Named {
 
     @Id
@@ -21,17 +20,13 @@ public class BaseTask implements Created, Discriminated, Named {
     private boolean inProgress;
     private boolean isComplete;
 
-//    @Nullable
     @ManyToOne
     private FamilyMember assignedTo;
 
-//    @Nullable
     @ManyToOne
     private FamilyMember createdBy;
 
-    private LocalDateTime createdAt; // = LocalDateTime.now();
-
-//    private String taskType;
+    private LocalDateTime createdAt;
 
     public BaseTask(String name, FamilyMember assignedTo) {
         this.name = name;
