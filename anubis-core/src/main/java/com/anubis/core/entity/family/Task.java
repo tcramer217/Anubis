@@ -18,7 +18,6 @@ public class Task extends BaseTask implements Created, Discriminated, Named, Rem
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-//    @Nullable
     @OneToMany
     private List<Reminder> reminders;
 
@@ -37,7 +36,7 @@ public class Task extends BaseTask implements Created, Discriminated, Named, Rem
 
     @Override
     public String getDiscriminator() {
-        return null;
+        return TaskType.Discriminator.BASE;
     }
 
     @Override
