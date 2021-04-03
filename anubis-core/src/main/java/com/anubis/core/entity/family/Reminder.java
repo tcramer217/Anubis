@@ -30,11 +30,19 @@ public class Reminder implements Created, Named {
 
     private LocalDateTime createdAt;
 
+
     public Reminder(String name) {
+        this();
         this.name = name;
     }
 
     public Reminder() {
+        this.createdAt = LocalDateTime.now();
+    }
+
+    public Reminder(String name, FamilyMember reminderFor) {
+        this(name);
+        this.reminderFor = reminderFor;
     }
 
     public long getId() {

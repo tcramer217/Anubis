@@ -10,12 +10,13 @@ import org.springframework.test.annotation.Rollback;
 
 import java.util.List;
 
+import static com.anubis.core.AnubisTestConstants.*;
+
 @DisplayName("Verify the functionality of the ReminderRepo.")
 @DataJpaTest
 public class FamilyRepoTestDB {
 
-    private static final String FAMILY_NAME = "Cramer Family";
-    private static final String FAMILY_NAME_UPDATE = FAMILY_NAME + " Update";
+
 
     @Autowired
     private FamilyRepo familyRepo;
@@ -39,12 +40,12 @@ public class FamilyRepoTestDB {
     }
 
     @Test
-    void update_save() {
+    void update() {
         List<Family> families = getFamilyRepo().findFamilyByFamilyName(FAMILY_NAME);
         Family family = families.get(0);
-        family.setFamilyName(FAMILY_NAME_UPDATE);
+        family.setFamilyName(FAMILY_NAME + " Update");
         Family savedFamily = getFamilyRepo().save(family);
-        Assertions.assertEquals(FAMILY_NAME_UPDATE, savedFamily.getFamilyName());
+        Assertions.assertEquals(FAMILY_NAME + " Update", savedFamily.getFamilyName());
     }
 
     @Test

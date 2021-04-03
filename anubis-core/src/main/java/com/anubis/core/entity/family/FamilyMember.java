@@ -1,11 +1,15 @@
 package com.anubis.core.entity.family;
 
 import com.anubis.core.entity.interfaces.Named;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
 @Entity
+@Table(
+        uniqueConstraints = @UniqueConstraint(columnNames = {"email"})
+)
 @EntityListeners(AuditingEntityListener.class)
 public class FamilyMember implements Named {
 
@@ -17,13 +21,21 @@ public class FamilyMember implements Named {
 
     private String lastName;
 
+    private String email;
+
     @ManyToOne
     private Family family;
 
-    public FamilyMember(String firstName, String lastName, Family family) {
+    public FamilyMember(String firstName, String lastName, String email, Family family) {
+        EmailValidator emailValidator = EmailValidator.getInstance(true);
+        Boolean emailValid = emailValidator.isValid(email);
+        if (!emailValid) {
+            throw new IllegalArgumentException("Valid email is required.");
+        }
         this.firstName = firstName;
         this.lastName = lastName;
         this.family = family;
+        this.email = email;
     }
 
     public FamilyMember() {
@@ -47,6 +59,14 @@ public class FamilyMember implements Named {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Family getFamily() {
