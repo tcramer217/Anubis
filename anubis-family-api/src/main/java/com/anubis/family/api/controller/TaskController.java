@@ -1,7 +1,7 @@
 package com.anubis.family.api.controller;
 
 import com.anubis.core.constants.TaskType;
-import com.anubis.family.api.service.TaskService;
+import com.anubis.core.service.task.TaskService;
 import com.anubis.core.entity.family.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

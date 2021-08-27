@@ -16,7 +16,7 @@ public class PythonExecUtil {
 
     private static final Logger LOG = LoggerFactory.getLogger(PythonExecUtil.class);
 
-    public static String[] executePythonScript(String scriptPath) throws IOException {
+    public static String[] executePythonScript(String scriptPath) throws AnubisPythonExecutionException {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PumpStreamHandler psh = new PumpStreamHandler(outputStream);
         Integer exitValue = -1;

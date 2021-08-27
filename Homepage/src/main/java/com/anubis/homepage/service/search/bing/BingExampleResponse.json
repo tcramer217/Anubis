@@ -1,0 +1,782 @@
+{
+  "_type": "TrendingTopics",
+  "value": [
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Ahmaud+Arbery+murder+trial&form=TNSA01&filters=tnTID%3a%220F4B96C2-4E15-48e1-9F17-E962EFE1DA5A%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%220%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Trial set for February",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_pj78DJpLVmIP7X9rTcymHQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Erik McGregor/LightRocket via Getty Images"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Ahmaud Arbery murder trial"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Ahmaud+Arbery+murder+trial&form=TNSA02&filters=tnTID%3a%220F4B96C2-4E15-48e1-9F17-E962EFE1DA5A%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%220%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Leopard+attack+Nebra&form=TNSA01&filters=tnTID%3a%223068CD45-82BB-4819-B55F-87E84160FA88%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%221%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Model mauled",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_1OfbE60PwR6FyF2hTQvfag&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© E+/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Leopard attack Nebra"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Leopard+attack+Nebra&form=TNSA02&filters=tnTID%3a%223068CD45-82BB-4819-B55F-87E84160FA88%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%221%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Sidney+Powell+voter+fraud&form=TNSA01&filters=tnTID%3a%22F880646B-9948-4f62-91E0-5A5CEFB29CF6%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Judge sanctions Powell",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_p-_Lkbe8IG2FQSgZ1C-_Wg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Nathan Posner/Shutterstock"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Sidney Powell voter fraud"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Sidney+Powell+voter+fraud&form=TNSA02&filters=tnTID%3a%22F880646B-9948-4f62-91E0-5A5CEFB29CF6%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Downton+Abbey+sequel&form=TNSA01&filters=tnTID%3a%228A7EE268-F7EC-4dc4-B435-52E3C64D7012%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%223%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Sequel gets a title",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_5iD5TrDhkAJK9w2i2araEA&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Jaap Buitendijk/Focus/Kobal/Shutterstock"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Downton Abbey sequel"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Downton+Abbey+sequel&form=TNSA02&filters=tnTID%3a%228A7EE268-F7EC-4dc4-B435-52E3C64D7012%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%223%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Enbridge+Minnesota+Line+3+project&form=TNSA01&filters=tnTID%3a%225BDA919B-4C98-4bcf-90DE-5A62C563A01A%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%224%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Major pipeline victory",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_xKoPFt30nOSeGutFyiK2yg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Jim Mone/AP Photo"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Enbridge Minnesota Line 3 project"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Enbridge+Minnesota+Line+3+project&form=TNSA02&filters=tnTID%3a%225BDA919B-4C98-4bcf-90DE-5A62C563A01A%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%224%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Aaron+Bowman+beating&form=TNSA01&filters=tnTID%3a%22546FC729-784F-475f-977B-944F8591725B%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%225%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "New video released",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_a5j1Aw7DsPGPCTC9ET9Lng&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Rogelio V. Solis/AP Photo"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Aaron Bowman beating"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Aaron+Bowman+beating&form=TNSA02&filters=tnTID%3a%22546FC729-784F-475f-977B-944F8591725B%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%225%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Kristen+Stewart+Diana+poster&form=TNSA01&filters=tnTID%3a%22A000DBD1-7E1A-4131-8E14-889484F5581F%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%226%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "1st ‘Spencer’ poster",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_vXDTBd4dlnJLLe4Iw1B0lQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Mario Anzuoni/Reuters"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Kristen Stewart Diana poster"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Kristen+Stewart+Diana+poster&form=TNSA02&filters=tnTID%3a%22A000DBD1-7E1A-4131-8E14-889484F5581F%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%226%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Kabul+Airport+attack+warning&form=TNSA01&filters=tnTID%3a%22C666E821-0480-4b7f-9C15-BE10A23E3F42%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%227%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "US warns of ‘threat’",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_CP3p9ACN_wzv4XYn1h9PSw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© U.S. Air Force/Master Sgt. Donald R. Allen/Reuters"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Kabul Airport attack warning"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Kabul+Airport+attack+warning&form=TNSA02&filters=tnTID%3a%22C666E821-0480-4b7f-9C15-BE10A23E3F42%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%227%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Ford+office+return+delay&form=TNSA01&filters=tnTID%3a%22D7D99816-FBA9-491b-8066-331370A58160%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%228%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Delays return-to-work",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_qwY6814GfBL1JQZSLT_N_g&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Artur Widak/NurPhoto/Shutterstock"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Ford office return delay"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Ford+office+return+delay&form=TNSA02&filters=tnTID%3a%22D7D99816-FBA9-491b-8066-331370A58160%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%228%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Norway+cargo+ship&form=TNSA01&filters=tnTID%3a%2275E1CB1F-18C6-4a48-ABB4-151E12F0416F%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%229%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Voyage by year-end",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_Q166GMLWDINT8UOG4dJupg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Provided by Yara International ASA via CNN"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Norway cargo ship"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Norway+cargo+ship&form=TNSA02&filters=tnTID%3a%2275E1CB1F-18C6-4a48-ABB4-151E12F0416F%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%229%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Brian+Benjamin+lieutenant+governor++&form=TNSA01&filters=tnTID%3a%22C7DF0EBD-3D71-496d-8319-FB6E690DC902%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2210%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Tapped as NY lt. gov.",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_mcrC-7lQXx3nY0OWfAcPKg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Debra L Rothenberg/Shutterstock"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Brian Benjamin lieutenant governor  "
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Brian+Benjamin+lieutenant+governor++&form=TNSA02&filters=tnTID%3a%22C7DF0EBD-3D71-496d-8319-FB6E690DC902%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2210%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Moderna+vaccine+doses+Japan&form=TNSA01&filters=tnTID%3a%222144BF47-A707-4170-9A03-C4FF871A72E5%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2211%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Vials on hold in Japan",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_jY9yZ9Uuxcu2Gd-N4ZHQiw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Hassene Dridi/AP Photo"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Moderna vaccine doses Japan"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Moderna+vaccine+doses+Japan&form=TNSA02&filters=tnTID%3a%222144BF47-A707-4170-9A03-C4FF871A72E5%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2211%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=British+Mini&form=TNSA01&filters=tnTID%3a%22E13A3E2F-838D-4f85-B568-40E646C85F84%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2212%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "On This Day: 1959",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_y-8URGDnBVc_9yHDOAeZyA&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© PA Images via Getty Images"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "British Mini"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=British+Mini&form=TNSA02&filters=tnTID%3a%22E13A3E2F-838D-4f85-B568-40E646C85F84%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2212%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Lil+Nas+X+Montero+September&form=TNSA01&filters=tnTID%3a%22181165CB-7DE6-4cd5-8AA6-DDA9A9B63725%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2213%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Debut album in Sept.",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_jMLidbEQj-4efU0afkjzbg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Ringo Chiu/Reuters"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Lil Nas X Montero September"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Lil+Nas+X+Montero+September&form=TNSA02&filters=tnTID%3a%22181165CB-7DE6-4cd5-8AA6-DDA9A9B63725%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2213%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Broncos+Teddy+Bridgewater&form=TNSA01&filters=tnTID%3a%22781C1E73-6A6A-4029-983A-1BADA94548F0%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2214%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Starting for Broncos",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_0VVDL4VzlXRuQdiBO7dNgw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Stephen Brashear/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Broncos Teddy Bridgewater"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Broncos+Teddy+Bridgewater&form=TNSA02&filters=tnTID%3a%22781C1E73-6A6A-4029-983A-1BADA94548F0%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2214%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Air+Canada+employees+vaccine&form=TNSA01&filters=tnTID%3a%2252EA54B6-B974-4787-80BB-08B66732CDB3%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2215%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Mandates vax for staff",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_DMC9j9oyEAeyTvAx-dvN9w&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Carlos Osorio/Reuters"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Air Canada employees vaccine"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Air+Canada+employees+vaccine&form=TNSA02&filters=tnTID%3a%2252EA54B6-B974-4787-80BB-08B66732CDB3%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2215%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Japan+COVID+emergency&form=TNSA01&filters=tnTID%3a%227F670DDB-88DB-41a1-B327-9E835A6B83C2%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2216%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Japan expands curbs",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_7vmlpYUK5M2RSFe5bpcFMw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Kim Kyung-Hoon/Reuters"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Japan COVID emergency"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Japan+COVID+emergency&form=TNSA02&filters=tnTID%3a%227F670DDB-88DB-41a1-B327-9E835A6B83C2%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2216%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Vinny+Curry+blood+disorder&form=TNSA01&filters=tnTID%3a%22ED8B8B26-66F8-4b5a-8006-CCD028C09450%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2217%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Rare blood disorder",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_Z3WBJce2kUm2396p2NY0jQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Jason E. Miczek/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Vinny Curry blood disorder"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Vinny+Curry+blood+disorder&form=TNSA02&filters=tnTID%3a%22ED8B8B26-66F8-4b5a-8006-CCD028C09450%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2217%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Emoni+Bates+Memphis&form=TNSA01&filters=tnTID%3a%22D2DC1B09-9E7B-4ebc-AFA2-CBAB62660F20%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2218%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Commits to Memphis",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_IasCnsWFrqV9cSoaN8rofw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Scott W. Grau/Icon Sportswire/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Emoni Bates Memphis"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Emoni+Bates+Memphis&form=TNSA02&filters=tnTID%3a%22D2DC1B09-9E7B-4ebc-AFA2-CBAB62660F20%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2218%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Trevor+Lawrence+starting&form=TNSA01&filters=tnTID%3a%22C3CC204C-0243-43c1-BEE7-5CA79CDB0FAE%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2219%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Named Jags starter",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_vZQAozU49dff0q2uP40-Fg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Chris Graythen/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Trevor Lawrence starting"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Trevor+Lawrence+starting&form=TNSA02&filters=tnTID%3a%22C3CC204C-0243-43c1-BEE7-5CA79CDB0FAE%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2219%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Brazil+Indigenous+march&form=TNSA01&filters=tnTID%3a%22FEAE9C21-AC08-4927-88B9-03A622729CD0%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2220%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Land rights ruling",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_plC0hCcarWLlcbL2sXBh6w&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "​© Amanda Perobelli/Reuters​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Brazil Indigenous march"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Brazil+Indigenous+march&form=TNSA02&filters=tnTID%3a%22FEAE9C21-AC08-4927-88B9-03A622729CD0%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2220%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Dominion+Virginia+wind+project&form=TNSA01&filters=tnTID%3a%2242DC9E55-B352-443b-97EA-435437B1989F%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2221%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Offshore wind deal",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_0QPodmPCbJq7fSjh63yR5Q&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "​© Steve Helber/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Dominion Virginia wind project"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Dominion+Virginia+wind+project&form=TNSA02&filters=tnTID%3a%2242DC9E55-B352-443b-97EA-435437B1989F%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2221%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Ron+Jeremy+indicted+assault&form=TNSA01&filters=tnTID%3a%22D80C7EB5-048C-4fc9-9298-758BE022C269%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2222%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "30 counts of assault",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_JFfgZhYY9Y__t2S2AEGMfA&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© David McNew/Reuters​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Ron Jeremy indicted assault"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Ron+Jeremy+indicted+assault&form=TNSA02&filters=tnTID%3a%22D80C7EB5-048C-4fc9-9298-758BE022C269%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2222%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Ty+Garbin+sentenced&form=TNSA01&filters=tnTID%3a%2281FDACEA-6177-404d-B12A-9456CD3A50FF%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2223%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Kidnap plot sentencing",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_aCJKKHZkgG-acW_LDij1Jg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "​© Kent County Sheriff's Office/Reuters​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Ty Garbin sentenced"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Ty+Garbin+sentenced&form=TNSA02&filters=tnTID%3a%2281FDACEA-6177-404d-B12A-9456CD3A50FF%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2223%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Telescope+Canary+Islands&form=TNSA01&filters=tnTID%3a%2280FB1EA5-EC8B-47ab-9AE3-5ADF12107ADB%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2224%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Telescope site nixed",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_SIkQA1FsEZA4X0D02OvB7A&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Caleb Jones/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Telescope Canary Islands"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Telescope+Canary+Islands&form=TNSA02&filters=tnTID%3a%2280FB1EA5-EC8B-47ab-9AE3-5ADF12107ADB%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2224%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Mike+Dunleavy+recall&form=TNSA01&filters=tnTID%3a%22AC0F58DD-A00C-418b-855D-D28B0A45A2D2%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2225%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Recall effort ends",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_OYJE0mxNOy1FgQeAos-OWw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Becky Bohrer/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Mike Dunleavy recall"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Mike+Dunleavy+recall&form=TNSA02&filters=tnTID%3a%22AC0F58DD-A00C-418b-855D-D28B0A45A2D2%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2225%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Bruce+Arians+COVID+protocols&form=TNSA01&filters=tnTID%3a%227C07806A-9AC9-4e1a-BA5B-690D2C14AF80%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2226%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Tougher COVID rules",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_HGVIayO2Atyu0mJfW3bxrA&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "​© Douglas P. DeFelice/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Bruce Arians COVID protocols"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Bruce+Arians+COVID+protocols&form=TNSA02&filters=tnTID%3a%227C07806A-9AC9-4e1a-BA5B-690D2C14AF80%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2226%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Rachel+Nichols+show+canceled&form=TNSA01&filters=tnTID%3a%228710093B-403E-4be9-8704-9F14D01437F8%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2227%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "ESPN removes NBA host",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_AAUwxyQpAH-LtubgzHCQvg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "​© Paul Sancya/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Rachel Nichols show canceled"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Rachel+Nichols+show+canceled&form=TNSA02&filters=tnTID%3a%228710093B-403E-4be9-8704-9F14D01437F8%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2227%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Kite+surfer+killed&form=TNSA01&filters=tnTID%3a%22502275C5-3B07-4d39-BFC3-F53D052FF779%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2228%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Kite surfer killed",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_x5V5oZRUmL1xERSYSIg_vQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© iStockphoto/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Kite surfer killed"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Kite+surfer+killed&form=TNSA02&filters=tnTID%3a%22502275C5-3B07-4d39-BFC3-F53D052FF779%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2228%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Shooting+Miami+Beach+restaurant&form=TNSA01&filters=tnTID%3a%22E44AC14A-B7C8-403a-887E-2C657ACD9314%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2229%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Tourist randomly shot",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_FJF0cHusH_Gw_xUkTE3YiQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Miami-Dade Police Department/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Shooting Miami Beach restaurant"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Shooting+Miami+Beach+restaurant&form=TNSA02&filters=tnTID%3a%22E44AC14A-B7C8-403a-887E-2C657ACD9314%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2229%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Larry+Elder+Datig+police&form=TNSA01&filters=tnTID%3a%22CCD50DD2-2E03-443e-BF3B-180C5DC18BA6%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2230%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Ex-fiancee abuse claim",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_LZu3_B1dwTGdN7haCd8ScQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Courtesy of Alexandra Datig via AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Larry Elder Datig police"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Larry+Elder+Datig+police&form=TNSA02&filters=tnTID%3a%22CCD50DD2-2E03-443e-BF3B-180C5DC18BA6%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2230%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=India+COVID+Onam&form=TNSA01&filters=tnTID%3a%22F29DC331-72E0-4c3d-9F88-597A867E4EE4%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2231%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Festival COVID surge",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_OaMxjfph7dMEy3laTVnMWQ&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© R S Iyer/AP​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "India COVID Onam"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=India+COVID+Onam&form=TNSA02&filters=tnTID%3a%22F29DC331-72E0-4c3d-9F88-597A867E4EE4%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2231%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Harris+speak+South+China+Sea&form=TNSA01&filters=tnTID%3a%22BFBEA804-09CF-4aa0-990E-9C18460B67A9%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2232%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "South China Sea pledge",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_ji9me9xkVZeFm0fuBi2klw&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Evelyn Hockstein/Reuters​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Harris speak South China Sea"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Harris+speak+South+China+Sea&form=TNSA02&filters=tnTID%3a%22BFBEA804-09CF-4aa0-990E-9C18460B67A9%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2232%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Qatar+first+F-15&form=TNSA01&filters=tnTID%3a%228112EC4E-EBAA-4378-9BBE-F2D25B046913%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2233%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Qatar gets F-15s",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_ySw42cwNWdVtK9Nf1ZsR9A&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Karim Jaafar/AFP/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Qatar first F-15"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Qatar+first+F-15&form=TNSA02&filters=tnTID%3a%228112EC4E-EBAA-4378-9BBE-F2D25B046913%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2233%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=CDC+Africa+vaccination&form=TNSA01&filters=tnTID%3a%22315D42AD-EB22-488c-B57D-A360A603FCB3%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2234%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "CDC: Boost Africa vax",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_WSRELi9bxUNPmZ-9Yhh8gg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "​© Papi Morake/Gallo Images/Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "CDC Africa vaccination"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=CDC+Africa+vaccination&form=TNSA02&filters=tnTID%3a%22315D42AD-EB22-488c-B57D-A360A603FCB3%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2234%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Beirut+Diab+judge+subpoena&form=TNSA01&filters=tnTID%3a%22D19B271D-C100-484b-85A8-4A08C970F0B5%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2235%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Subpoena for no-show",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_2F1ySYE6rTk11Omf55pgnA&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Mohamed Azakir/Reuters​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Beirut Diab judge subpoena"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Beirut+Diab+judge+subpoena&form=TNSA02&filters=tnTID%3a%22D19B271D-C100-484b-85A8-4A08C970F0B5%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2235%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    },
+    {
+      "_type": "News/Topic",
+      "webSearchUrl": "https://www.bing.com/search?q=Israel+eases+blockade&form=TNSA01&filters=tnTID%3a%2226CD34D9-59B9-4bf4-A82F-A840F0B36750%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2236%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22",
+      "name": "Israel eases blockade",
+      "image": {
+        "_type": "ImageObject",
+        "url": "https://www.bing.com/th?id=OPN.RTNews_6c6skE7mEbh8Sr-zVhFoGg&c=14&rs=2&qlt=80&pcl=f9f9f9&pid=News",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "© Mahmud Hams/AFP via Getty Images​"
+          }
+        ]
+      },
+      "isBreakingNews": false,
+      "query": {
+        "_type": "Query",
+        "text": "Israel eases blockade"
+      },
+      "newsSearchUrl": "https://www.bing.com/news/search?q=Israel+eases+blockade&form=TNSA02&filters=tnTID%3a%2226CD34D9-59B9-4bf4-A82F-A840F0B36750%22+tnVersion%3a%224199392%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2236%22+tnScenario%3a%22TrendingTopicsAPI%22+tnOrder%3a%2220b6ddb0-743d-4388-9878-8b4abd9046fd%22"
+    }
+  ]
+}

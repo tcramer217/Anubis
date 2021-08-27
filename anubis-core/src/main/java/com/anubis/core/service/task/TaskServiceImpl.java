@@ -1,4 +1,4 @@
-package com.anubis.family.api.service;
+package com.anubis.core.service.task;
 
 import com.anubis.core.dao.TaskRepo;
 import com.anubis.core.entity.family.FamilyMember;

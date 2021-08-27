@@ -18,4 +18,9 @@ public class AnubisTestConstants {
      */
     public static final String TASK_NAME = "Task Name";
     public static final String TASK_NAME_1 = TASK_NAME + " 1";
+
+    /**
+     * PYTHON TESTING CONSTANTS
+     */
+    public static final String PYTHON_TEST_FILE = "testPyScript.py";
 }
