@@ -8,8 +8,8 @@ import java.util.List;
 public class BingSearchResponse extends SearchResponse {
 
     @JsonProperty("_type")
-    public String type;
-    public List<BingSearchResponseItem> value;
+    private String type;
+    private List<BingSearchResponseItem> value;
 
     public BingSearchResponse() {
     }

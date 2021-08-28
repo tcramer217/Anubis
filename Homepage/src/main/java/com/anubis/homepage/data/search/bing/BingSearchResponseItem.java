@@ -6,12 +6,12 @@ public class BingSearchResponseItem {
 
     @JsonProperty("_type")
     private String type;
-    private String webSearchUrl;
     private String name;
-    private BingSearchResponseImage image;
-    private Boolean isBreakingNews;
-    private BingSearchResponseQuery query;
+    private String webSearchUrl;
     private String newsSearchUrl;
+    private Boolean isBreakingNews;
+    private BingSearchResponseImage image;
+    private BingSearchResponseQuery query;
 
     public BingSearchResponseItem() {
     }
@@ -48,12 +48,12 @@ public class BingSearchResponseItem {
         this.image = image;
     }
 
-    public Boolean getBreakingNews() {
+    public Boolean getIsBreakingNews() {
         return isBreakingNews;
     }
 
-    public void setBreakingNews(Boolean breakingNews) {
-        isBreakingNews = breakingNews;
+    public void setIsBreakingNews(Boolean isBreakingNews) {
+        this.isBreakingNews = isBreakingNews;
     }
 
     public BingSearchResponseQuery getQuery() {

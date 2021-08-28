@@ -1,0 +1,16 @@
+{{>header}}
+<div class="container">
+    {{#newsItems}}
+        <div class="row">
+            <div class="col-3">
+                {{name}}
+                {{#image}}
+                    <img src="{{url}}" />
+                {{/image}}
+            </div>
+            <div class="col-9">
+            </div>
+        </div>
+    {{/newsItems}}
+</div>
+{{>footer}}

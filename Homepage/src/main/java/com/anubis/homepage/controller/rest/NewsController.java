@@ -1,4 +1,4 @@
-package com.anubis.homepage.controller;
+package com.anubis.homepage.controller.rest;
 
 import com.anubis.homepage.data.search.bing.BingSearchResponse;
 import com.anubis.homepage.service.news.NewsService;

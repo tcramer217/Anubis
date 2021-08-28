@@ -1,4 +1,4 @@
-package com.anubis.homepage.controller;
+package com.anubis.homepage.controller.view;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
