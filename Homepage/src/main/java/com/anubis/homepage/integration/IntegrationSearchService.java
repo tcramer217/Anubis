@@ -1,4 +1,4 @@
-package com.anubis.homepage.service.integration;
+package com.anubis.homepage.integration;
 
 import com.anubis.homepage.data.search.SearchResponse;
 import org.springframework.beans.factory.annotation.Value;

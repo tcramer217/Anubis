@@ -1,7 +1,7 @@
 package com.anubis.homepage.service.news;
 
 import com.anubis.homepage.data.search.bing.BingSearchResponse;
-import com.anubis.homepage.service.integration.bing.BingTopNewsIntegrationServiceImpl;
+import com.anubis.homepage.integration.bing.BingTopNewsIntegrationServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

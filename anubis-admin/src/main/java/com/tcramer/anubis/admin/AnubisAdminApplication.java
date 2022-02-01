@@ -17,7 +17,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration(proxyBeanMethods = false)
 @EnableAdminServer
 @SpringBootApplication
-@ComponentScan({"com.tcramer.anubis.core", "com.tcramer.anubis.admin"})
+@ComponentScan({"com.anubis.core", "com.tcramer.anubis.admin"})
 public class AnubisAdminApplication extends SpringBootServletInitializer {
 
     private final AdminServerProperties adminServer;

@@ -1,0 +1,41 @@
+{
+  "location":{
+    "name":"South Saint Paul",
+    "region":"Minnesota",
+    "country":"USA",
+    "lat":44.89,
+    "lon":-93.04,
+    "tz_id":"America/Chicago",
+    "localtime_epoch":1630166399,
+    "localtime":"2021-08-28 10:59"
+  },
+  "current":{
+    "last_updated_epoch":1630165500,
+    "last_updated":"2021-08-28 10:45",
+    "temp_c":26.3,
+    "temp_f":79.3,
+    "is_day":1,
+    "condition":{
+      "text":"Sunny",
+      "icon":"//cdn.weatherapi.com/weather/64x64/day/113.png",
+      "code":1000
+    },
+    "wind_mph":8.1,
+    "wind_kph":13,
+    "wind_degree":160,
+    "wind_dir":"SSE",
+    "pressure_mb":1013,
+    "pressure_in":29.92,
+    "precip_mm":0,
+    "precip_in":0,
+    "humidity":74,
+    "cloud":0,
+    "feelslike_c":30.8,
+    "feelslike_f":87.4,
+    "vis_km":16,
+    "vis_miles":9,
+    "uv":4,
+    "gust_mph":15.4,
+    "gust_kph":24.8
+  }
+}

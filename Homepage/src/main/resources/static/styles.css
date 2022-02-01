@@ -1,0 +1,10 @@
+body {
+    color: #5e6e82;
+}
+.align-right {
+    text-align: right;
+}
+
+.card-body-img {
+    width: 75px;
+}

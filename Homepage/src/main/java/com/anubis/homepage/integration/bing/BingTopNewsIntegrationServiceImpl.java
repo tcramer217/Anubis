@@ -1,7 +1,7 @@
-package com.anubis.homepage.service.integration.bing;
+package com.anubis.homepage.integration.bing;
 
 import com.anubis.homepage.data.search.bing.BingSearchResponse;
-import com.anubis.homepage.service.integration.IntegrationSearchService;
+import com.anubis.homepage.integration.IntegrationSearchService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

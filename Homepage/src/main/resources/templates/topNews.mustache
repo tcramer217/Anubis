@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+        {{#newsItems}}
+            <div class="list-group">
+                <a href="{{webSearchUrl}}"
+                   class="list-group-item list-group-item-action"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-current="true">
+                    {{name}}
+                </a>
+            </div>
+        {{/newsItems}}
+        </div>
+        <div class="col-6"></div>
+        <div class="col-3 align-right">
+        {{#weatherCurrent}}
+            {{#current}}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Current Weather</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{location.name}}</h6>
+                    <img src="{{condition.icon}}" class="card-img card-body-img" alt="...">
+                    <p class="card-text">{{temp_f}} & {{condition.text}}</p>
+                </div>
+            </div>
+            {{/current}}
+        {{/weatherCurrent}}
+        </div>
+    </div>
+</div>
