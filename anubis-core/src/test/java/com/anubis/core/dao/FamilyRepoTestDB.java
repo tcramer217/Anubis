@@ -10,9 +10,9 @@ import org.springframework.test.annotation.Rollback;
 
 import java.util.List;
 
-import static com.anubis.core.AnubisTestConstants.*;
+import static com.anubis.core.AnubisTestConstants.FAMILY_NAME;
 
-@DisplayName("Verify the functionality of the ReminderRepo.")
+@DisplayName("Verify the functionality of the FamilyRepo.")
 @DataJpaTest
 public class FamilyRepoTestDB {
 

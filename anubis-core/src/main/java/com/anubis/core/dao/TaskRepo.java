@@ -5,9 +5,11 @@ import com.anubis.core.entity.family.Task;
 import com.anubis.core.entity.family.WeeklyTask;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface TaskRepo<T extends Task> extends JpaRepository<T, Long> {
 
 //    @Query("FROM Task WHERE task_type = ?1 ")

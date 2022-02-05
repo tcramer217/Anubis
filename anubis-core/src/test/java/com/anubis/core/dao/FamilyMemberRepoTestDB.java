@@ -12,7 +12,7 @@ import org.springframework.test.annotation.Rollback;
 
 import java.util.List;
 
-@DisplayName("Verify the functionality of the ReminderRepo.")
+@DisplayName("Verify the functionality of the FamilyMemberRepo.")
 @DataJpaTest
 public class FamilyMemberRepoTestDB {
 

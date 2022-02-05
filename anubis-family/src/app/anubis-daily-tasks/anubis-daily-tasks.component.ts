@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {DailyTaskService} from '../daily-task.service';
-import {Task} from '../task';
 
 @Component({
   selector: 'app-anubis-daily-tasks',
@@ -9,10 +8,14 @@ import {Task} from '../task';
 })
 export class AnubisDailyTasksComponent implements OnInit {
   // private tasks: Observable<any>;
-  private readonly tasks: Task[];
+  private tasks: any;
 
   constructor(private taskService: DailyTaskService) {
-    this.tasks = this.taskService.getDailyTasks();
+    this.taskService.getDailyTasks().subscribe((response) => {
+      this.tasks = response;
+    }, (error) => {
+      console.log('error:', error);
+    });
   }
 
   ngOnInit(): void {
