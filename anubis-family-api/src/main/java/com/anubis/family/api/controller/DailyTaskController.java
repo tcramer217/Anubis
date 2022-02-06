@@ -1,5 +1,6 @@
 package com.anubis.family.api.controller;
 
+import com.anubis.core.service.task.DailyTaskServiceImpl;
 import com.anubis.core.service.task.TaskService;
 import com.anubis.core.entity.family.DailyTask;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import java.util.List;
 public class DailyTaskController {
 
     @Autowired
-    private TaskService<DailyTask> dailyTaskService;
+    private DailyTaskServiceImpl dailyTaskService;
 
     @GetMapping("/count")
     public Integer getDailyTaskCount() {

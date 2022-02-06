@@ -13,24 +13,10 @@ export class DailyTaskService {
   constructor(
     private httpClient: HttpClient
   ) {
-    // this.tasks = [
-    //   { id: 11, name: 'Dr Nice' },
-    //   { id: 12, name: 'Narco' },
-    //   { id: 13, name: 'Bombasto' },
-    //   { id: 14, name: 'Celeritas' },
-    //   { id: 15, name: 'Magneta' },
-    //   { id: 16, name: 'RubberMan' },
-    //   { id: 17, name: 'Dynama' },
-    //   { id: 18, name: 'Dr IQ' },
-    //   { id: 19, name: 'Magma' },
-    //   { id: 20, name: 'Tornado' }
-    // ];
+
   }
 
-  // getDailyTasks(): Observable<any> {
   getDailyTasks(): Observable<any> {
-    // return of(this.tasks);
-    // return this.tasks;
     return this.httpClient.get(this.DAILY_TASK_URL);
   }
 }
