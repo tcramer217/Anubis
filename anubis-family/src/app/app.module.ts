@@ -12,13 +12,15 @@ import {AnubisNavigationComponent} from './anubis-navigation/anubis-navigation.c
 import {AnubisDailyTasksComponent} from './anubis-daily-tasks/anubis-daily-tasks.component';
 import {AnubisWeeklyTasksComponent} from './anubis-weekly-tasks/anubis-weekly-tasks.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DailyTaskComponent } from './anubis-daily-tasks/daily-task/daily-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnubisNavigationComponent,
     AnubisDailyTasksComponent,
-    AnubisWeeklyTasksComponent
+    AnubisWeeklyTasksComponent,
+    DailyTaskComponent
   ],
   imports: [
     AppMaterialModule,
