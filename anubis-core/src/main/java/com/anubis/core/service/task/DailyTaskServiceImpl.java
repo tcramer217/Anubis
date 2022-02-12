@@ -16,6 +16,10 @@ public class DailyTaskServiceImpl implements TaskService<DailyTask> {
         this.dailyTaskRepo = dailyTaskRepo;
     }
 
+    public DailyTask findTaskById(Integer id) {
+        return getDailyTaskRepo().findTaskById(id.longValue());
+    }
+
     @Override
     public DailyTask createTask(DailyTask task) {
         return getDailyTaskRepo().save(task);

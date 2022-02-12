@@ -25,12 +25,17 @@ public class DailyTaskController {
         return getDailyTaskService().getAllTasks();
     }
 
+    @GetMapping("/{taskId}")
+    public DailyTask getDailyTask(@PathVariable Integer taskId) {
+        return getDailyTaskService().findTaskById(taskId);
+    }
+
     @PostMapping
     public DailyTask createDailyTask(@RequestBody DailyTask task) {
         return getDailyTaskService().createTask(task);
     }
 
-    public TaskService<DailyTask> getDailyTaskService() {
+    public DailyTaskServiceImpl getDailyTaskService() {
         return dailyTaskService;
     }
 

@@ -14,6 +14,7 @@ public interface TaskRepo<T extends Task> extends JpaRepository<T, Long> {
 
 //    @Query("FROM Task WHERE task_type = ?1 ")
 //    List<T>  findTasksByDiscriminator(String discriminator);
+    T findTaskById(long id);
 
     @Query("select t from Task t")
     List<T> findAllTasks();
