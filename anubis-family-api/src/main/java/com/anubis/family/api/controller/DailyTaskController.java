@@ -1,15 +1,14 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.core.service.task.DailyTaskServiceImpl;
-import com.anubis.core.service.task.TaskService;
 import com.anubis.core.entity.family.DailyTask;
+import com.anubis.core.service.task.DailyTaskServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/task/daily")
+@RequestMapping("/task/daily")
 public class DailyTaskController {
 
     @Autowired
