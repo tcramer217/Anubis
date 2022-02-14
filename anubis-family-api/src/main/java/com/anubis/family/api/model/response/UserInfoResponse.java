@@ -1,12 +1,20 @@
 package com.anubis.family.api.model.response;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.http.ResponseCookie;
+
+import javax.persistence.Transient;
+import java.util.Set;
 
 public class UserInfoResponse {
     private long id;
     private String username;
     private String email;
-    private List<String> roles;
+    private Set<String> roles;
+
+    @JsonIgnore
+    @Transient
+    private ResponseCookie jwt;
 
     public UserInfoResponse() {
     }
@@ -35,11 +43,19 @@ public class UserInfoResponse {
         this.email = email;
     }
 
-    public List<String> getRoles() {
+    public Set<String> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<String> roles) {
+    public void setRoles(Set<String> roles) {
         this.roles = roles;
+    }
+
+    public ResponseCookie getJwt() {
+        return jwt;
+    }
+
+    public void setJwt(ResponseCookie jwt) {
+        this.jwt = jwt;
     }
 }

@@ -1,4 +1,4 @@
-package com.anubis.family.api.service;
+package com.anubis.family.api.service.user;
 
 import com.anubis.family.api.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;

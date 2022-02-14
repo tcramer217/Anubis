@@ -1,8 +1,8 @@
 package com.anubis.family.api.config;
 
 import com.anubis.family.api.filter.AuthTokenFilter;
-import com.anubis.family.api.service.AuthEntryPointJwtImpl;
-import com.anubis.family.api.service.UserDetailsServiceImpl;
+import com.anubis.family.api.service.auth.AuthEntryPointJwtImpl;
+import com.anubis.family.api.service.user.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

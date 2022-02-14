@@ -1,6 +1,6 @@
 package com.anubis.family.api.filter;
 
-import com.anubis.family.api.service.UserDetailsServiceImpl;
+import com.anubis.family.api.service.user.UserDetailsServiceImpl;
 import com.anubis.family.api.util.JwtUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
