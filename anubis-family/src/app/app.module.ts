@@ -12,7 +12,11 @@ import {AnubisNavigationComponent} from './anubis-navigation/anubis-navigation.c
 import {AnubisDailyTasksComponent} from './anubis-daily-tasks/anubis-daily-tasks.component';
 import {AnubisWeeklyTasksComponent} from './anubis-weekly-tasks/anubis-weekly-tasks.component';
 import {HttpClientModule} from '@angular/common/http';
-import { DailyTaskComponent } from './anubis-daily-tasks/daily-task/daily-task.component';
+import {DailyTaskComponent} from './anubis-daily-tasks/daily-task/daily-task.component';
+import {RegisterComponent} from './register/register.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { DailyTaskComponent } from './anubis-daily-tasks/daily-task/daily-task.c
     AnubisNavigationComponent,
     AnubisDailyTasksComponent,
     AnubisWeeklyTasksComponent,
-    DailyTaskComponent
+    DailyTaskComponent,
+    RegisterComponent
   ],
   imports: [
     AppMaterialModule,
@@ -29,6 +34,10 @@ import { DailyTaskComponent } from './anubis-daily-tasks/daily-task/daily-task.c
     BrowserModule,
     HttpClientModule,
     LayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
