@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
   ) {
     this.registerForm = this.formBuilder.group(
       {

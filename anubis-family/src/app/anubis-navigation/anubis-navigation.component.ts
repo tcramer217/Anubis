@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
+import {MatDialog} from "@angular/material/dialog";
+import {RegisterDialogComponent} from "../register/register-dialog.component";
 
 @Component({
   selector: 'app-anubis-navigation',
@@ -16,6 +18,19 @@ export class AnubisNavigationComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private dialog: MatDialog
+  ) {
+  }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(RegisterDialogComponent, {
+      width: '250px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed:', result);
+    });
+  }
 }
