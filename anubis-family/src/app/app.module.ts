@@ -19,6 +19,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {RegisterDialogComponent} from "./register/register-dialog.component";
 import {authInterceptorProviders} from "./interceptor/auth.interceptor";
+import {LoginComponent} from './login/login.component';
+import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import {authInterceptorProviders} from "./interceptor/auth.interceptor";
     DailyTaskComponent,
     RegisterComponent,
     RegisterDialogComponent,
+    LoginComponent,
+    LoginDialogComponent,
   ],
   imports: [
     AppMaterialModule,

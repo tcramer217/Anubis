@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
 import {MatDialog} from "@angular/material/dialog";
 import {RegisterDialogComponent} from "../register/register-dialog.component";
+import {LoginDialogComponent} from "../login/login-dialog/login-dialog.component";
 
 @Component({
   selector: 'app-anubis-navigation',
@@ -24,8 +25,18 @@ export class AnubisNavigationComponent {
   ) {
   }
 
-  openDialog(): void {
+  openRegisterDialog(): void {
     const dialogRef = this.dialog.open(RegisterDialogComponent, {
+      width: '250px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed:', result);
+    });
+  }
+
+  openLoginDialog(): void {
+    const dialogRef = this.dialog.open(LoginDialogComponent, {
       width: '250px',
     });
 
