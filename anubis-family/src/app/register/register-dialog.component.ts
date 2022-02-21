@@ -1,6 +1,6 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {FormGroup} from "@angular/forms";
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatDialogRef} from "@angular/material/dialog";
+import {RegisterComponent} from "./register.component";
 
 @Component({
   selector: 'app-register-dialog',
@@ -9,9 +9,11 @@ import {FormGroup} from "@angular/forms";
 })
 export class RegisterDialogComponent implements OnInit {
 
+  @ViewChild(RegisterComponent)
+  registerComponent!: RegisterComponent;
+
   constructor(
     public dialogReference: MatDialogRef<RegisterDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: FormGroup
   ) {
   }
 
@@ -23,7 +25,8 @@ export class RegisterDialogComponent implements OnInit {
   }
 
   registerUser(): void {
-
+    this.registerComponent.onSubmit();
+    this.dialogReference.close('Form Submitted.');
   }
 
 }
