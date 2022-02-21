@@ -55,6 +55,7 @@ public class AuthServiceImpl implements AuthService {
         response.setEmail(userDetails.getEmail());
         response.setRoles(new HashSet<>(roles));
         response.setJwt(jwtCookie);
+        response.setAccessToken(jwtCookie.getValue());
 
         return response;
     }

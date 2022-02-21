@@ -12,8 +12,14 @@ public class UserInfoResponse {
     private String email;
     private Set<String> roles;
 
-    @JsonIgnore
     @Transient
+    private String tokenType = "Bearer";
+
+    @Transient
+    private String accessToken;
+
+    @Transient
+    @JsonIgnore
     private ResponseCookie jwt;
 
     public UserInfoResponse() {
@@ -49,6 +55,22 @@ public class UserInfoResponse {
 
     public void setRoles(Set<String> roles) {
         this.roles = roles;
+    }
+
+    public String getTokenType() {
+        return tokenType;
+    }
+
+    public void setTokenType(String tokenType) {
+        this.tokenType = tokenType;
+    }
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 
     public ResponseCookie getJwt() {
