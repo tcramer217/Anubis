@@ -2,10 +2,10 @@ import {Component} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
-import {MatDialog} from "@angular/material/dialog";
-import {RegisterDialogComponent} from "../register/register-dialog.component";
-import {LoginDialogComponent} from "../login/login-dialog/login-dialog.component";
-import {TokenStorageService} from "../service/token-storage.service";
+import {MatDialog} from '@angular/material/dialog';
+import {RegisterDialogComponent} from '../register/register-dialog.component';
+import {LoginDialogComponent} from '../login/login-dialog/login-dialog.component';
+import {TokenStorageService} from '../service/token-storage.service';
 
 @Component({
   selector: 'app-anubis-navigation',
@@ -20,7 +20,7 @@ export class AnubisNavigationComponent {
       shareReplay()
     );
 
-  isLoggedIn: Boolean = false;
+  isLoggedIn: boolean = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -29,7 +29,7 @@ export class AnubisNavigationComponent {
   ) {
     let user = this.tokenService.getUser();
     console.log('user', user);
-    this.isLoggedIn = tokenService.getUser() != {};
+    this.isLoggedIn = tokenService.getUser() !== {};
   }
 
   openRegisterDialog(): void {

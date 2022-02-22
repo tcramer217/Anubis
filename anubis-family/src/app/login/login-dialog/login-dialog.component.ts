@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
-import {LoginComponent} from "../login.component";
+import {MatDialogRef} from '@angular/material/dialog';
+import {LoginComponent} from '../login.component';
 
 @Component({
   selector: 'app-login-dialog',
@@ -20,7 +20,7 @@ export class LoginDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onNoClick() {
+  onNoClick(): void {
     this.dialogReference.close();
   }
 

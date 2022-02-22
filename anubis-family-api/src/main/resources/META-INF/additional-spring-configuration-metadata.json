@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "anubis.app.jwtExpMS",
+      "type": "java.lang.String",
+      "description": "Description for anubis.app.jwtExpMS."
+    },
+    {
+      "name": "anubis.app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Description for anubis.app.jwtSecret."
+    },
+    {
+      "name": "anubis.app.jwtCookieName",
+      "type": "java.lang.String",
+      "description": "Description for anubis.app.jwtCookieName."
+    }
+  ] }

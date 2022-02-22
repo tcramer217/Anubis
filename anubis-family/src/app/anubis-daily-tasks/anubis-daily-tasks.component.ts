@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DailyTaskService} from '../service/daily-task.service';
-import {Task} from "../model/task";
+import {Task} from '../model/task';
 
 @Component({
   selector: 'app-anubis-daily-tasks',

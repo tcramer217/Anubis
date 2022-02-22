@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
-import {RegisterComponent} from "./register.component";
+import {MatDialogRef} from '@angular/material/dialog';
+import {RegisterComponent} from './register.component';
 
 @Component({
   selector: 'app-register-dialog',
@@ -20,7 +20,7 @@ export class RegisterDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onNoClick() {
+  onNoClick(): void {
     this.dialogReference.close();
   }
 

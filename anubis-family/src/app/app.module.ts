@@ -14,11 +14,11 @@ import {AnubisWeeklyTasksComponent} from './anubis-weekly-tasks/anubis-weekly-ta
 import {HttpClientModule} from '@angular/common/http';
 import {DailyTaskComponent} from './anubis-daily-tasks/daily-task/daily-task.component';
 import {RegisterComponent} from './register/register.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {RegisterDialogComponent} from "./register/register-dialog.component";
-import {authInterceptorProviders} from "./interceptor/auth.interceptor";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {RegisterDialogComponent} from './register/register-dialog.component';
+import {authInterceptorProviders} from './interceptor/auth.interceptor';
 import {LoginComponent} from './login/login.component';
 import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
 
