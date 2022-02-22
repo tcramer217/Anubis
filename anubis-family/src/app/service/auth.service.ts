@@ -25,7 +25,7 @@ export class AuthService {
   }
 
   login(username: string, password: string): Observable<any> {
-    return this.httpClient.post<any>(this.AUTH_ENDPOINT + "signin",
+    return this.httpClient.post(this.AUTH_ENDPOINT + "signin",
       {username, password},
       httpOptions);
   }

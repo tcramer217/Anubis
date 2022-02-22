@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.f);
+    console.log('this.f', this.f);
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
@@ -59,10 +59,11 @@ export class LoginComponent implements OnInit {
           this.isLoginFailed = false;
           this.isLoggedIn = true;
           this.roles = this.tokenService.getUser().roles;
-          // this.reloadPage();
+          this.reloadPage();
         },
         error => {
-          this.errorMessage = error.error.getMessage();
+          console.log('error:', error);
+          this.errorMessage = error.message;
           this.isLoggedIn = false;
           this.submitted = false;
           this.isLoginFailed = true;
