@@ -28,8 +28,7 @@ export class AnubisNavigationComponent {
     private tokenService: TokenStorageService
   ) {
     let user = this.tokenService.getUser();
-    console.log('user', user);
-    this.isLoggedIn = tokenService.getUser() !== {};
+    this.isLoggedIn = Object.keys(user).length > 0;
   }
 
   openRegisterDialog(): void {
@@ -50,5 +49,11 @@ export class AnubisNavigationComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed:', result);
     });
+  }
+
+  logout(): void {
+    this.tokenService.signOut()
+    this.isLoggedIn = false;
+    window.location.reload();
   }
 }
