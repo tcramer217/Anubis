@@ -21,6 +21,7 @@ import {RegisterDialogComponent} from './register/register-dialog.component';
 import {authInterceptorProviders} from './interceptor/auth.interceptor';
 import {LoginComponent} from './login/login.component';
 import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {LoginDialogComponent} from './login/login-dialog/login-dialog.component'
     RegisterDialogComponent,
     LoginComponent,
     LoginDialogComponent,
+    CalendarComponent,
   ],
   imports: [
     AppMaterialModule,

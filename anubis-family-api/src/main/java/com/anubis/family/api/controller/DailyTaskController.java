@@ -3,10 +3,12 @@ package com.anubis.family.api.controller;
 import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.service.task.DailyTaskServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMINISTRATOR')")
 @RestController
 @RequestMapping("/task/daily")
 public class DailyTaskController {

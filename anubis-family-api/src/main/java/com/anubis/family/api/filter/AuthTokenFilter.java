@@ -49,7 +49,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     }
 
     private String parseJwt(HttpServletRequest request) {
-        return getJwtUtils().getJwtFromCookies(request);
+        return getJwtUtils().parseJwt(request);
     }
 
     public JwtUtil getJwtUtils() {

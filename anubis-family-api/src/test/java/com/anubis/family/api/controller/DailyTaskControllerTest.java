@@ -1,18 +1,12 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.core.service.task.TaskService;
 import com.anubis.core.entity.family.DailyTask;
-import jdk.nashorn.internal.ir.annotations.Ignore;
-import org.junit.jupiter.api.Assertions;
+import com.anubis.core.service.task.TaskService;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import static com.anubis.family.test.AnubisTestConstants.DAILY_TASK_1_NAME;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class DailyTaskControllerTest {
