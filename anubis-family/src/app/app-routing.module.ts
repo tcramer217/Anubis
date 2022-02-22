@@ -4,7 +4,8 @@ import {AnubisDailyTasksComponent} from './anubis-daily-tasks/anubis-daily-tasks
 import {AnubisWeeklyTasksComponent} from './anubis-weekly-tasks/anubis-weekly-tasks.component';
 import {DailyTaskComponent} from './anubis-daily-tasks/daily-task/daily-task.component';
 import {RegisterComponent} from './register/register.component';
-import {CalendarComponent} from "./calendar/calendar.component";
+import {CalendarComponent} from './calendar/calendar.component';
+import {ProfileComponent} from './profile/profile.component';
 
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'daily-tasks/:id', component: DailyTaskComponent},
   {path: 'weekly-tasks', component: AnubisWeeklyTasksComponent},
   {path: 'calendar', component: CalendarComponent},
+  {path: 'profile', component: ProfileComponent},
 ];
 
 @NgModule({

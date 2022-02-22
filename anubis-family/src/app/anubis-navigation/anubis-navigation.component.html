@@ -32,6 +32,10 @@
         </button>
       </div>
       <div *ngIf="isLoggedIn">
+        <button mat-icon-button routerLink="/profile">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <span style="margin-left:10px;"></span>
         <button (click)="logout()" mat-raised-button>
           Logout
         </button>
