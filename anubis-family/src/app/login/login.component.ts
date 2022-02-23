@@ -11,11 +11,11 @@ import {TokenStorageService} from '../service/token-storage.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  submitted: boolean = false;
-  isLoggedIn: boolean = false;
-  isLoginFailed: boolean = false;
+  submitted = false;
+  isLoggedIn = false;
+  isLoginFailed = false;
 
-  errorMessage: string = '';
+  errorMessage = '';
   roles: string[] = [];
 
   constructor(

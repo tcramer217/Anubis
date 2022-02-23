@@ -6,6 +6,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {RegisterDialogComponent} from '../register/register-dialog.component';
 import {LoginDialogComponent} from '../login/login-dialog/login-dialog.component';
 import {TokenStorageService} from '../service/token-storage.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-anubis-navigation',
@@ -20,14 +21,15 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  isLoggedIn: boolean = false;
+  isLoggedIn = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private dialog: MatDialog,
-    private tokenService: TokenStorageService
+    private tokenService: TokenStorageService,
+    private router: Router
   ) {
-    let user = this.tokenService.getUser();
+    const user = this.tokenService.getUser();
     this.isLoggedIn = Object.keys(user).length > 0;
   }
 
@@ -38,6 +40,7 @@ export class NavigationComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed:', result);
+      this.router.navigate(['/daily-tasks'])
     });
   }
 
@@ -52,7 +55,7 @@ export class NavigationComponent {
   }
 
   logout(): void {
-    this.tokenService.signOut()
+    this.tokenService.signOut();
     this.isLoggedIn = false;
     window.location.reload();
   }

@@ -12,11 +12,11 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
 
-  submitted: boolean = false;
-  isSuccessful: boolean = false;
-  isSignUpFailed: boolean = false;
+  submitted = false;
+  isSuccessful = false;
+  isSignUpFailed = false;
 
-  errorMessage: string = '';
+  errorMessage = '';
 
   constructor(
     private authService: AuthService,
