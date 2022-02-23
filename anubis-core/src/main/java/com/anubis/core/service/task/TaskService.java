@@ -13,5 +13,5 @@ public interface TaskService<T extends Task> {
 
 //    List<T> getTasksByDiscriminator();
 
-    List<T> getTasksForFamilyMember(FamilyMember familyMember);
+    List<T> getTasksForFamilyMember(FamilyMember familyMemberId);
 }
