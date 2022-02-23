@@ -1,1 +1,36 @@
-<p>profile works!</p>
+<mat-card class="centered-card">
+  <mat-card-title><mat-toolbar>Profile</mat-toolbar></mat-card-title>
+  <mat-card-content>
+    <mat-grid-list cols="4" rowHeight="3:1">
+      <mat-list>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>Username:</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>{{currentUser.username}}</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>Email Address:</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>{{userProfile === undefined ? "" : userProfile.email}}</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>First Name:</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>{{userProfile === undefined ? "" : userProfile.firstName}}</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>Last Name:</mat-list-item>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-list-item>{{userProfile === undefined ? "" : userProfile.lastName}}</mat-list-item>
+        </mat-grid-tile>
+      </mat-list>
+    </mat-grid-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button>Edit Profile</button>
+  </mat-card-actions>
+</mat-card>

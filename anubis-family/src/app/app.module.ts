@@ -23,6 +23,7 @@ import {LoginComponent} from './login/login.component';
 import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ProfileComponent } from './profile/profile.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatGridListModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

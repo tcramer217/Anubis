@@ -18,7 +18,7 @@ export class AuthService {
   ) {
   }
 
-  signup(username: string, email: string, password: string, confirmPassword: string) {
+  signup(username: string, email: string, password: string, confirmPassword: string): Observable<any> {
     return this.httpClient.post<any>(this.AUTH_ENDPOINT + 'signup',
       {username, email, password, confirmPassword},
       httpOptions);
@@ -28,8 +28,5 @@ export class AuthService {
     return this.httpClient.post(this.AUTH_ENDPOINT + 'signin',
       {username, password},
       httpOptions);
-  }
-
-  logout(): void {
   }
 }
