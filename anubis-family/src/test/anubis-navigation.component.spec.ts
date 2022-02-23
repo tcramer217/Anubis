@@ -7,15 +7,15 @@ import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
-import {AnubisNavigationComponent} from '../app/anubis-navigation/anubis-navigation.component';
+import {NavigationComponent} from '../app/navigation/navigation.component';
 
 describe('AnubisNavigationComponent', () => {
-  let component: AnubisNavigationComponent;
-  let fixture: ComponentFixture<AnubisNavigationComponent>;
+  let component: NavigationComponent;
+  let fixture: ComponentFixture<NavigationComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AnubisNavigationComponent],
+      declarations: [NavigationComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -29,7 +29,7 @@ describe('AnubisNavigationComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AnubisNavigationComponent);
+    fixture = TestBed.createComponent(NavigationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

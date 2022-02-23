@@ -8,11 +8,11 @@ import {AppComponent} from './app.component';
 
 import {LayoutModule} from '@angular/cdk/layout';
 
-import {AnubisNavigationComponent} from './anubis-navigation/anubis-navigation.component';
-import {AnubisDailyTasksComponent} from './anubis-daily-tasks/anubis-daily-tasks.component';
-import {AnubisWeeklyTasksComponent} from './anubis-weekly-tasks/anubis-weekly-tasks.component';
+import {NavigationComponent} from './navigation/navigation.component';
+import {DailyTasksComponent} from './daily-tasks/daily-tasks.component';
+import {WeeklyTasksComponent} from './weekly-tasks/weekly-tasks.component';
 import {HttpClientModule} from '@angular/common/http';
-import {DailyTaskComponent} from './anubis-daily-tasks/daily-task/daily-task.component';
+import {DailyTaskComponent} from './daily-tasks/daily-task/daily-task.component';
 import {RegisterComponent} from './register/register.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -28,9 +28,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
 @NgModule({
   declarations: [
     AppComponent,
-    AnubisNavigationComponent,
-    AnubisDailyTasksComponent,
-    AnubisWeeklyTasksComponent,
+    NavigationComponent,
+    DailyTasksComponent,
+    WeeklyTasksComponent,
     DailyTaskComponent,
     RegisterComponent,
     RegisterDialogComponent,

@@ -9,10 +9,10 @@ import {TokenStorageService} from '../service/token-storage.service';
 
 @Component({
   selector: 'app-anubis-navigation',
-  templateUrl: './anubis-navigation.component.html',
-  styleUrls: ['./anubis-navigation.component.less']
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.less']
 })
-export class AnubisNavigationComponent {
+export class NavigationComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

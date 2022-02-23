@@ -4,10 +4,10 @@ import {Task} from '../model/task';
 
 @Component({
   selector: 'app-anubis-daily-tasks',
-  templateUrl: './anubis-daily-tasks.component.html',
-  styleUrls: ['./anubis-daily-tasks.component.less']
+  templateUrl: './daily-tasks.component.html',
+  styleUrls: ['./daily-tasks.component.less']
 })
-export class AnubisDailyTasksComponent implements OnInit {
+export class DailyTasksComponent implements OnInit {
   private tasks: Task[] = [];
 
   constructor(private taskService: DailyTaskService) {
