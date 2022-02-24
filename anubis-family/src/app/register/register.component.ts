@@ -45,7 +45,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.f);
     this.submitted = true;
     if (this.registerForm.invalid) {
       return;
@@ -55,7 +54,6 @@ export class RegisterComponent implements OnInit {
     this.authService.signup(username, email, password, confirmPassword)
       .subscribe(
         data => {
-          console.log('Data:', data);
           this.submitted = true;
           this.isSuccessful = true;
           this.isSignUpFailed = false;

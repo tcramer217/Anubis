@@ -15,10 +15,9 @@ export class DailyTasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.getDailyTasks().subscribe((response) => {
-      console.log('tasks:', response);
       this.tasks = response;
     }, (error) => {
-      console.log('error:', error);
+      throw new Error(error);
     });
   }
 

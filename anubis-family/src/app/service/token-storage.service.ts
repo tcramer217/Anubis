@@ -18,7 +18,6 @@ export class TokenStorageService {
   public saveToken(token: string): void {
     window.sessionStorage.removeItem(TOKEN_KEY);
     window.sessionStorage.setItem(TOKEN_KEY, token);
-    console.log('saved token, sessionStorage:', token, window.sessionStorage);
   }
 
   public getToken(): string | null {
@@ -28,11 +27,9 @@ export class TokenStorageService {
   public saveUser(user: any): void {
     window.sessionStorage.removeItem(USER_KEY);
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
-    console.log('saved user, sessionStorage:', user, window.sessionStorage);
   }
 
   public getUser(): any {
-    console.log('get user, window.sessionStorage:', window.sessionStorage);
     const user = window.sessionStorage.getItem(USER_KEY);
     if (user) {
       return JSON.parse(user);

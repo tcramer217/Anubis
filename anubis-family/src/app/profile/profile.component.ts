@@ -20,13 +20,11 @@ export class ProfileComponent implements OnInit {
     private tokenService: TokenStorageService,
   ) {
     this.currentUser = this.tokenService.getUser();
-    console.log('currentUser:', this.currentUser);
 
   }
 
   ngOnInit(): void {
     this.getProfile(this.currentUser.id).subscribe(result => {
-      console.log('result for getProfile:', result);
       this.userProfile = result;
     });
   }

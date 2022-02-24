@@ -43,17 +43,14 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('this.f', this.f);
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.loginForm.value, null, 2));
     const {username, password} = this.loginForm.value;
     this.authService.login(username, password)
       .subscribe(
         data => {
-          console.log('Data:', data);
           this.tokenService.saveToken(data.accessToken);
           this.tokenService.saveUser(data);
           this.isLoginFailed = false;
@@ -62,11 +59,11 @@ export class LoginComponent implements OnInit {
           this.reloadPage();
         },
         error => {
-          console.log('error:', error);
           this.errorMessage = error.message;
           this.isLoggedIn = false;
           this.submitted = false;
           this.isLoginFailed = true;
+          throw new Error(error.message);
         }
       );
   }
