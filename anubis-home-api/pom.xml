@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>anubis-home-auto-api</artifactId>
+    <artifactId>anubis-home-api</artifactId>
 
     <dependencies>
         <dependency>

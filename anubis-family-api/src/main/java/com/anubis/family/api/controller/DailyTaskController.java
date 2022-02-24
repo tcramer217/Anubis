@@ -1,14 +1,11 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.service.task.DailyTaskServiceImpl;
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.repo.UserRepository;
+import com.anubis.family.api.service.family.FamilyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,14 +15,8 @@ import java.util.List;
 @RequestMapping("/task/daily")
 public class DailyTaskController {
 
-    @Autowired
+    private FamilyMemberService familyMemberService;
     private DailyTaskServiceImpl dailyTaskService;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private FamilyMemberRepo familyMemberRepo;
 
     @GetMapping("/count")
     public Integer getDailyTaskCount() {
@@ -38,10 +29,9 @@ public class DailyTaskController {
     }
 
     @GetMapping("/user/{userId}")
-    public List<DailyTask> getDailyTasksForFamilyMember(@PathVariable Integer userId) {
-        User user = userRepository.findById(userId.longValue()).orElseThrow(() -> new UsernameNotFoundException("Could not find userId."));
-        FamilyMember familyMemberId = familyMemberRepo.findFamilyMemberByEmail(user.getEmail());
-        return getDailyTaskService().getTasksForFamilyMember(familyMemberId);
+    public List<DailyTask> getDailyTasksForFamilyMember(@PathVariable long userId) {
+        FamilyMember familyMember = getFamilyMemberService().getFamilyMemberByUserId(userId);
+        return getDailyTaskService().getTasksForFamilyMember(familyMember);
     }
 
     @GetMapping("/{taskId}")
@@ -54,8 +44,13 @@ public class DailyTaskController {
         return getDailyTaskService().createTask(task);
     }
 
+    @Autowired
     public DailyTaskServiceImpl getDailyTaskService() {
         return dailyTaskService;
     }
 
+    @Autowired
+    public FamilyMemberService getFamilyMemberService() {
+        return familyMemberService;
+    }
 }
