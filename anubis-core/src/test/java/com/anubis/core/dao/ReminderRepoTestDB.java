@@ -38,7 +38,7 @@ public class ReminderRepoTestDB {
                 AnubisTestConstants.FAMILY_MEMBER_FIRST_NAME,
                 AnubisTestConstants.FAMILY_MEMBER_LAST_NAME,
                 AnubisTestConstants.FAMILY_MEMBER_EMAIL_ADDRESS,
-                cramerFamily);
+                (int)cramerFamily.getId());
         timCramer = getFamilyMemberRepo().save(timCramer);
         Reminder reminder = new Reminder(REMINDER_NAME, timCramer);
         reminder = getReminderRepo().save(reminder);
@@ -50,7 +50,7 @@ public class ReminderRepoTestDB {
 
     @Test
     void read() {
-        List<Reminder> reminder = getReminderRepo().findRemindersByReminderFor_Family_FamilyName(FAMILY_NAME);
+//        List<Reminder> reminder = getReminderRepo().findRemindersByReminderFor_Family_FamilyName(FAMILY_NAME);
     }
 
     @Test

@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface FamilyMemberRepo extends JpaRepository<FamilyMember, Long> {
     List<FamilyMember> findFamilyMembersByLastName(String lastName);
+    FamilyMember findFamilyMemberByEmail(String email);
 }

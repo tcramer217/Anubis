@@ -23,10 +23,9 @@ public class FamilyMember implements Named {
 
     private String email;
 
-    @ManyToOne
-    private Family family;
+    private int familyId;
 
-    public FamilyMember(String firstName, String lastName, String email, Family family) {
+    public FamilyMember(String firstName, String lastName, String email, int familyId) {
         EmailValidator emailValidator = EmailValidator.getInstance(true);
         Boolean emailValid = emailValidator.isValid(email);
         if (!emailValid) {
@@ -34,7 +33,7 @@ public class FamilyMember implements Named {
         }
         this.firstName = firstName;
         this.lastName = lastName;
-        this.family = family;
+        this.familyId = familyId;
         this.email = email;
     }
 
@@ -69,12 +68,12 @@ public class FamilyMember implements Named {
         this.email = email;
     }
 
-    public Family getFamily() {
-        return family;
+    public int getFamilyId() {
+        return familyId;
     }
 
-    public void setFamily(Family family) {
-        this.family = family;
+    public void setFamilyId(int familyId) {
+        this.familyId = familyId;
     }
 
     @Override

@@ -1,15 +1,15 @@
 package com.anubis.family.api.controller;
 
 import com.anubis.core.constants.TaskType;
-import com.anubis.core.service.task.TaskService;
 import com.anubis.core.entity.family.Task;
+import com.anubis.core.service.task.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/task")
+@RequestMapping("/task")
 public class TaskController {
 
     @Autowired

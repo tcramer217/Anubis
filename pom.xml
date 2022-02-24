@@ -10,6 +10,7 @@
         <module>anubis-home-api</module>
         <module>anubis-family-api</module>
         <module>anubis-family</module>
+        <module>Homepage</module>
     </modules>
 
     <parent>
