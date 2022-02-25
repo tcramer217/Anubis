@@ -8,6 +8,7 @@ import com.anubis.family.api.model.request.SignupRequest;
 import com.anubis.family.api.repo.RoleRepository;
 import com.anubis.family.api.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create(SignupRequest signUpRequest) {
+        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+            throw new UsernameNotFoundException("Username Already Exists.");
+//            return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
+        }
+        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
+            throw new UsernameNotFoundException("Email Address Already Exists.");
+//            return ResponseEntity.badRequest().body(new MessageResponse("Error: Email is already in use!"));
+        }
         User user = new User(
                 signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
