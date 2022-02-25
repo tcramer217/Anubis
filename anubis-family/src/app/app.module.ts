@@ -24,6 +24,7 @@ import {LoginDialogComponent} from './login/login-dialog/login-dialog.component'
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
+    MatTableModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

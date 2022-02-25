@@ -8,13 +8,15 @@ import {Task} from '../model/task';
   styleUrls: ['./daily-tasks.component.less']
 })
 export class DailyTasksComponent implements OnInit {
-  private tasks: Task[] = [];
+  public tasks: Task[] = [];
+  public columns: string[] = [];
 
   constructor(private taskService: DailyTaskService) {
   }
 
   ngOnInit(): void {
     this.taskService.getDailyTasks().subscribe((response) => {
+      this.columns = ['name'];
       this.tasks = response;
     }, (error) => {
       throw new Error(error);

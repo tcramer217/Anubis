@@ -44,13 +44,21 @@ public class DailyTaskController {
         return getDailyTaskService().createTask(task);
     }
 
-    @Autowired
     public DailyTaskServiceImpl getDailyTaskService() {
         return dailyTaskService;
     }
 
     @Autowired
+    public void setDailyTaskService(DailyTaskServiceImpl dailyTaskService) {
+        this.dailyTaskService = dailyTaskService;
+    }
+
     public FamilyMemberService getFamilyMemberService() {
         return familyMemberService;
+    }
+
+    @Autowired
+    public void setFamilyMemberService(FamilyMemberService familyMemberService) {
+        this.familyMemberService = familyMemberService;
     }
 }

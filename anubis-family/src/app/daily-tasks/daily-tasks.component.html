@@ -2,4 +2,12 @@
   <div *ngFor="let task of getTasks()">
     <a routerLink="/daily-tasks/{{task.id}}">{{task.name}}</a>
   </div>
+  <mat-table [dataSource]="tasks" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Task Name</mat-header-cell>
+      <mat-cell *matCellDef="let task">{{task.name}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+  </mat-table>
 </div>
