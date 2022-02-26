@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DailyTaskService} from '../service/daily-task.service';
 import {Task} from '../model/task';
+import {SelectionModel} from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-anubis-daily-tasks',
@@ -10,13 +11,15 @@ import {Task} from '../model/task';
 export class DailyTasksComponent implements OnInit {
   public tasks: Task[] = [];
   public columns: string[] = [];
+  public selection = new SelectionModel<Task>(true,  []);
 
   constructor(private taskService: DailyTaskService) {
   }
 
   ngOnInit(): void {
     this.taskService.getDailyTasks().subscribe((response) => {
-      this.columns = ['name'];
+      console.log('tasksService.getDailyTasks:', response);
+      this.columns = ['select', 'name', 'assignedTo'];
       this.tasks = response;
     }, (error) => {
       throw new Error(error);
@@ -26,4 +29,9 @@ export class DailyTasksComponent implements OnInit {
   getTasks(): Task[] {
     return this.tasks;
   }
+
+  taskCompleted(task: Task) : void {
+    console.log('clicked');
+  }
+
 }
