@@ -1,7 +1,8 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.core.service.task.TaskService;
+import com.anubis.core.constants.TaskType;
 import com.anubis.core.entity.family.Task;
+import com.anubis.core.service.task.TaskService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.anubis.family.test.AnubisTestConstants.*;
-
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -41,5 +41,15 @@ public class TaskControllerTest {
         Assertions.assertEquals(2, resp.size());
         Assertions.assertEquals(DAILY_TASK_1_NAME, resp.get(INDEX_1).getName());
         Assertions.assertEquals(WEEKLY_TASK_1_NAME, resp.get(INDEX_2).getName());
+    }
+
+    @Test
+    public void createTask() {
+        Task task = new Task(DAILY_TASK_1_NAME);
+        when(taskService.createTask(task)).thenReturn(task);
+
+        Task resp = taskController.createTask(task);
+        Assertions.assertEquals(DAILY_TASK_1_NAME, resp.getName());
+        Assertions.assertEquals(TaskType.Discriminator.BASE, resp.getDiscriminator());
     }
 }
