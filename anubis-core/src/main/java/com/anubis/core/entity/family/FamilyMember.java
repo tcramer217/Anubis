@@ -23,9 +23,9 @@ public class FamilyMember implements Named {
 
     private String email;
 
-    private int familyId;
+    private long familyId;
 
-    public FamilyMember(String firstName, String lastName, String email, int familyId) {
+    public FamilyMember(String firstName, String lastName, String email, long familyId) {
         EmailValidator emailValidator = EmailValidator.getInstance(true);
         Boolean emailValid = emailValidator.isValid(email);
         if (!emailValid) {
@@ -68,11 +68,11 @@ public class FamilyMember implements Named {
         this.email = email;
     }
 
-    public int getFamilyId() {
+    public long getFamilyId() {
         return familyId;
     }
 
-    public void setFamilyId(int familyId) {
+    public void setFamilyId(long familyId) {
         this.familyId = familyId;
     }
 

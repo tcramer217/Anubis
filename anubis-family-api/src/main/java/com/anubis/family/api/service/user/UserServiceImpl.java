@@ -1,5 +1,9 @@
 package com.anubis.family.api.service.user;
 
+import com.anubis.core.dao.FamilyMemberRepo;
+import com.anubis.core.dao.FamilyRepo;
+import com.anubis.core.entity.family.Family;
+import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.family.api.exception.RoleNotFoundException;
 import com.anubis.family.api.model.Role;
 import com.anubis.family.api.model.Roles;
@@ -23,6 +27,12 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     RoleRepository roleRepository;
+
+    @Autowired
+    FamilyRepo familyRepo;
+
+    @Autowired
+    FamilyMemberRepo familyMemberRepo;
 
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -67,7 +77,14 @@ public class UserServiceImpl implements UserService {
             });
         }
         user.setRoles(roles);
-        return getUserRepository().save(user);
+        // setup initial profile info
+        // TODO : Need to get initial family name somehow,Add to prfile setup page for FAMILY_ADMIN role
+        User persistedUser = getUserRepository().save(user);
+        Family newFamily = new Family("New Family");
+        Family persistedFamily = getFamilyRepo().save(newFamily);
+        FamilyMember newFamilyMember = new FamilyMember(null, null, persistedUser.getEmail(), persistedFamily.getId());
+        getFamilyMemberRepo().save(newFamilyMember);
+        return persistedUser;
     }
 
     protected Role getRole(Roles role) {
@@ -88,6 +105,22 @@ public class UserServiceImpl implements UserService {
 
     public void setRoleRepository(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
+    }
+
+    public FamilyRepo getFamilyRepo() {
+        return familyRepo;
+    }
+
+    public void setFamilyRepo(FamilyRepo familyRepo) {
+        this.familyRepo = familyRepo;
+    }
+
+    public FamilyMemberRepo getFamilyMemberRepo() {
+        return familyMemberRepo;
+    }
+
+    public void setFamilyMemberRepo(FamilyMemberRepo familyMemberRepo) {
+        this.familyMemberRepo = familyMemberRepo;
     }
 
     public PasswordEncoder getPasswordEncoder() {
