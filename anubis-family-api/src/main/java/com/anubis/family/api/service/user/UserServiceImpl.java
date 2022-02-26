@@ -29,11 +29,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create(SignupRequest signUpRequest) {
-        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+        if (getUserRepository().existsByUsername(signUpRequest.getUsername())) {
             throw new UsernameNotFoundException("Username Already Exists.");
 //            return ResponseEntity.badRequest().body(new MessageResponse("Error: Username is already taken!"));
         }
-        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
+        if (getUserRepository().existsByEmail(signUpRequest.getEmail())) {
             throw new UsernameNotFoundException("Email Address Already Exists.");
 //            return ResponseEntity.badRequest().body(new MessageResponse("Error: Email is already in use!"));
         }
@@ -68,6 +68,16 @@ public class UserServiceImpl implements UserService {
         }
         user.setRoles(roles);
         return getUserRepository().save(user);
+    }
+
+    @Override
+    public User find(long userId) {
+        return getUserRepository().findById(userId).orElse(null);
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        return getUserRepository().findByUsername(username).orElse(null);
     }
 
     protected Role getRole(Roles role) {
