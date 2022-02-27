@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Profile} from '../model/profile';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,9 @@ export class ProfileService {
 
   getProfile(userId: number): Observable<any> {
     return this.httpClient.get(this.AUTH_ENDPOINT + userId);
+  }
+
+  saveProfile(profile: Profile): void {
+    this.httpClient.put(this.AUTH_ENDPOINT, profile);
   }
 }

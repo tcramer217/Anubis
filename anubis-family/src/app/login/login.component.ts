@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../service/auth.service';
 import {TokenStorageService} from '../service/token-storage.service';
+import {ProfileService} from '../service/profile.service';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private tokenService: TokenStorageService,
     private formBuilder: FormBuilder,
+    private profileService: ProfileService,
   ) {
     this.loginForm = this.formBuilder.group(
       {
@@ -56,6 +58,9 @@ export class LoginComponent implements OnInit {
           this.isLoginFailed = false;
           this.isLoggedIn = true;
           this.roles = this.tokenService.getUser().roles;
+          this.profileService.getProfile(data.id).subscribe(result => {
+            this.tokenService.saveProfile(result);
+          });
           this.reloadPage();
         },
         error => {

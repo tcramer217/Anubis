@@ -26,6 +26,7 @@ import { ProfileComponent } from './profile/profile.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     LoginDialogComponent,
     CalendarComponent,
     ProfileComponent,
+    ProfileEditComponent,
   ],
     imports: [
         AppMaterialModule,
