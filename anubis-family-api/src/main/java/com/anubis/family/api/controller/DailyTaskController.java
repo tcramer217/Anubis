@@ -36,7 +36,7 @@ public class DailyTaskController {
 
     @GetMapping("/{taskId}")
     public DailyTask getDailyTask(@PathVariable Integer taskId) {
-        return getDailyTaskService().findTaskById(taskId);
+        return getDailyTaskService().findById(taskId);
     }
 
     @PostMapping

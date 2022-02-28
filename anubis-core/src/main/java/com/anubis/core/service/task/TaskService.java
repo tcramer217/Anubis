@@ -8,10 +8,11 @@ import java.util.List;
 public interface TaskService<T extends Task> {
 
     T createTask(T task);
+    T findById(long taskId);
+    void markTaskCompleted(long taskId);
+    void markTaskIncomplete(long taskId);
 
     List<T> getAllTasks();
-
-//    List<T> getTasksByDiscriminator();
 
     List<T> getTasksForFamilyMember(FamilyMember familyMemberId);
 }

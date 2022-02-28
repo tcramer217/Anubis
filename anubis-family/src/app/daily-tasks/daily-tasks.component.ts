@@ -31,7 +31,10 @@ export class DailyTasksComponent implements OnInit {
   }
 
   taskCompleted(task: Task) : void {
-    console.log('clicked');
+    console.log('clicked', task);
+    this.taskService.markCompleted(task.id, !task.complete).subscribe((response) => {
+      console.log('response', response);
+    });
   }
 
 }

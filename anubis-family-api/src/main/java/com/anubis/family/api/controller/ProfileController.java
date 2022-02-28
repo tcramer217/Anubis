@@ -47,13 +47,6 @@ public class ProfileController {
         return ResponseEntity.ok(member);
     }
 
-    protected User getUserAccount(HttpServletRequest request) {
-        String jwt = getJwtUtil().parseJwt(request);
-        String username = getJwtUtil().getUserNameFromJwtToken(jwt);
-        User userAccount = getUserService().findByUsername(username);
-        return userAccount;
-    }
-
     public JwtUtil getJwtUtil() {
         return jwtUtil;
     }

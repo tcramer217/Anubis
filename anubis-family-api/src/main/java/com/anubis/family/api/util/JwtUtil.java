@@ -1,9 +1,12 @@
 package com.anubis.family.api.util;
 
+import com.anubis.family.api.model.User;
 import com.anubis.family.api.service.user.UserDetailsImpl;
+import com.anubis.family.api.service.user.UserService;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
@@ -19,6 +22,9 @@ public class JwtUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JwtUtil.class);
 
+    @Autowired
+    private UserService userService;
+
     @Value("${anubis.app.jwtSecret}")
     private String jwtSecret;
 
@@ -27,6 +33,13 @@ public class JwtUtil {
 
     @Value("${anubis.app.jwtCookieName}")
     private String jwtCookie;
+
+    public User getUserAccount(HttpServletRequest request) {
+        String jwt = parseJwt(request);
+        String username = getUserNameFromJwtToken(jwt);
+        User userAccount = getUserService().findByUsername(username);
+        return userAccount;
+    }
 
     public String getJwtFromCookies(HttpServletRequest request) {
         Cookie cookie = WebUtils.getCookie(request, jwtCookie);
@@ -89,5 +102,13 @@ public class JwtUtil {
                 .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret)
                 .compact();
+    }
+
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }

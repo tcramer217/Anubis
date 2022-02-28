@@ -16,8 +16,19 @@ public class DailyTaskServiceImpl implements TaskService<DailyTask> {
         this.dailyTaskRepo = dailyTaskRepo;
     }
 
-    public DailyTask findTaskById(Integer id) {
-        return getDailyTaskRepo().findTaskById(id.longValue());
+    @Override
+    public DailyTask findById(long taskId) {
+        return getDailyTaskRepo().findTaskById(taskId);
+    }
+
+    @Override
+    public void markTaskCompleted(long taskId) {
+
+    }
+
+    @Override
+    public void markTaskIncomplete(long taskId) {
+
     }
 
     @Override

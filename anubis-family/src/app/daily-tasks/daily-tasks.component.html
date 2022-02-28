@@ -1,7 +1,4 @@
 <div>
-  <div *ngFor="let task of getTasks()">
-    <a routerLink="/daily-tasks/{{task.id}}">{{task.name}}</a>
-  </div>
   <mat-table [dataSource]="tasks" class="mat-elevation-z8">
 
     <!-- Checkbox Column -->
@@ -10,7 +7,7 @@
         Done
       </mat-header-cell>
       <mat-cell *matCellDef="let task">
-        <mat-checkbox (click)="taskCompleted(task)"></mat-checkbox>
+        <mat-checkbox [ngModel]="task.complete" (click)="taskCompleted(task)"></mat-checkbox>
       </mat-cell>
     </ng-container>
     <!-- NAME Column -->

@@ -23,6 +23,25 @@ public class TaskServiceImpl<T extends Task> implements TaskService<T> {
     }
 
     @Override
+    public T findById(long taskId) {
+        return getTaskRepo().findTaskById(taskId);
+    }
+
+    @Override
+    public void markTaskCompleted(long taskId) {
+        T taskForUpdate = findById(taskId);
+        taskForUpdate.setComplete(true);
+        getTaskRepo().save(taskForUpdate);
+    }
+
+    @Override
+    public void markTaskIncomplete(long taskId) {
+        T taskForUpdate = findById(taskId);
+        taskForUpdate.setComplete(false);
+        getTaskRepo().save(taskForUpdate);
+    }
+
+    @Override
     public List<T> getAllTasks() {
         return getTaskRepo().findAllTasks();
     }

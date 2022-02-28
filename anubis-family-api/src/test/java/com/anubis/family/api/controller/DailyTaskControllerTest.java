@@ -50,7 +50,7 @@ public class DailyTaskControllerTest {
     public void getDailyTask() {
         DailyTask dt1 = new DailyTask(DAILY_TASK_1_NAME);
 
-        when(dailyTaskService.findTaskById(1)).thenReturn(dt1);
+        when(dailyTaskService.findById(1)).thenReturn(dt1);
 
         DailyTask result = dailyTaskController.getDailyTask(1);
         Assertions.assertNotNull(result);
