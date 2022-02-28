@@ -83,6 +83,6 @@ public class FamilyMember implements Named {
 
     @Override
     public void setName(String name) {
-        this.firstName = name;
+        // noop
     }
 }

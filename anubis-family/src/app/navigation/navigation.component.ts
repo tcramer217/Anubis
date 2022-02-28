@@ -40,7 +40,7 @@ export class NavigationComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed:', result);
-      this.router.navigate(['/daily-tasks']);
+      this.router.navigate(['/']);
     });
   }
 

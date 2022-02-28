@@ -60,8 +60,8 @@ export class LoginComponent implements OnInit {
           this.roles = this.tokenService.getUser().roles;
           this.profileService.getProfile(data.id).subscribe(result => {
             this.tokenService.saveProfile(result);
+            this.reloadPage();
           });
-          this.reloadPage();
         },
         error => {
           this.errorMessage = error.message;

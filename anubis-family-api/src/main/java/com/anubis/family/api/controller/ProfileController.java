@@ -30,8 +30,9 @@ public class ProfileController {
 
     @GetMapping("/{userId}")
     public ResponseEntity<?> getUserProfile(@PathVariable Integer userId, HttpServletRequest request) {
-        User userAccount = getUserAccount(request);
-        if (userAccount == null || !userAccount.getId().equals(userAccount)) {
+        User userAccount = getUserService().find(userId.longValue());
+//        User userAccount = getUserAccount(request);
+        if (userAccount == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(new MessageResponse("Unable to find user for your account."));
         }
