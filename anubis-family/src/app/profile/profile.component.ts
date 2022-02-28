@@ -36,10 +36,14 @@ export class ProfileComponent implements OnInit {
 
   saveEdit(): void {
     if (_.isEqual(this.originalProfile, this.userProfile)) {
+      // noop
       console.log('same!');
     } else {
-      console.log('different!');
-      this.profileService.saveProfile(this.userProfile);
+      this.userProfile.email = this.currentUser.email;
+      console.log('different!', this.userProfile);
+      this.profileService.saveProfile(this.userProfile).subscribe((response) => {
+        this.tokenService.saveProfile(response);
+      });
     }
     this.isEditMode = false;
   }
