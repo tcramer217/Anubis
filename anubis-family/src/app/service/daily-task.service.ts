@@ -21,6 +21,10 @@ export class DailyTaskService {
     return this.httpClient.get<Task[]>(this.DAILY_TASK_URL + '/user/' + this.tokenService.getUser().id);
   }
 
+  createNewTask(newTask: Task): Observable<Task> {
+    return this.httpClient.post<Task>(this.DAILY_TASK_URL, newTask);
+  }
+
   markCompleted(taskId: number, isComplete: boolean): Observable<any> {
     console.log('patching...')
     const updateIsComplete = { taskId, isComplete };

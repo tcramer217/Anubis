@@ -1,27 +1,21 @@
 <h1 mat-dialog-title>Login</h1>
 <div mat-dialog-content>
   <div class="registration-form">
-    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <form (ngSubmit)="createTask()" [formGroup]="newDailyTaskForm">
       <mat-form-field appearance="outline">
-        <mat-label>Username</mat-label>
+        <mat-label>Task Description</mat-label>
         <input
           [type]="'text'"
-          formControlName="username"
+          formControlName="name"
           matInput/>
-        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-          <div *ngIf="f.username.errors.required">Username is required</div>
-        </div>
+<!--        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">-->
+<!--          <div *ngIf="f.name.errors.required">Task Description is required</div>-->
+<!--        </div>-->
       </mat-form-field>
       <p></p>
       <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input
-          [type]="'password'"
-          formControlName="password"
-          matInput/>
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-          <div *ngIf="f.password.errors.required">Password is required</div>
-        </div>
+        <mat-slide-toggle formControlName="inProgress">Start In Progress?</mat-slide-toggle>
+        <input matInput type="text" hidden>
       </mat-form-field>
       <p></p>
     </form>

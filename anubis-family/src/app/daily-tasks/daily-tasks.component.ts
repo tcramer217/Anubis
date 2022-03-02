@@ -52,7 +52,7 @@ export class DailyTasksComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed:', result);
-      this.router.navigate(['/daily-tasks']);
+      window.location.reload();
     });
   }
 

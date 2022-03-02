@@ -15,17 +15,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {DailyTaskComponent} from './daily-tasks/daily-task/daily-task.component';
 import {RegisterComponent} from './register/register.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
 import {RegisterDialogComponent} from './register/register-dialog.component';
 import {authInterceptorProviders} from './interceptor/auth.interceptor';
 import {LoginComponent} from './login/login.component';
 import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
 import {CalendarComponent} from './calendar/calendar.component';
 import {ProfileComponent} from './profile/profile.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatTableModule} from '@angular/material/table';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
 import {DailyTaskCreateComponent} from './daily-tasks/daily-task-create/daily-task-create.component';
 
@@ -45,21 +40,16 @@ import {DailyTaskCreateComponent} from './daily-tasks/daily-task-create/daily-ta
     ProfileEditComponent,
     DailyTaskCreateComponent,
   ],
-    imports: [
-        AppMaterialModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        BrowserModule,
-        HttpClientModule,
-        LayoutModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatGridListModule,
-        MatTableModule,
-        MatCheckboxModule,
-    ],
+  imports: [
+    AppMaterialModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    HttpClientModule,
+    LayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
