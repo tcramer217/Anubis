@@ -21,12 +21,13 @@ import {RegisterDialogComponent} from './register/register-dialog.component';
 import {authInterceptorProviders} from './interceptor/auth.interceptor';
 import {LoginComponent} from './login/login.component';
 import {LoginDialogComponent} from './login/login-dialog/login-dialog.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { ProfileComponent } from './profile/profile.component';
+import {CalendarComponent} from './calendar/calendar.component';
+import {ProfileComponent} from './profile/profile.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
+import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
+import {DailyTaskCreateComponent} from './daily-tasks/daily-task-create/daily-task-create.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ProfileEditComponent } from './profile/profile-edit/profile-edit.compon
     CalendarComponent,
     ProfileComponent,
     ProfileEditComponent,
+    DailyTaskCreateComponent,
   ],
     imports: [
         AppMaterialModule,

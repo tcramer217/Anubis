@@ -51,12 +51,14 @@ export class NavigationComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       // noop
+      this.router.navigate(['/']);
     });
   }
 
   logout(): void {
     this.tokenService.signOut();
     this.isLoggedIn = false;
-    window.location.reload();
+    this.router.navigate(['/']);
+
   }
 }
