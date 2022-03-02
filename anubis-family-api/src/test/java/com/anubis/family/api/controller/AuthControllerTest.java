@@ -1,5 +1,6 @@
 package com.anubis.family.api.controller;
 
+import com.anubis.family.api.exception.UsernamePasswordAuthenticationException;
 import com.anubis.family.api.model.User;
 import com.anubis.family.api.model.request.LoginRequest;
 import com.anubis.family.api.model.request.SignupRequest;
@@ -48,6 +49,16 @@ public class AuthControllerTest {
         ResponseEntity<UserInfoResponse> result = authController.authenticateUser(request);
         Assertions.assertEquals(result.getBody().getJwt().toString(), "key=value");
         Assertions.assertEquals(HttpStatus.OK, result.getStatusCode());
+    }
+
+    @Test
+    public void authenticateUser_usernamePasswordException() {
+        LoginRequest request = mock(LoginRequest.class);
+        when(authService.authenticateUser(request)).thenThrow(UsernamePasswordAuthenticationException.class);
+
+        Assertions.assertThrows(UsernamePasswordAuthenticationException.class, () -> {
+            authController.authenticateUser(request);
+        });
     }
 
     @Test

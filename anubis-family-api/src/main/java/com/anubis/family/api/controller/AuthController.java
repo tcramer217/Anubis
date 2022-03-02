@@ -1,6 +1,5 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.family.api.model.User;
 import com.anubis.family.api.model.request.LoginRequest;
 import com.anubis.family.api.model.request.SignupRequest;
 import com.anubis.family.api.model.response.MessageResponse;
@@ -55,7 +54,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-        User user = getUserService().create(signUpRequest);
+        getUserService().create(signUpRequest);
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
 

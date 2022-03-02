@@ -1,10 +1,9 @@
 package com.anubis.family.api.controller;
 
 import com.anubis.core.constants.TaskType;
-import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.entity.family.Task;
 import com.anubis.core.service.task.TaskService;
-import com.anubis.family.api.model.User;
+import com.anubis.family.api.model.IsCompleteDTO;
 import com.anubis.family.api.model.response.MessageResponse;
 import com.anubis.family.api.service.family.FamilyMemberService;
 import com.anubis.family.api.util.JwtUtil;
@@ -13,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController
@@ -47,30 +45,6 @@ public class TaskController {
     @GetMapping("/types/name")
     public List<String> getTaskTypeNames() {
         return TaskType.Name.getNames();
-    }
-
-    protected static class IsCompleteDTO {
-        private boolean isComplete;
-        private long taskId;
-
-        public IsCompleteDTO() {
-        }
-
-        public boolean getIsComplete() {
-            return isComplete;
-        }
-
-        public void setIsComplete(boolean complete) {
-            isComplete = complete;
-        }
-
-        public long getTaskId() {
-            return taskId;
-        }
-
-        public void setTaskId(long taskId) {
-            this.taskId = taskId;
-        }
     }
 
     @PostMapping("/complete")
