@@ -2,7 +2,10 @@
   <button (click)="addTask()" mat-icon-button>
     <mat-icon>assignment</mat-icon>
   </button>
-  <mat-table [dataSource]="tasks" class="mat-elevation-z8">
+  <button (click)="toggleFilterOutCompletedTasks()" mat-icon-button>
+    <mat-icon>filter</mat-icon>
+  </button>
+  <mat-table [dataSource]="displayTasks" class="mat-elevation-z8">
 
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">

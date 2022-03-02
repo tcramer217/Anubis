@@ -86,7 +86,7 @@ public class DailyTaskControllerTest {
         FamilyMember familyMemberMock = mock(FamilyMember.class);
 
         when(familyMemberService.getFamilyMemberByUserId(1)).thenReturn(familyMemberMock);
-        when(dailyTaskService.getTasksForFamilyMember(familyMemberMock)).thenReturn(Arrays.asList(dt1));
+        when(dailyTaskService.getDailyTasksForFamilyMember(familyMemberMock)).thenReturn(Arrays.asList(dt1));
 
         List<DailyTask> dailyTasks = dailyTaskController.getDailyTasksForFamilyMember(1);
         Assertions.assertEquals(1, dailyTasks.size());

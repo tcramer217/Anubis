@@ -3,6 +3,7 @@ package com.anubis.family.api.controller;
 import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.service.task.DailyTaskServiceImpl;
+import com.anubis.core.service.task.TaskServiceImpl;
 import com.anubis.family.api.service.family.FamilyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,7 +17,7 @@ import java.util.List;
 public class DailyTaskController {
 
     private FamilyMemberService familyMemberService;
-    private DailyTaskServiceImpl dailyTaskService;
+    private TaskServiceImpl<DailyTask> dailyTaskService;
 
     @GetMapping("/count")
     public Integer getDailyTaskCount() {
@@ -31,7 +32,7 @@ public class DailyTaskController {
     @GetMapping("/user/{userId}")
     public List<DailyTask> getDailyTasksForFamilyMember(@PathVariable long userId) {
         FamilyMember familyMember = getFamilyMemberService().getFamilyMemberByUserId(userId);
-        return getDailyTaskService().getTasksForFamilyMember(familyMember);
+        return getDailyTaskService().getDailyTasksForFamilyMember(familyMember);
     }
 
     @GetMapping("/{taskId}")
@@ -44,12 +45,12 @@ public class DailyTaskController {
         return getDailyTaskService().createTask(task);
     }
 
-    public DailyTaskServiceImpl getDailyTaskService() {
+    public TaskServiceImpl<DailyTask> getDailyTaskService() {
         return dailyTaskService;
     }
 
     @Autowired
-    public void setDailyTaskService(DailyTaskServiceImpl dailyTaskService) {
+    public void setDailyTaskService(TaskServiceImpl<DailyTask> dailyTaskService) {
         this.dailyTaskService = dailyTaskService;
     }
 

@@ -1,5 +1,6 @@
 package com.anubis.core.service.task;
 
+import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.entity.family.Task;
 
@@ -14,5 +15,5 @@ public interface TaskService<T extends Task> {
 
     List<T> getAllTasks();
 
-    List<T> getTasksForFamilyMember(FamilyMember familyMemberId);
+    List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId);
 }

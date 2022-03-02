@@ -42,7 +42,7 @@ public class DailyTaskServiceImpl implements TaskService<DailyTask> {
     }
 
     @Override
-    public List<DailyTask> getTasksForFamilyMember(FamilyMember familyMemberId) {
+    public List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId) {
         List<DailyTask> tasks = getDailyTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
         return tasks;
     }

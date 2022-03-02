@@ -1,6 +1,7 @@
 package com.anubis.core.service.task;
 
 import com.anubis.core.dao.TaskRepo;
+import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.entity.family.Task;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,14 +47,10 @@ public class TaskServiceImpl<T extends Task> implements TaskService<T> {
         return getTaskRepo().findAllTasks();
     }
 
-//    @Override
-//    public List<T> getTasksByDiscriminator() {
-//        return getTaskRepo().findTasksByDiscriminator(null);
-//    }
-
     @Override
-    public List<T> getTasksForFamilyMember(FamilyMember familyMemberId) {
-        return null;
+    public List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId) {
+        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
+        return tasks;
     }
 
     @Autowired

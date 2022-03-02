@@ -12,35 +12,50 @@ import {Router} from "@angular/router";
   styleUrls: ['./daily-tasks.component.less']
 })
 export class DailyTasksComponent implements OnInit {
-  public tasks: Task[] = [];
+  public displayTasks: Task[] = [];
+  public allTasks: Task[] = [];
   public columns: string[] = [];
-  public selection = new SelectionModel<Task>(true, []);
+
+  filterCompleted = false;
 
   constructor(
     private dialog: MatDialog,
     private taskService: DailyTaskService,
-    private router: Router
   ) {
   }
 
   ngOnInit(): void {
-    this.taskService.getDailyTasks().subscribe((response) => {
-      console.log('tasksService.getDailyTasks:', response);
-      this.columns = ['select', 'name', 'assignedTo'];
-      this.tasks = response;
-    }, (error) => {
-      throw new Error(error);
-    });
+    this.refreshTasks();
   }
 
   getTasks(): Task[] {
-    return this.tasks;
+    return this.displayTasks;
+  }
+
+  toggleFilterOutCompletedTasks(): void {
+    this.filterCompleted = !this.filterCompleted;
+    console.log('filter tasks')
+    if (this.filterCompleted) {
+      this.displayTasks = this.displayTasks.filter((task) => {
+        return !task.complete
+      })
+    } else {
+      this.displayTasks = this.allTasks;
+    }
   }
 
   taskCompleted(task: Task): void {
     console.log('clicked', task);
-    this.taskService.markCompleted(task.id, !task.complete).subscribe((response) => {
+    const isComplete = !task.complete;
+    console.log('isComplete', isComplete);
+    let mine = this.allTasks.find((value => value.id === task.id));
+    console.log('mine', mine);
+    typeof mine === 'undefined' ? () => {} : mine.complete = isComplete;
+
+    console.log('mine after', mine);
+    this.taskService.markCompleted(task.id, isComplete).subscribe((response) => {
       console.log('response', response);
+      this.refreshTasks();
     });
   }
 
@@ -52,7 +67,20 @@ export class DailyTasksComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed:', result);
-      window.location.reload();
+      if (typeof result !== 'undefined') {
+        window.location.reload();
+      }
+    });
+  }
+
+  refreshTasks(): void {
+    this.taskService.getDailyTasks().subscribe((response) => {
+      console.log('tasksService.getDailyTasks:', response);
+      this.columns = ['select', 'name', 'assignedTo'];
+      this.displayTasks = response;
+      this.allTasks = response;
+    }, (error) => {
+      throw new Error(error);
     });
   }
 
