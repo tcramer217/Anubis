@@ -55,7 +55,7 @@ export class DailyTaskCreateComponent implements OnInit {
       return;
     }
     console.log('this.newDailyTaskForm', this.newDailyTaskForm);
-    this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe((result) => {
+    this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe(() => {
       this.dialogReference.close(true);
     });
   }
