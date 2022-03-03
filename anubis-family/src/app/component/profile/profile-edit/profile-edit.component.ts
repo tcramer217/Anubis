@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Profile} from '../../model/profile';
-import {TokenStorageService} from '../../service/token-storage.service';
+import {Profile} from '../../../model/profile';
+import {TokenStorageService} from '../../../service/token-storage.service';
 
 @Component({
   selector: 'app-profile-edit',

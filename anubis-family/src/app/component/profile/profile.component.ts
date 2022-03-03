@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {TokenStorageService} from '../service/token-storage.service';
-import {User} from '../model/user';
-import {ProfileService} from '../service/profile.service';
+import {TokenStorageService} from '../../service/token-storage.service';
+import {User} from '../../model/user';
+import {ProfileService} from '../../service/profile.service';
 import * as _ from 'lodash';
-import {Profile} from '../model/profile';
+import {Profile} from '../../model/profile';
 
 @Component({
   selector: 'app-profile',

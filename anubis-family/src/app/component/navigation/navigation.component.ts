@@ -5,7 +5,7 @@ import {map, shareReplay} from 'rxjs/operators';
 import {MatDialog} from '@angular/material/dialog';
 import {RegisterDialogComponent} from '../register/register-dialog.component';
 import {LoginDialogComponent} from '../login/login-dialog/login-dialog.component';
-import {TokenStorageService} from '../service/token-storage.service';
+import {TokenStorageService} from '../../service/token-storage.service';
 import {Router} from '@angular/router';
 
 @Component({
