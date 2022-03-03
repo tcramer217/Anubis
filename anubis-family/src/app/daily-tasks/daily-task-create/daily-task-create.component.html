@@ -20,8 +20,8 @@
       <p></p>
       <mat-form-field appearance="outline">
         <mat-label>Assigned To</mat-label>
-        <mat-select [(ngModel)]="selectedAssignee" name="assignedTo">
-          <mat-option *ngFor="let assignee of familyMembers" [value]="assignee.id">
+        <mat-select formControlName="assignedTo">
+          <mat-option *ngFor="let assignee of familyMembers" [value]="assignee">
             {{assignee.name}}
           </mat-option>
         </mat-select>

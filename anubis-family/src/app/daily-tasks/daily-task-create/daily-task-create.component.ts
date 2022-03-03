@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {DailyTaskService} from '../../service/daily-task.service';
+import {Profile} from '../../model/profile';
+import {FamilyService} from '../../service/family.service';
+import {TokenStorageService} from '../../service/token-storage.service';
 
 @Component({
   selector: 'app-daily-task-create',
@@ -10,24 +13,27 @@ import {DailyTaskService} from '../../service/daily-task.service';
 })
 export class DailyTaskCreateComponent implements OnInit {
   newDailyTaskForm: FormGroup;
-  selectedAssignee: number;
+  selectedAssignee: number = 0;
+  familyMembers: Profile[] = [];
 
   submitted = false;
   errorMessage = '';
 
   constructor(
-    private formBuilder: FormBuilder,
     private dailyTaskService: DailyTaskService,
+    private familyService: FamilyService,
+    private tokenService: TokenStorageService,
+    private formBuilder: FormBuilder,
     public dialogReference: MatDialogRef<DailyTaskCreateComponent>,
   ) {
     this.newDailyTaskForm = this.formBuilder.group({
       id: [null],
       name: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(50)]],
-      assignedTo: [{ id: 8 }],
-      createdBy: [{ id : 11 }],
+      assignedTo: [{id: 0}, [Validators.required]],
+      createdBy: [{id: this.tokenService.getProfile().id}, [Validators.required]],
       createdAt: [new Date()],
-      complete: [false, []],
-      inProgress: [false, []],
+      complete: [false],
+      inProgress: [false],
       reminders: [[]],
     })
   }
@@ -37,6 +43,10 @@ export class DailyTaskCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.familyService.getFamilyMembers(this.tokenService.getProfile().familyId).subscribe((result) => {
+      console.log('familyMembers:', result);
+      this.familyMembers = result;
+    })
   }
 
   createTask(): void {
@@ -44,9 +54,10 @@ export class DailyTaskCreateComponent implements OnInit {
     if (this.newDailyTaskForm.invalid) {
       return;
     }
-    this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe((result) => {
-      this.dialogReference.close(true);
-    })
+    console.log('this.newDailyTaskForm', this.newDailyTaskForm);
+    // this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe((result) => {
+    //   this.dialogReference.close(true);
+    // })
   }
 
   onNoClick(): void {

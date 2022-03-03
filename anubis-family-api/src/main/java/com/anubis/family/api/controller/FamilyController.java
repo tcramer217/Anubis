@@ -21,7 +21,6 @@ public class FamilyController {
 
     @GetMapping("/{familyId}/members")
     public ResponseEntity<?> getFamilyMembers(@PathVariable long familyId) {
-
         List<FamilyMember> familyMemberList = getFamilyMemberService().getFamilyMembersByFamilyId(familyId);
         return ResponseEntity.ok(familyMemberList);
     }
