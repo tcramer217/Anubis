@@ -32,7 +32,6 @@ public class ProfileController {
                     .body(new MessageResponse("Unable to find user for your account."));
         }
         FamilyMember memberProfile = getFamilyMemberService().getFamilyMemberByEmail(userAccount.getEmail());
-
         return ResponseEntity.ok(memberProfile);
     }
 

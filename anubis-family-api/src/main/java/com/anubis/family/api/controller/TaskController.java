@@ -24,9 +24,6 @@ public class TaskController {
     @Autowired
     FamilyMemberService familyMemberService;
 
-    @Autowired
-    JwtUtil jwtUtil;
-
     @GetMapping
     public List<Task> getTasks() {
         return getTaskService().getAllTasks();
@@ -58,14 +55,6 @@ public class TaskController {
             return ResponseEntity.ok().body(new MessageResponse("Successful Update to Task Completion Status."));
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-    }
-
-    public JwtUtil getJwtUtil() {
-        return jwtUtil;
-    }
-
-    public FamilyMemberService getFamilyMemberService() {
-        return familyMemberService;
     }
 
     public TaskService<Task> getTaskService() {

@@ -1,6 +1,5 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.family.api.model.User;
 import com.anubis.family.api.service.family.FamilyMemberService;
@@ -12,6 +11,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import static org.mockito.Mockito.when;
@@ -36,11 +36,11 @@ public class ProfileControllerTest {
 
     @BeforeEach
     public void setup() {
-        when(user.getEmail()).thenReturn("email.address@host.com");
     }
 
     @Test
     public void getUserProfile() {
+        when(user.getEmail()).thenReturn("email.address@host.com");
         when(userService.find(1)).thenReturn(user);
         when(familyMemberService.getFamilyMemberByEmail(user.getEmail())).thenReturn(familyMember);
         ResponseEntity<?> response = profileController.getUserProfile(1);
@@ -48,5 +48,17 @@ public class ProfileControllerTest {
     }
 
     @Test
-    public void saveProfile() {}
+    public void getUserProfile_nullUser() {
+        when(userService.find(1)).thenReturn(null);
+        ResponseEntity<?> response = profileController.getUserProfile(1);
+        Assertions.assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
+    }
+
+    @Test
+    public void saveProfile() {
+        when(familyMemberService.save(familyMember)).thenReturn(familyMember);
+        ResponseEntity<?> response = profileController.saveProfile(familyMember);
+        Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
+        Assertions.assertEquals(familyMember, response.getBody());
+    }
 }

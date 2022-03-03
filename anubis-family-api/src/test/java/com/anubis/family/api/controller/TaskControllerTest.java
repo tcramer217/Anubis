@@ -11,6 +11,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -83,6 +85,18 @@ public class TaskControllerTest {
         taskController.markTaskComplete(isComplete);
         //then
         verify(taskService).markTaskCompleted(1);
+    }
+
+    @Test
+    public void markTaskComplete_badId() {
+        //given
+        IsCompleteDTO isComplete = new IsCompleteDTO();
+        isComplete.setIsComplete(true);
+        isComplete.setTaskId(0);
+        //when
+        ResponseEntity<?> response = taskController.markTaskComplete(isComplete);
+        //then
+        Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
     }
 
     @Test
