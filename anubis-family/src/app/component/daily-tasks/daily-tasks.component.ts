@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {DailyTaskService} from '../service/daily-task.service';
-import {Task} from '../model/task';
+import {DailyTaskService} from '../../service/daily-task.service';
+import {Task} from '../../model/task';
 import {DailyTaskCreateComponent} from './daily-task-create/daily-task-create.component';
 import {MatDialog} from '@angular/material/dialog';
 

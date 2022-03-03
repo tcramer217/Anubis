@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {DailyTaskService} from '../../service/daily-task.service';
-import {Profile} from '../../model/profile';
-import {FamilyService} from '../../service/family.service';
-import {TokenStorageService} from '../../service/token-storage.service';
+import {DailyTaskService} from '../../../service/daily-task.service';
+import {Profile} from '../../../model/profile';
+import {FamilyService} from '../../../service/family.service';
+import {TokenStorageService} from '../../../service/token-storage.service';
 
 @Component({
   selector: 'app-daily-task-create',
