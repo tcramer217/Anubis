@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {MatDialogRef} from '@angular/material/dialog';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {DailyTaskService} from '../../service/daily-task.service';
 import {Profile} from '../../model/profile';
@@ -13,9 +13,9 @@ import {TokenStorageService} from '../../service/token-storage.service';
 })
 export class DailyTaskCreateComponent implements OnInit {
   newDailyTaskForm: FormGroup;
-  selectedAssignee: number = 0;
   familyMembers: Profile[] = [];
 
+  selectedAssignee = 0;
   submitted = false;
   errorMessage = '';
 
@@ -35,7 +35,7 @@ export class DailyTaskCreateComponent implements OnInit {
       complete: [false],
       inProgress: [false],
       reminders: [[]],
-    })
+    });
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -46,7 +46,7 @@ export class DailyTaskCreateComponent implements OnInit {
     this.familyService.getFamilyMembers(this.tokenService.getProfile().familyId).subscribe((result) => {
       console.log('familyMembers:', result);
       this.familyMembers = result;
-    })
+    });
   }
 
   createTask(): void {
@@ -55,9 +55,9 @@ export class DailyTaskCreateComponent implements OnInit {
       return;
     }
     console.log('this.newDailyTaskForm', this.newDailyTaskForm);
-    // this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe((result) => {
-    //   this.dialogReference.close(true);
-    // })
+    this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe((result) => {
+      this.dialogReference.close(true);
+    });
   }
 
   onNoClick(): void {

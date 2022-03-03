@@ -24,9 +24,9 @@ export class ProfileComponent implements OnInit {
     this.currentUser = this.tokenService.getUser();
     this.userProfile = this.tokenService.getProfile();
     this.originalProfile = this.tokenService.getProfile();
-    console.log('this.currentUser',this.currentUser);
-    console.log('this.userProfile',this.userProfile);
-    console.log('this.originalProfile',this.originalProfile);
+    console.log('this.currentUser', this.currentUser);
+    console.log('this.userProfile', this.userProfile);
+    console.log('this.originalProfile', this.originalProfile);
   }
 
   ngOnInit(): void {

@@ -26,7 +26,6 @@ export class DailyTaskService {
   }
 
   markCompleted(taskId: number, isComplete: boolean): Observable<any> {
-    console.log('patching...')
     const updateIsComplete = { taskId, isComplete };
     return this.httpClient.post(this.TASK_URL + '/complete', updateIsComplete);
   }

@@ -23,7 +23,7 @@ import {CalendarComponent} from './calendar/calendar.component';
 import {ProfileComponent} from './profile/profile.component';
 import {ProfileEditComponent} from './profile/profile-edit/profile-edit.component';
 import {DailyTaskCreateComponent} from './daily-tasks/daily-task-create/daily-task-create.component';
-import {MatSelectModule} from "@angular/material/select";
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [

@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {DailyTaskService} from '../service/daily-task.service';
 import {Task} from '../model/task';
-import {SelectionModel} from '@angular/cdk/collections';
-import {DailyTaskCreateComponent} from "./daily-task-create/daily-task-create.component";
-import {MatDialog} from "@angular/material/dialog";
-import {Router} from "@angular/router";
+import {DailyTaskCreateComponent} from './daily-task-create/daily-task-create.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-anubis-daily-tasks',
@@ -34,11 +32,11 @@ export class DailyTasksComponent implements OnInit {
 
   toggleFilterOutCompletedTasks(): void {
     this.filterCompleted = !this.filterCompleted;
-    console.log('filter tasks')
+    console.log('filter tasks');
     if (this.filterCompleted) {
       this.displayTasks = this.displayTasks.filter((task) => {
-        return !task.complete
-      })
+        return !task.complete;
+      });
     } else {
       this.displayTasks = this.allTasks;
     }
@@ -48,10 +46,11 @@ export class DailyTasksComponent implements OnInit {
     console.log('clicked', task);
     const isComplete = !task.complete;
     console.log('isComplete', isComplete);
-    let mine = this.allTasks.find((value => value.id === task.id));
+    const mine = this.allTasks.find((value => value.id === task.id));
     console.log('mine', mine);
-    typeof mine === 'undefined' ? () => {} : mine.complete = isComplete;
-
+    if (typeof mine !== 'undefined') {
+      mine.complete = isComplete;
+    }
     console.log('mine after', mine);
     this.taskService.markCompleted(task.id, isComplete).subscribe((response) => {
       console.log('response', response);
