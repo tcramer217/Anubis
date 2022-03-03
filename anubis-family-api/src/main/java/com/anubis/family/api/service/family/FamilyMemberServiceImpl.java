@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FamilyMemberServiceImpl implements FamilyMemberService {
 
@@ -26,5 +28,11 @@ public class FamilyMemberServiceImpl implements FamilyMemberService {
         User user = userRepository.findById(userId).orElseThrow(() -> new UsernameNotFoundException("Could not find userId."));
         FamilyMember familyMember = familyMemberRepo.findFamilyMemberByEmail(user.getEmail());
         return familyMember;
+    }
+
+    @Override
+    public List<FamilyMember> getFamilyMembersByFamilyId(long familyId) {
+        List<FamilyMember> familyMembers = familyMemberRepo.findFamilyMembersByFamilyId(familyId);
+        return familyMembers;
     }
 }

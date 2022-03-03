@@ -10,6 +10,7 @@ import {DailyTaskService} from '../../service/daily-task.service';
 })
 export class DailyTaskCreateComponent implements OnInit {
   newDailyTaskForm: FormGroup;
+  selectedAssignee: number;
 
   submitted = false;
   errorMessage = '';
@@ -39,20 +40,10 @@ export class DailyTaskCreateComponent implements OnInit {
   }
 
   createTask(): void {
-    console.log('create');
     this.submitted = true;
     if (this.newDailyTaskForm.invalid) {
-      console.log('formInvalid', this.newDailyTaskForm.invalid);
-      console.log('form', this.newDailyTaskForm);
       return;
     }
-    const {name, inProgress, complete, assignedTo, createdBy, createdAt} = this.newDailyTaskForm.value;
-    console.log('form', this.newDailyTaskForm);
-    console.log('name is:', name);
-    console.log('complete is:', complete);
-    console.log('assignedTo is:', assignedTo);
-    console.log('createdBy is:', createdBy);
-    console.log('createdAt is:', createdAt);
     this.dailyTaskService.createNewTask(this.newDailyTaskForm.value).subscribe((result) => {
       this.dialogReference.close(true);
     })
