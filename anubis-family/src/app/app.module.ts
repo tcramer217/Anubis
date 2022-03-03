@@ -21,7 +21,6 @@ import {LoginComponent} from './component/login/login.component';
 import {LoginDialogComponent} from './component/login/login-dialog/login-dialog.component';
 import {CalendarComponent} from './component/calendar/calendar.component';
 import {ProfileComponent} from './component/profile/profile.component';
-import {ProfileEditComponent} from './component/profile/profile-edit/profile-edit.component';
 import {DailyTaskCreateComponent} from './component/daily-tasks/daily-task-create/daily-task-create.component';
 import {MatSelectModule} from '@angular/material/select';
 
@@ -38,7 +37,6 @@ import {MatSelectModule} from '@angular/material/select';
     LoginDialogComponent,
     CalendarComponent,
     ProfileComponent,
-    ProfileEditComponent,
     DailyTaskCreateComponent,
   ],
   imports: [
