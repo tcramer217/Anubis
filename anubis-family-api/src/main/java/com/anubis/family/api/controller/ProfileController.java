@@ -4,6 +4,7 @@ import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.family.api.model.User;
 import com.anubis.family.api.model.response.MessageResponse;
+import com.anubis.family.api.service.family.FamilyMemberService;
 import com.anubis.family.api.service.user.UserService;
 import com.anubis.family.api.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,54 +20,42 @@ import javax.servlet.http.HttpServletRequest;
 @PreAuthorize("hasRole('USER')")
 public class ProfileController {
 
-    @Autowired
-    private JwtUtil jwtUtil;
-
-    @Autowired
-    private FamilyMemberRepo familyMemberRepo;
-
-    @Autowired
+    private FamilyMemberService familyMemberService;
     private UserService userService;
 
     @GetMapping("/{userId}")
-    public ResponseEntity<?> getUserProfile(@PathVariable Integer userId, HttpServletRequest request) {
+    public ResponseEntity<?> getUserProfile(@PathVariable Integer userId) {
         User userAccount = getUserService().find(userId.longValue());
-//        User userAccount = getUserAccount(request);
         if (userAccount == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
                     .body(new MessageResponse("Unable to find user for your account."));
         }
-        FamilyMember memberProfile = getFamilyMemberRepo().findFamilyMemberByEmail(userAccount.getEmail());
+        FamilyMember memberProfile = getFamilyMemberService().getFamilyMemberByEmail(userAccount.getEmail());
 
         return ResponseEntity.ok(memberProfile);
     }
 
     @PostMapping("/save")
     public ResponseEntity<?> saveProfile(@RequestBody FamilyMember familyMember) {
-        FamilyMember member = getFamilyMemberRepo().save(familyMember);
+        FamilyMember member = getFamilyMemberService().save(familyMember);
         return ResponseEntity.ok(member);
     }
 
-    public JwtUtil getJwtUtil() {
-        return jwtUtil;
+    public FamilyMemberService getFamilyMemberService() {
+        return familyMemberService;
     }
 
-    public void setJwtUtil(JwtUtil jwtUtil) {
-        this.jwtUtil = jwtUtil;
-    }
-
-    public FamilyMemberRepo getFamilyMemberRepo() {
-        return familyMemberRepo;
-    }
-
-    public void setFamilyMemberRepo(FamilyMemberRepo familyMemberRepo) {
-        this.familyMemberRepo = familyMemberRepo;
+    @Autowired
+    public void setFamilyMemberService(FamilyMemberService familyMemberService) {
+        this.familyMemberService = familyMemberService;
     }
 
     public UserService getUserService() {
         return userService;
     }
 
+    @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
     }

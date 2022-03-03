@@ -4,7 +4,7 @@ import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.dao.FamilyRepo;
 import com.anubis.core.entity.family.Family;
 import com.anubis.core.entity.family.FamilyMember;
-import com.anubis.family.api.exception.RoleNotFoundException;
+import com.anubis.core.exception.RoleNotFoundException;
 import com.anubis.family.api.model.Role;
 import com.anubis.family.api.model.Roles;
 import com.anubis.family.api.model.User;

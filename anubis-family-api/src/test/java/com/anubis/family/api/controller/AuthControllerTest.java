@@ -1,6 +1,6 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.family.api.exception.UsernamePasswordAuthenticationException;
+import com.anubis.core.exception.UsernamePasswordAuthenticationException;
 import com.anubis.family.api.model.User;
 import com.anubis.family.api.model.request.LoginRequest;
 import com.anubis.family.api.model.request.SignupRequest;

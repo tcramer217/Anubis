@@ -17,22 +17,45 @@ public class FamilyMemberServiceImpl implements FamilyMemberService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FamilyMemberServiceImpl.class);
 
-    @Autowired
     private UserRepository userRepository;
-
-    @Autowired
     private FamilyMemberRepo familyMemberRepo;
 
     @Override
     public FamilyMember getFamilyMemberByUserId(long userId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new UsernameNotFoundException("Could not find userId."));
-        FamilyMember familyMember = familyMemberRepo.findFamilyMemberByEmail(user.getEmail());
-        return familyMember;
+        User user = getUserRepository().findById(userId).orElseThrow(() -> new UsernameNotFoundException("Could not find userId."));
+        return getFamilyMemberRepo().findFamilyMemberByEmail(user.getEmail());
     }
 
     @Override
     public List<FamilyMember> getFamilyMembersByFamilyId(long familyId) {
-        List<FamilyMember> familyMembers = familyMemberRepo.findFamilyMembersByFamilyId(familyId);
-        return familyMembers;
+        return getFamilyMemberRepo().findFamilyMembersByFamilyId(familyId);
+    }
+
+    @Override
+    public FamilyMember getFamilyMemberByEmail(String emailAddress) {
+        return getFamilyMemberRepo().findFamilyMemberByEmail(emailAddress);
+    }
+
+    @Override
+    public FamilyMember save(FamilyMember familyMember) {
+        return getFamilyMemberRepo().save(familyMember);
+    }
+
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public FamilyMemberRepo getFamilyMemberRepo() {
+        return familyMemberRepo;
+    }
+
+    @Autowired
+    public void setFamilyMemberRepo(FamilyMemberRepo familyMemberRepo) {
+        this.familyMemberRepo = familyMemberRepo;
     }
 }
