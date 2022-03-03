@@ -7,6 +7,7 @@ import {RegisterDialogComponent} from '../dialog/register-dialog/register-dialog
 import {LoginDialogComponent} from '../dialog/login-dialog/login-dialog.component';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {Router} from '@angular/router';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-anubis-navigation',
@@ -21,6 +22,8 @@ export class NavigationComponent {
       shareReplay()
     );
 
+  currentUser: User;
+  familyName = 'Anubis';
   isLoggedIn = false;
 
   constructor(
@@ -29,8 +32,10 @@ export class NavigationComponent {
     private tokenService: TokenStorageService,
     private router: Router
   ) {
-    const user = this.tokenService.getUser();
-    this.isLoggedIn = Object.keys(user).length > 0;
+    this.currentUser = this.tokenService.getUser();
+    this.familyName = this.tokenService.getProfile().lastName;
+    console.log('familyName:', this.familyName)
+    this.isLoggedIn = Object.keys(this.currentUser).length > 0;
   }
 
   openRegisterDialog(): void {

@@ -20,7 +20,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>anubis-family</span>
+      <span>Welcome, {{familyName}} Family!</span>
       <span class="spacer"></span>
       <div *ngIf="!isLoggedIn">
         <button (click)="openRegisterDialog()" mat-raised-button>
