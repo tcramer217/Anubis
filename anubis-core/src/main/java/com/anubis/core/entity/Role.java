@@ -1,4 +1,6 @@
-package com.anubis.family.api.model;
+package com.anubis.core.entity;
+
+import com.anubis.core.constants.Roles;
 
 import javax.persistence.*;
 

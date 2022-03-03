@@ -1,7 +1,7 @@
 package com.anubis.family.api.controller;
 
 import com.anubis.core.entity.family.FamilyMember;
-import com.anubis.family.api.service.family.FamilyMemberService;
+import com.anubis.core.service.family.FamilyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

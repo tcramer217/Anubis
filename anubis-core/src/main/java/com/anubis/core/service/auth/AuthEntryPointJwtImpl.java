@@ -1,4 +1,4 @@
-package com.anubis.family.api.service.auth;
+package com.anubis.core.service.auth;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.anubis.family.api.model.request;
+package com.anubis.core.dto;
 
 public class LoginRequest {
     private String username;

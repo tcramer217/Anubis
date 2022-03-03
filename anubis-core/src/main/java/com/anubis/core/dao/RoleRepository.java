@@ -1,7 +1,7 @@
-package com.anubis.family.api.repo;
+package com.anubis.core.dao;
 
-import com.anubis.family.api.model.Role;
-import com.anubis.family.api.model.Roles;
+import com.anubis.core.constants.Roles;
+import com.anubis.core.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

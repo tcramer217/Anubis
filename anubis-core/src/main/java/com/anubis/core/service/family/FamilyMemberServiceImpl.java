@@ -1,9 +1,9 @@
-package com.anubis.family.api.service.family;
+package com.anubis.core.service.family;
 
 import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.entity.family.FamilyMember;
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.repo.UserRepository;
+import com.anubis.core.entity.User;
+import com.anubis.core.dao.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

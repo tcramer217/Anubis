@@ -1,14 +1,13 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.family.api.model.request.LoginRequest;
-import com.anubis.family.api.model.request.SignupRequest;
+import com.anubis.core.dto.LoginRequest;
+import com.anubis.core.dto.SignupRequest;
 import com.anubis.family.api.model.response.MessageResponse;
-import com.anubis.family.api.model.response.UserInfoResponse;
-import com.anubis.family.api.repo.RoleRepository;
-import com.anubis.family.api.repo.UserRepository;
-import com.anubis.family.api.service.auth.AuthServiceImpl;
-import com.anubis.family.api.service.user.UserServiceImpl;
-import com.anubis.family.api.util.JwtUtil;
+import com.anubis.core.dto.UserInfoResponse;
+import com.anubis.core.dao.RoleRepository;
+import com.anubis.core.service.auth.AuthServiceImpl;
+import com.anubis.core.service.user.UserServiceImpl;
+import com.anubis.core.util.JwtHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -29,16 +28,13 @@ public class AuthController {
     AuthenticationManager authenticationManager;
 
     @Autowired
-    UserRepository userRepository;
-
-    @Autowired
     RoleRepository roleRepository;
 
     @Autowired
     PasswordEncoder passwordEncoder;
 
     @Autowired
-    JwtUtil jwtUtil;
+    JwtHelper jwtHelper;
 
     @Autowired
     AuthServiceImpl authService;

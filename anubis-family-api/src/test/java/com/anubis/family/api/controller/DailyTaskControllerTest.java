@@ -3,7 +3,7 @@ package com.anubis.family.api.controller;
 import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.service.task.TaskServiceImpl;
-import com.anubis.family.api.service.family.FamilyMemberService;
+import com.anubis.core.service.family.FamilyMemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

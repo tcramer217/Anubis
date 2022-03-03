@@ -1,6 +1,6 @@
-package com.anubis.family.api.repo;
+package com.anubis.core.dao;
 
-import com.anubis.family.api.model.User;
+import com.anubis.core.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

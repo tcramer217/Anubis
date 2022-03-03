@@ -1,12 +1,12 @@
 package com.anubis.family.api.controller;
 
 import com.anubis.core.exception.UsernamePasswordAuthenticationException;
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.model.request.LoginRequest;
-import com.anubis.family.api.model.request.SignupRequest;
-import com.anubis.family.api.model.response.UserInfoResponse;
-import com.anubis.family.api.service.auth.AuthServiceImpl;
-import com.anubis.family.api.service.user.UserServiceImpl;
+import com.anubis.core.entity.User;
+import com.anubis.core.dto.LoginRequest;
+import com.anubis.core.dto.SignupRequest;
+import com.anubis.core.dto.UserInfoResponse;
+import com.anubis.core.service.auth.AuthServiceImpl;
+import com.anubis.core.service.user.UserServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,7 +1,7 @@
-package com.anubis.family.api.filter;
+package com.anubis.core.filter;
 
-import com.anubis.family.api.service.user.UserDetailsServiceImpl;
-import com.anubis.family.api.util.JwtUtil;
+import com.anubis.core.service.user.UserDetailsServiceImpl;
+import com.anubis.core.util.JwtHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthTokenFilter.class);
 
     @Autowired
-    private JwtUtil jwtUtils;
+    private JwtHelper jwtUtils;
 
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
@@ -52,11 +52,11 @@ public class AuthTokenFilter extends OncePerRequestFilter {
         return getJwtUtils().parseJwt(request);
     }
 
-    public JwtUtil getJwtUtils() {
+    public JwtHelper getJwtUtils() {
         return jwtUtils;
     }
 
-    public void setJwtUtils(JwtUtil jwtUtils) {
+    public void setJwtUtils(JwtHelper jwtUtils) {
         this.jwtUtils = jwtUtils;
     }
 

@@ -1,4 +1,4 @@
-package com.anubis.family.api.model.request;
+package com.anubis.core.dto;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package com.anubis.family.api.model;
+package com.anubis.core.constants;
 
 public enum Roles {
     ROLE_USER("USER", "user"),

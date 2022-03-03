@@ -1,4 +1,4 @@
-package com.anubis.family.api.service.family;
+package com.anubis.core.service.family;
 
 import com.anubis.core.entity.family.FamilyMember;
 

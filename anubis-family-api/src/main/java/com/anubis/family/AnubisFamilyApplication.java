@@ -9,9 +9,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@EntityScan({"com.anubis.core.entity", "com.anubis.family.api.model"})
-@ComponentScan({"com.anubis.core.service", "com.anubis.family"})
-@EnableJpaRepositories({"com.anubis.core.dao", "com.anubis.family.api.repo"})
+@EntityScan({"com.anubis.core.entity"})
+@ComponentScan({
+        "com.anubis.core.service",
+        "com.anubis.core.util",
+        "com.anubis.family"
+})
+@EnableJpaRepositories({"com.anubis.core.dao"})
 public class AnubisFamilyApplication {
 
     public static void main(String[] args) {

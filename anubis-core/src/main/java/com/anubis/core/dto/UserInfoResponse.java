@@ -1,4 +1,4 @@
-package com.anubis.family.api.model.response;
+package com.anubis.core.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.http.ResponseCookie;

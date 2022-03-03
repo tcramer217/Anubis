@@ -1,8 +1,8 @@
-package com.anubis.family.api.util;
+package com.anubis.core.util;
 
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.service.user.UserDetailsImpl;
-import com.anubis.family.api.service.user.UserService;
+import com.anubis.core.entity.User;
+import com.anubis.core.service.user.UserDetailsImpl;
+import com.anubis.core.service.user.UserService;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 @Component
-public class JwtUtil {
+public class JwtHelper {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JwtUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(JwtHelper.class);
 
     @Autowired
     private UserService userService;

@@ -1,9 +1,9 @@
 package com.anubis.family.api.controller;
 
 import com.anubis.core.entity.family.FamilyMember;
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.service.family.FamilyMemberService;
-import com.anubis.family.api.service.user.UserService;
+import com.anubis.core.entity.User;
+import com.anubis.core.service.family.FamilyMemberService;
+import com.anubis.core.service.user.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

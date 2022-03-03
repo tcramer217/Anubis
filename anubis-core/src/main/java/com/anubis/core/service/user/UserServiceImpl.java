@@ -1,16 +1,16 @@
-package com.anubis.family.api.service.user;
+package com.anubis.core.service.user;
 
 import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.dao.FamilyRepo;
+import com.anubis.core.dto.SignupRequest;
 import com.anubis.core.entity.family.Family;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.exception.RoleNotFoundException;
-import com.anubis.family.api.model.Role;
-import com.anubis.family.api.model.Roles;
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.model.request.SignupRequest;
-import com.anubis.family.api.repo.RoleRepository;
-import com.anubis.family.api.repo.UserRepository;
+import com.anubis.core.entity.Role;
+import com.anubis.core.constants.Roles;
+import com.anubis.core.entity.User;
+import com.anubis.core.dao.RoleRepository;
+import com.anubis.core.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;

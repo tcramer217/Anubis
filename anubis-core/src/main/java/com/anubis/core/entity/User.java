@@ -1,4 +1,4 @@
-package com.anubis.family.api.model;
+package com.anubis.core.entity;
 
 import javax.persistence.*;
 import java.util.HashSet;

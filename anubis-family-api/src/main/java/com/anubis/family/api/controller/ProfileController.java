@@ -1,19 +1,15 @@
 package com.anubis.family.api.controller;
 
-import com.anubis.core.dao.FamilyMemberRepo;
 import com.anubis.core.entity.family.FamilyMember;
-import com.anubis.family.api.model.User;
+import com.anubis.core.entity.User;
 import com.anubis.family.api.model.response.MessageResponse;
-import com.anubis.family.api.service.family.FamilyMemberService;
-import com.anubis.family.api.service.user.UserService;
-import com.anubis.family.api.util.JwtUtil;
+import com.anubis.core.service.family.FamilyMemberService;
+import com.anubis.core.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/profile")

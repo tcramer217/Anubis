@@ -1,7 +1,7 @@
-package com.anubis.family.api.service.user;
+package com.anubis.core.service.user;
 
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.model.request.SignupRequest;
+import com.anubis.core.dto.SignupRequest;
+import com.anubis.core.entity.User;
 
 public interface UserService {
     User create(SignupRequest signupRequest);

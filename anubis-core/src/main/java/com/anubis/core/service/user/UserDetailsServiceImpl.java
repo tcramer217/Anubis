@@ -1,7 +1,7 @@
-package com.anubis.family.api.service.user;
+package com.anubis.core.service.user;
 
-import com.anubis.family.api.model.User;
-import com.anubis.family.api.repo.UserRepository;
+import com.anubis.core.entity.User;
+import com.anubis.core.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

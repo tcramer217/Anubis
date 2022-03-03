@@ -34,7 +34,7 @@ export class NavigationComponent {
   ) {
     this.currentUser = this.tokenService.getUser();
     this.familyName = this.tokenService.getProfile().lastName;
-    console.log('familyName:', this.familyName)
+    console.log('familyName:', this.familyName);
     this.isLoggedIn = Object.keys(this.currentUser).length > 0;
   }
 
