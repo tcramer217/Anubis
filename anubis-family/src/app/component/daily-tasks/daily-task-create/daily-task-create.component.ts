@@ -43,6 +43,7 @@ export class DailyTaskCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('this.tokenService.getProfile().familyId', this.tokenService.getProfile().familyId);
     this.familyService.getFamilyMembers(this.tokenService.getProfile().familyId).subscribe((result) => {
       console.log('familyMembers:', result);
       this.familyMembers = result;

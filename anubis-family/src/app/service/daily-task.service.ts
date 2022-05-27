@@ -17,8 +17,12 @@ export class DailyTaskService {
   ) {
   }
 
-  getDailyTasks(): Observable<Task[]> {
+  getMyDailyTasks(): Observable<Task[]> {
     return this.httpClient.get<Task[]>(this.DAILY_TASK_URL + '/user/' + this.tokenService.getUser().id);
+  }
+
+  getFamilyDailyTasks(): Observable<Task[]> {
+    return this.httpClient.get<Task[]>(this.DAILY_TASK_URL + '/family/' + this.tokenService.getProfile().familyId);
   }
 
   createNewTask(newTask: Task): Observable<Task> {

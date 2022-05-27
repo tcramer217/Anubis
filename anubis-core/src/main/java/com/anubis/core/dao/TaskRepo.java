@@ -23,6 +23,10 @@ public interface TaskRepo<T extends Task> extends JpaRepository<T, Long> {
     @Query("from DailyTask ")
     List<DailyTask> findDailyTasks();
 
+    @Query("SELECT t FROM DailyTask t LEFT JOIN FamilyMember fm on t.assignedTo.id = fm.id " +
+            "WHERE fm.familyId = :familyId ORDER BY t.isComplete, t.createdAt")
+    List<DailyTask> findDailyTasksForFamily(long familyId);
+
     @Query("SELECT t FROM DailyTask t WHERE t.assignedTo = :familyMemberId ORDER BY t.isComplete, t.createdAt")
     List<DailyTask> findDailyTasksForFamilyMember(FamilyMember familyMemberId);
 

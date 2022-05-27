@@ -34,6 +34,11 @@ public class DailyTaskController {
         return getDailyTaskService().getDailyTasksForFamilyMember(familyMember);
     }
 
+    @GetMapping("/family/{familyId}")
+    public List<DailyTask> getDailyTasksForFamily(@PathVariable long familyId) {
+        return getDailyTaskService().getDailyTasksForFamily(familyId);
+    }
+
     @GetMapping("/{taskId}")
     public DailyTask getDailyTask(@PathVariable Integer taskId) {
         return getDailyTaskService().findById(taskId);

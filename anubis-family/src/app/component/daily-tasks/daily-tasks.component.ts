@@ -10,11 +10,16 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./daily-tasks.component.less']
 })
 export class DailyTasksComponent implements OnInit {
-  public displayTasks: Task[] = [];
-  public allTasks: Task[] = [];
+  public myDailyTasks: Task[] = [];
+  public familyDailyTasks: Task[] = [];
+
+  public allMyDailyTasks: Task[] = [];
+  public allFamilyDailyTasks: Task[] = [];
+
   public columns: string[] = [];
 
-  filterCompleted = false;
+  myTasksFilterCompleted = false;
+  familyTasksFilterCompleted = false;
 
   constructor(
     private dialog: MatDialog,
@@ -23,38 +28,43 @@ export class DailyTasksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.refreshTasks();
+    this.refreshMyDailyTasks();
+    this.refreshFamilyDailyTasks();
   }
 
   getTasks(): Task[] {
-    return this.displayTasks;
+    return this.myDailyTasks;
   }
 
-  toggleFilterOutCompletedTasks(): void {
-    this.filterCompleted = !this.filterCompleted;
-    console.log('filter tasks');
-    if (this.filterCompleted) {
-      this.displayTasks = this.displayTasks.filter((task) => {
+  toggleFilterMyDailyCompletedTasks(): void {
+    this.myTasksFilterCompleted = !this.myTasksFilterCompleted;
+    this.myDailyTasks = this.filterTasks(this.myTasksFilterCompleted, this.myDailyTasks, this.allMyDailyTasks);
+  }
+
+  toggleFilterFamilyDailyCompletedTasks(): void {
+    this.familyTasksFilterCompleted = !this.familyTasksFilterCompleted;
+    this.familyDailyTasks = this.filterTasks(this.familyTasksFilterCompleted, this.familyDailyTasks, this.allFamilyDailyTasks);
+  }
+
+  private filterTasks = function (filterCompleted: boolean, arrayToFilter: Task[], allTasks: Task[]) {
+    if (filterCompleted) {
+      arrayToFilter = arrayToFilter.filter((task) => {
         return !task.complete;
       });
     } else {
-      this.displayTasks = this.allTasks;
+      arrayToFilter = allTasks;
     }
+    return arrayToFilter;
   }
 
   taskCompleted(task: Task): void {
-    console.log('clicked', task);
     const isComplete = !task.complete;
-    console.log('isComplete', isComplete);
-    const mine = this.allTasks.find((value => value.id === task.id));
-    console.log('mine', mine);
-    if (typeof mine !== 'undefined') {
-      mine.complete = isComplete;
+    const taskToComplete = this.allMyDailyTasks.find((value => value.id === task.id));
+    if (typeof taskToComplete !== 'undefined') {
+      taskToComplete.complete = isComplete;
     }
-    console.log('mine after', mine);
     this.taskService.markCompleted(task.id, isComplete).subscribe((response) => {
-      console.log('response', response);
-      this.refreshTasks();
+      this.refreshMyDailyTasks();
     });
   }
 
@@ -65,19 +75,28 @@ export class DailyTasksComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed:', result);
       if (typeof result !== 'undefined') {
         window.location.reload();
       }
     });
   }
 
-  refreshTasks(): void {
-    this.taskService.getDailyTasks().subscribe((response) => {
-      console.log('tasksService.getDailyTasks:', response);
+  refreshMyDailyTasks(): void {
+    this.taskService.getMyDailyTasks().subscribe((response) => {
       this.columns = ['select', 'name', 'assignedTo'];
-      this.displayTasks = response;
-      this.allTasks = response;
+      this.myDailyTasks = response;
+      this.allMyDailyTasks = response;
+    }, (error) => {
+      throw new Error(error);
+    });
+  }
+
+  refreshFamilyDailyTasks(): void {
+    this.taskService.getFamilyDailyTasks().subscribe((response) => {
+      console.log('response', response);
+      this.columns = ['select', 'name', 'assignedTo'];
+      this.familyDailyTasks = response;
+      this.allFamilyDailyTasks = response;
     }, (error) => {
       throw new Error(error);
     });
