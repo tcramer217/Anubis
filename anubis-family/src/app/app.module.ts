@@ -23,6 +23,7 @@ import {CalendarComponent} from './component/calendar/calendar.component';
 import {ProfileComponent} from './component/profile/profile.component';
 import {DailyTaskCreateComponent} from './component/daily-tasks/daily-task-create/daily-task-create.component';
 import {MatSelectModule} from '@angular/material/select';
+import { AnubisTaskTableComponent } from './component/shared/anubis-task-table/anubis-task-table.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {MatSelectModule} from '@angular/material/select';
     CalendarComponent,
     ProfileComponent,
     DailyTaskCreateComponent,
+    AnubisTaskTableComponent,
   ],
   imports: [
     AppMaterialModule,

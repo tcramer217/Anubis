@@ -5,66 +5,22 @@
   <mat-grid-list cols="2">
     <mat-grid-tile>
       <mat-card class="table-card family-tasks">
-        <h3>My Tasks</h3>
-        <button (click)="toggleFilterMyDailyCompletedTasks()" mat-icon-button>
-          <mat-icon>filter</mat-icon>
-        </button>
-        <mat-table [dataSource]="myDailyTasks" class="mat-elevation-z8">
-
-          <!-- Checkbox Column -->
-          <ng-container matColumnDef="select">
-            <mat-header-cell *matHeaderCellDef>
-              Done
-            </mat-header-cell>
-            <mat-cell *matCellDef="let task">
-              <mat-checkbox [ngModel]="task.complete" (click)="taskCompleted(task)"></mat-checkbox>
-            </mat-cell>
-          </ng-container>
-          <!-- NAME Column -->
-          <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef>Task Name</mat-header-cell>
-            <mat-cell *matCellDef="let task"><a routerLink="/daily-tasks/{{task.id}}">{{task.name}}</a></mat-cell>
-          </ng-container>
-          <!-- ASSIGNED_TO Column -->
-          <ng-container matColumnDef="assignedTo">
-            <mat-header-cell *matHeaderCellDef>Assigned To</mat-header-cell>
-            <mat-cell *matCellDef="let task">{{task.assignedTo.name}}</mat-cell>
-          </ng-container>
-          <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
-          <mat-row *matRowDef="let row; columns: columns;"></mat-row>
-        </mat-table>
+        <div *ngIf="allMyDailyTasks.length > 0">
+          <app-anubis-task-table tableTitle="My Tasks"
+                                 [tasks]="allMyDailyTasks"
+                                 [columns]="columns">
+          </app-anubis-task-table>
+        </div>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
       <mat-card class="table-card family-tasks">
-        <h3>Family's Tasks</h3>
-        <button (click)="toggleFilterFamilyDailyCompletedTasks()" mat-icon-button>
-          <mat-icon>filter</mat-icon>
-        </button>
-        <mat-table [dataSource]="familyDailyTasks" class="mat-elevation-z8">
-
-          <!-- Checkbox Column -->
-          <ng-container matColumnDef="select">
-            <mat-header-cell *matHeaderCellDef>
-              Done
-            </mat-header-cell>
-            <mat-cell *matCellDef="let task">
-              <mat-checkbox [ngModel]="task.complete" (click)="taskCompleted(task)"></mat-checkbox>
-            </mat-cell>
-          </ng-container>
-          <!-- NAME Column -->
-          <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef>Task Name</mat-header-cell>
-            <mat-cell *matCellDef="let task"><a routerLink="/daily-tasks/{{task.id}}">{{task.name}}</a></mat-cell>
-          </ng-container>
-          <!-- ASSIGNED_TO Column -->
-          <ng-container matColumnDef="assignedTo">
-            <mat-header-cell *matHeaderCellDef>Assigned To</mat-header-cell>
-            <mat-cell *matCellDef="let task">{{task.assignedTo.name}}</mat-cell>
-          </ng-container>
-          <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
-          <mat-row *matRowDef="let row; columns: columns;"></mat-row>
-        </mat-table>
+        <div *ngIf="allFamilyDailyTasks.length > 0">
+          <app-anubis-task-table tableTitle="Family Tasks"
+                                 [tasks]="allFamilyDailyTasks"
+                                 [columns]="columns">
+          </app-anubis-task-table>
+        </div>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

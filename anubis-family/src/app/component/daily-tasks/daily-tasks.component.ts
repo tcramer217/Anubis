@@ -10,16 +10,11 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./daily-tasks.component.less']
 })
 export class DailyTasksComponent implements OnInit {
-  public myDailyTasks: Task[] = [];
-  public familyDailyTasks: Task[] = [];
 
   public allMyDailyTasks: Task[] = [];
   public allFamilyDailyTasks: Task[] = [];
 
-  public columns: string[] = [];
-
-  myTasksFilterCompleted = false;
-  familyTasksFilterCompleted = false;
+  public columns: string[] = ['select', 'name', 'assignedTo'];
 
   constructor(
     private dialog: MatDialog,
@@ -30,42 +25,6 @@ export class DailyTasksComponent implements OnInit {
   ngOnInit(): void {
     this.refreshMyDailyTasks();
     this.refreshFamilyDailyTasks();
-  }
-
-  getTasks(): Task[] {
-    return this.myDailyTasks;
-  }
-
-  toggleFilterMyDailyCompletedTasks(): void {
-    this.myTasksFilterCompleted = !this.myTasksFilterCompleted;
-    this.myDailyTasks = this.filterTasks(this.myTasksFilterCompleted, this.myDailyTasks, this.allMyDailyTasks);
-  }
-
-  toggleFilterFamilyDailyCompletedTasks(): void {
-    this.familyTasksFilterCompleted = !this.familyTasksFilterCompleted;
-    this.familyDailyTasks = this.filterTasks(this.familyTasksFilterCompleted, this.familyDailyTasks, this.allFamilyDailyTasks);
-  }
-
-  private filterTasks = function (filterCompleted: boolean, arrayToFilter: Task[], allTasks: Task[]) {
-    if (filterCompleted) {
-      arrayToFilter = arrayToFilter.filter((task) => {
-        return !task.complete;
-      });
-    } else {
-      arrayToFilter = allTasks;
-    }
-    return arrayToFilter;
-  }
-
-  taskCompleted(task: Task): void {
-    const isComplete = !task.complete;
-    const taskToComplete = this.allMyDailyTasks.find((value => value.id === task.id));
-    if (typeof taskToComplete !== 'undefined') {
-      taskToComplete.complete = isComplete;
-    }
-    this.taskService.markCompleted(task.id, isComplete).subscribe((response) => {
-      this.refreshMyDailyTasks();
-    });
   }
 
   addTask(): void {
@@ -83,8 +42,6 @@ export class DailyTasksComponent implements OnInit {
 
   refreshMyDailyTasks(): void {
     this.taskService.getMyDailyTasks().subscribe((response) => {
-      this.columns = ['select', 'name', 'assignedTo'];
-      this.myDailyTasks = response;
       this.allMyDailyTasks = response;
     }, (error) => {
       throw new Error(error);
@@ -93,9 +50,6 @@ export class DailyTasksComponent implements OnInit {
 
   refreshFamilyDailyTasks(): void {
     this.taskService.getFamilyDailyTasks().subscribe((response) => {
-      console.log('response', response);
-      this.columns = ['select', 'name', 'assignedTo'];
-      this.familyDailyTasks = response;
       this.allFamilyDailyTasks = response;
     }, (error) => {
       throw new Error(error);
