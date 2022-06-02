@@ -2,6 +2,7 @@ package com.anubis.family.api.controller;
 
 import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
+import com.anubis.core.service.task.DailyTaskServiceImpl;
 import com.anubis.core.service.task.TaskServiceImpl;
 import com.anubis.core.service.family.FamilyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import java.util.List;
 public class DailyTaskController {
 
     private FamilyMemberService familyMemberService;
-    private TaskServiceImpl<DailyTask> dailyTaskService;
+    private DailyTaskServiceImpl dailyTaskService;
 
     @GetMapping("/count")
     public Integer getDailyTaskCount() {
@@ -49,12 +50,12 @@ public class DailyTaskController {
         return getDailyTaskService().createTask(task);
     }
 
-    public TaskServiceImpl<DailyTask> getDailyTaskService() {
+    public DailyTaskServiceImpl getDailyTaskService() {
         return dailyTaskService;
     }
 
     @Autowired
-    public void setDailyTaskService(TaskServiceImpl<DailyTask> dailyTaskService) {
+    public void setDailyTaskService(DailyTaskServiceImpl dailyTaskService) {
         this.dailyTaskService = dailyTaskService;
     }
 

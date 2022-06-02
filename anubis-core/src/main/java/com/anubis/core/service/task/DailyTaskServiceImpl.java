@@ -8,52 +8,25 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DailyTaskServiceImpl implements TaskService<DailyTask> {
-
-    private final TaskRepo<DailyTask> dailyTaskRepo;
+public class DailyTaskServiceImpl extends TaskServiceImpl<DailyTask> {
 
     public DailyTaskServiceImpl(TaskRepo<DailyTask> dailyTaskRepo) {
-        this.dailyTaskRepo = dailyTaskRepo;
-    }
-
-    @Override
-    public DailyTask findById(long taskId) {
-        return getDailyTaskRepo().findTaskById(taskId);
-    }
-
-    @Override
-    public void markTaskCompleted(long taskId) {
-
-    }
-
-    @Override
-    public void markTaskIncomplete(long taskId) {
-
-    }
-
-    @Override
-    public DailyTask createTask(DailyTask task) {
-        return getDailyTaskRepo().save(task);
+        super(dailyTaskRepo);
     }
 
     @Override
     public List<DailyTask> getAllTasks() {
-        return getDailyTaskRepo().findDailyTasks();
+        return getTaskRepo().findDailyTasks();
     }
 
-    @Override
     public List<DailyTask> getDailyTasksForFamily(long familyId) {
-        List<DailyTask> tasks = getDailyTaskRepo().findDailyTasksForFamily(familyId);
+        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamily(familyId);
         return tasks;
     }
 
-    @Override
     public List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId) {
-        List<DailyTask> tasks = getDailyTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
+        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
         return tasks;
     }
 
-    public TaskRepo<DailyTask> getDailyTaskRepo() {
-        return dailyTaskRepo;
-    }
 }

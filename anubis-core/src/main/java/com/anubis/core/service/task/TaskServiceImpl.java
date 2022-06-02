@@ -47,17 +47,17 @@ public class TaskServiceImpl<T extends Task> implements TaskService<T> {
         return getTaskRepo().findAllTasks();
     }
 
-    @Override
-    public List<DailyTask> getDailyTasksForFamily(long familyId) {
-        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamily(familyId);
-        return tasks;
-    }
-
-    @Override
-    public List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId) {
-        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
-        return tasks;
-    }
+//    @Override
+//    public List<DailyTask> getDailyTasksForFamily(long familyId) {
+//        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamily(familyId);
+//        return tasks;
+//    }
+//
+//    @Override
+//    public List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId) {
+//        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
+//        return tasks;
+//    }
 
     @Autowired
     public TaskRepo<T> getTaskRepo() {

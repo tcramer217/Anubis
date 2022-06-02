@@ -15,6 +15,6 @@ public interface TaskService<T extends Task> {
 
     List<T> getAllTasks();
 
-    List<DailyTask> getDailyTasksForFamily(long familyId);
-    List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId);
+//    List<DailyTask> getDailyTasksForFamily(long familyId);
+//    List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId);
 }

@@ -20,6 +20,16 @@ public interface TaskRepo<T extends Task> extends JpaRepository<T, Long> {
     @Query("select t from Task t")
     List<T> findAllTasks();
 
+    @Query("from WeeklyTask ")
+    List<WeeklyTask> findWeeklyTasks();
+
+    @Query("SELECT t FROM WeeklyTask t LEFT JOIN FamilyMember fm on t.assignedTo.id = fm.id " +
+            "WHERE fm.familyId = :familyId ORDER BY t.isComplete, t.createdAt")
+    List<WeeklyTask> findWeeklyTasksForFamily(long familyId);
+
+    @Query("SELECT t FROM WeeklyTask t WHERE t.assignedTo = :familyMemberId ORDER BY t.isComplete, t.createdAt")
+    List<WeeklyTask> findWeeklyTasksForFamilyMember(FamilyMember familyMemberId);
+
     @Query("from DailyTask ")
     List<DailyTask> findDailyTasks();
 
@@ -29,8 +39,5 @@ public interface TaskRepo<T extends Task> extends JpaRepository<T, Long> {
 
     @Query("SELECT t FROM DailyTask t WHERE t.assignedTo = :familyMemberId ORDER BY t.isComplete, t.createdAt")
     List<DailyTask> findDailyTasksForFamilyMember(FamilyMember familyMemberId);
-
-    @Query("from WeeklyTask ")
-    List<WeeklyTask> findWeeklyTasks();
 
 }
