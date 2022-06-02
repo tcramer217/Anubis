@@ -3,6 +3,7 @@ import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/form
 import {AuthService} from '../../service/auth.service';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {ProfileService} from '../../service/profile.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
   roles: string[] = [];
 
   constructor(
+    private router: Router,
     private authService: AuthService,
     private tokenService: TokenStorageService,
     private formBuilder: FormBuilder,
@@ -60,6 +62,7 @@ export class LoginComponent implements OnInit {
           this.roles = this.tokenService.getUser().roles;
           this.profileService.getProfile(data.id).subscribe(result => {
             this.tokenService.saveProfile(result);
+            this.router.navigate(['/dashboard']);
             this.reloadPage();
           });
         },

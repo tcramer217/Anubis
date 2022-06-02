@@ -1,0 +1,27 @@
+<div>
+  <button (click)="addTask()" mat-icon-button>
+    <mat-icon>note_add</mat-icon>
+  </button>
+  <mat-grid-list cols="2">
+    <mat-grid-tile>
+      <mat-card class="table-card family-tasks">
+        <div *ngIf="allMyDailyTasks.length > 0">
+          <app-anubis-task-table tableTitle="My Tasks"
+                                 [tasks]="allMyDailyTasks"
+                                 [columns]="columns">
+          </app-anubis-task-table>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="table-card weekly-tasks">
+        <div *ngIf="allMyWeeklyTasks.length > 0">
+          <app-anubis-task-table tableTitle="My Weekly Tasks"
+                                 [tasks]="allMyWeeklyTasks"
+                                 [columns]="columns">
+          </app-anubis-task-table>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

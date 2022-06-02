@@ -6,8 +6,10 @@ import {DailyTaskComponent} from './component/daily-tasks/daily-task/daily-task.
 import {RegisterComponent} from './component/register/register.component';
 import {CalendarComponent} from './component/calendar/calendar.component';
 import {ProfileComponent} from './component/profile/profile.component';
+import {DashboardComponent} from './component/dashboard/dashboard.component';
 
 const routes: Routes = [
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'daily-tasks', component: DailyTasksComponent},
   {path: 'daily-tasks/:id', component: DailyTaskComponent},

@@ -5,6 +5,7 @@
       [opened]="(isHandset$ | async) === false && isLoggedIn">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list *ngIf="isLoggedIn">
+      <a mat-list-item routerLink="/dashboard">Dashboard</a>
       <a mat-list-item routerLink="/daily-tasks">Daily Tasks</a>
       <a mat-list-item routerLink="/weekly-tasks">Weekly Tasks</a>
       <a mat-list-item routerLink="/calendar">View Calendar</a>
