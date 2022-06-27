@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
   }
 
   refreshMyWeeklyTasks(): void {
-    this.taskService.getMyDailyTasks().subscribe((response) => {
+    this.taskService.getMyWeeklyTasks().subscribe((response) => {
       this.allMyWeeklyTasks = response;
     }, (error) => {
       throw new Error(error);

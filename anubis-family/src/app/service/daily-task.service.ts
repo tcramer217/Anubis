@@ -9,8 +9,9 @@ import {TokenStorageService} from './token-storage.service';
 })
 export class DailyTaskService {
 
-  private DAILY_TASK_URL = 'http://localhost:8080/api/task/daily';
   private TASK_URL = 'http://localhost:8080/api/task';
+  private DAILY_TASK_URL = this.TASK_URL + '/weekly';
+  private WEEKLY_TASK_URL = this.TASK_URL + '/daily';
   constructor(
     private httpClient: HttpClient,
     private tokenService: TokenStorageService
@@ -23,6 +24,14 @@ export class DailyTaskService {
 
   getFamilyDailyTasks(): Observable<Task[]> {
     return this.httpClient.get<Task[]>(this.DAILY_TASK_URL + '/family/' + this.tokenService.getProfile().familyId);
+  }
+
+  getMyWeeklyTasks(): Observable<Task[]> {
+    return this.httpClient.get<Task[]>(this.WEEKLY_TASK_URL + '/user/' + this.tokenService.getUser().id);
+  }
+
+  getFamilyWeeklyTasks(): Observable<Task[]> {
+    return this.httpClient.get<Task[]>(this.WEEKLY_TASK_URL + '/family/' + this.tokenService.getProfile().familyId);
   }
 
   createNewTask(newTask: Task): Observable<Task> {
