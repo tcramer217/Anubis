@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../service/auth.service';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {ProfileService} from '../../service/profile.service';
@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
 
   submitted = false;
   isLoggedIn = false;
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private tokenService: TokenStorageService,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private profileService: ProfileService,
   ) {
     this.loginForm = this.formBuilder.group(
