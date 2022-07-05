@@ -7,6 +7,7 @@ import {RegisterComponent} from './component/register/register.component';
 import {CalendarComponent} from './component/calendar/calendar.component';
 import {ProfileComponent} from './component/profile/profile.component';
 import {DashboardComponent} from './component/dashboard/dashboard.component';
+import {PokemonComponent} from './component/pokemon/pokemon.component';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'weekly-tasks', component: WeeklyTasksComponent},
   {path: 'calendar', component: CalendarComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'pokemon', component: PokemonComponent},
 ];
 
 @NgModule({

@@ -25,6 +25,8 @@ import {DailyTaskCreateComponent} from './component/daily-tasks/daily-task-creat
 import {MatSelectModule} from '@angular/material/select';
 import { AnubisTaskTableComponent } from './component/shared/anubis-task-table/anubis-task-table.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { TaskCreateComponent } from './component/task/task-create/task-create.component';
+import { PokemonComponent } from './component/pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     DailyTaskCreateComponent,
     AnubisTaskTableComponent,
     DashboardComponent,
+    TaskCreateComponent,
+    PokemonComponent,
   ],
   imports: [
     AppMaterialModule,

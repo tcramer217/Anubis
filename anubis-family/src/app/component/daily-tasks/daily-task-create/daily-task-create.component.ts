@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
-import {AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
+import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {DailyTaskService} from '../../../service/daily-task.service';
 import {Profile} from '../../../model/profile';
 import {FamilyService} from '../../../service/family.service';
@@ -12,7 +12,7 @@ import {TokenStorageService} from '../../../service/token-storage.service';
   styleUrls: ['./daily-task-create.component.less']
 })
 export class DailyTaskCreateComponent implements OnInit {
-  newDailyTaskForm: UntypedFormGroup;
+  newDailyTaskForm: FormGroup;
   familyMembers: Profile[] = [];
 
   selectedAssignee = 0;
@@ -23,7 +23,7 @@ export class DailyTaskCreateComponent implements OnInit {
     private dailyTaskService: DailyTaskService,
     private familyService: FamilyService,
     private tokenService: TokenStorageService,
-    private formBuilder: UntypedFormBuilder,
+    private formBuilder: FormBuilder,
     public dialogReference: MatDialogRef<DailyTaskCreateComponent>,
   ) {
     this.newDailyTaskForm = this.formBuilder.group({
@@ -36,6 +36,7 @@ export class DailyTaskCreateComponent implements OnInit {
       inProgress: [false],
       reminders: [[]],
     });
+
   }
 
   get f(): { [key: string]: AbstractControl } {
