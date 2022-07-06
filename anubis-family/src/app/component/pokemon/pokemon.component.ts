@@ -11,27 +11,6 @@ const POKE_BASE_CARDS_API: string = 'https://api.pokemontcg.io/v2/cards';
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
   styleUrls: ['./pokemon.component.less'],
-  animations: [
-    trigger('openClose', [
-      // ...
-      state('open', style({
-        height: '200px',
-        opacity: 1,
-        backgroundColor: 'yellow'
-      })),
-      state('closed', style({
-        height: '100px',
-        opacity: 0.8,
-        backgroundColor: 'blue'
-      })),
-      transition('open => closed', [
-        animate('1s')
-      ]),
-      transition('closed => open', [
-        animate('0.5s')
-      ]),
-    ]),
-  ],
 })
 export class PokemonComponent implements OnInit {
 
@@ -40,12 +19,6 @@ export class PokemonComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCards();
-  }
-
-  isOpen = true;
-
-  toggle() {
-    this.isOpen = !this.isOpen;
   }
 
   getCards(): void {
@@ -57,8 +30,6 @@ export class PokemonComponent implements OnInit {
   }
 
   trackByFn(index: number, item: any): number {
-    console.log(index);
-    console.log(item);
     return index;
   }
 
