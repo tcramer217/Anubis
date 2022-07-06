@@ -27,6 +27,7 @@ import { AnubisTaskTableComponent } from './component/shared/anubis-task-table/a
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TaskCreateComponent } from './component/task/task-create/task-create.component';
 import { PokemonComponent } from './component/pokemon/pokemon.component';
+import { PokemonCardComponent } from './component/pokemon/pokemon-card/pokemon-card.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PokemonComponent } from './component/pokemon/pokemon.component';
     DashboardComponent,
     TaskCreateComponent,
     PokemonComponent,
+    PokemonCardComponent,
   ],
   imports: [
     AppMaterialModule,
