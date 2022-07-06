@@ -1,4 +1,6 @@
 <div class="card" (mouseover)="showDetails()" (mouseout)="hideDetails()">
-  <div class="front" *ngIf="!card.showDetails">FRONT</div>
+  <div class="front" *ngIf="!card.showDetails">
+    <img [src]="card.images.small" />
+  </div>
   <div class="back" *ngIf="card.showDetails">BACK</div>
 </div>

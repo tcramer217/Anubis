@@ -11,7 +11,10 @@ export class PokemonCardComponent implements OnInit {
   @Input()
   card: Card = {
     name:'test',
-    showDetails: false
+    showDetails: false,
+    images: {
+      small: ''
+    }
   };
 
   constructor() { }
