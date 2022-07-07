@@ -28,6 +28,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TaskCreateComponent } from './component/task/task-create/task-create.component';
 import { PokemonComponent } from './component/pokemon/pokemon.component';
 import { PokemonCardComponent } from './component/pokemon/pokemon-card/pokemon-card.component';
+import { PokemonSearchComponent } from './component/pokemon/pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { PokemonCardComponent } from './component/pokemon/pokemon-card/pokemon-c
     TaskCreateComponent,
     PokemonComponent,
     PokemonCardComponent,
+    PokemonSearchComponent,
   ],
   imports: [
     AppMaterialModule,

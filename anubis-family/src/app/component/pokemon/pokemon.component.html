@@ -1,4 +1,14 @@
 <div class="container" style="margin-top: 16px">
+  <div class="search" style="margin-bottom: 16px">
+    <form [formGroup]="searchForm" (ngSubmit)="doSearch(searchForm)">
+      <div>
+        <label>
+          Name:
+          <input matInput formControlName="name" placeholder="Pokemon" (keyup)="doSearch(searchForm)"/>
+        </label>
+      </div>
+    </form>
+  </div>
   <div class="row row-cols-3 g-2 g-lg-3">
     <div *ngFor="let card of this.cards; trackBy: trackByFn" class="col">
       <app-pokemon-card [card]="card"></app-pokemon-card>

@@ -49,6 +49,9 @@ export class PokemonCardComponent implements OnInit {
     if (typeof this.card.showDetails === 'undefined') {
       this.card.showDetails = 'default';
     }
+    if(typeof this.card.types === 'undefined') {
+      this.card.types = ['Energy'];
+    }
     this.getCardHeaderClass(this.card.types[0])
   }
 
@@ -69,6 +72,7 @@ export class PokemonCardComponent implements OnInit {
       case 'Psychic':
         this.cardClass = 'psychic';
         break;
+      case 'Energy':
       default:
         this.cardClass = 'colorless';
         break;
@@ -85,4 +89,4 @@ export class PokemonCardComponent implements OnInit {
 
 }
 
-export type PokemonType = 'Colorless' | 'Fire' | 'Grass' | 'Poison' | 'Psychic';
+export type PokemonType = 'Colorless' | 'Energy' | 'Fire' | 'Grass' | 'Poison' | 'Psychic';
