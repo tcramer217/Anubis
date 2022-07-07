@@ -10,7 +10,7 @@ import {Profile} from '../../model/profile';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.less']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
 
   isEditMode = false;
   currentUser: User;
@@ -27,9 +27,6 @@ export class ProfileComponent implements OnInit {
     console.log('this.currentUser', this.currentUser);
     console.log('this.userProfile', this.userProfile);
     console.log('this.originalProfile', this.originalProfile);
-  }
-
-  ngOnInit(): void {
   }
 
   toggleEdit(): void {

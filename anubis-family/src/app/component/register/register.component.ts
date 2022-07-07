@@ -8,7 +8,7 @@ import Validation from '../../util/Validation';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.less']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   registerForm: UntypedFormGroup;
 
@@ -39,9 +39,6 @@ export class RegisterComponent implements OnInit {
 
   get f(): { [key: string]: AbstractControl } {
     return this.registerForm.controls;
-  }
-
-  ngOnInit(): void {
   }
 
   onSubmit(): void {

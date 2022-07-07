@@ -7,7 +7,7 @@ import {RegisterComponent} from '../../register/register.component';
   templateUrl: './register-dialog.component.html',
   styleUrls: ['./register-dialog.component.less']
 })
-export class RegisterDialogComponent implements OnInit {
+export class RegisterDialogComponent {
 
   @ViewChild(RegisterComponent)
   registerComponent!: RegisterComponent;
@@ -15,9 +15,6 @@ export class RegisterDialogComponent implements OnInit {
   constructor(
     public dialogReference: MatDialogRef<RegisterDialogComponent>,
   ) {
-  }
-
-  ngOnInit(): void {
   }
 
   onNoClick(): void {

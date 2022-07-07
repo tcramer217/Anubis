@@ -14,7 +14,7 @@ export class AnubisTaskTableComponent implements OnInit {
   @Input('tasks')
   public allMyTasks: Task[] = [];
 
-  @Input('columns')
+  @Input()
   columns: string[] = [];
 
   @Input()

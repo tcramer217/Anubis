@@ -7,7 +7,7 @@ import {LoginComponent} from '../../login/login.component';
   templateUrl: './login-dialog.component.html',
   styleUrls: ['./login-dialog.component.less']
 })
-export class LoginDialogComponent implements OnInit {
+export class LoginDialogComponent {
 
   @ViewChild(LoginComponent)
   loginComponent!: LoginComponent;
@@ -15,9 +15,6 @@ export class LoginDialogComponent implements OnInit {
   constructor(
     public dialogReference: MatDialogRef<LoginDialogComponent>,
   ) {
-  }
-
-  ngOnInit(): void {
   }
 
   onNoClick(): void {
