@@ -2,10 +2,19 @@
   <div class="search" style="margin-bottom: 16px">
     <form [formGroup]="searchForm" (ngSubmit)="doSearch(searchForm)">
       <div>
-        <label>
-          Name:
-          <input matInput formControlName="name" placeholder="Pokemon" (keyup)="doSearch(searchForm)"/>
-        </label>
+        <mat-form-field >
+          <mat-label>Name:</mat-label>
+          <input matInput formControlName="name" placeholder="Pokemon" (keyup)="doFilter(searchForm)"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Card Type:</mat-label>
+          <mat-select formControlName="cardType" (selectionChange)="doFilter(searchForm)" multiple>
+            <mat-option *ngFor="let cardType of cardTypes" [value]="cardType">{{cardType}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
       </div>
     </form>
   </div>

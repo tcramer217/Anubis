@@ -19,9 +19,12 @@ export class PokemonComponent implements OnInit {
 
   cards: Card[] = [];
   allCards: Card[] = [];
+  cardTypes: string[] = ['Energy', 'Trainer', 'Pokemon'];
+
   constructor(private httpClient: HttpClient, private formBuilder: FormBuilder) {
     this.searchForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]]
+      name: ['', [Validators.maxLength(25)]],
+      cardType: [['Pokemon'],],
     });
   }
 
@@ -32,10 +35,10 @@ export class PokemonComponent implements OnInit {
   private buildPokeQuery(form: FormGroup | null): string {
     let qString = 'q=subtypes:basic set.id:base1 ';
     if (form === null || !form.valid) {
-      return 'q=subtypes:basic set.id:base1&orderBy=name';
+      return 'q=set.id:base1&orderBy=name';
     }
     if (form.value.name !== '') {
-      qString += 'name:' + form.value.name;
+      qString += 'name:' + form.value.name + '*';
     }
 
     qString += '&orderBy=name';
@@ -44,19 +47,36 @@ export class PokemonComponent implements OnInit {
 
   doSearch(form: FormGroup): void {
     if (!form.valid){
+      this.getCards(null);
+      return;
+    }
+
+    this.getCards(form);
+  }
+
+  doFilter(form: FormGroup): void {
+    console.log('ding dong');
+    if (!form.valid){
+      console.log('form invalid:', form.value);
+      this.cards = this.allCards;
       return;
     }
     console.log('form: ', form);
-    console.log('valid?:', form.valid);
-    console.log('name:', form.value.name);
-    console.log(this.allCards);
-    this.cards = this.allCards.filter((card) => {
-      console.log(card.name);
-      return card.name.includes(form.value.name.toLowerCase());
-    });
-    console.log(this.cards);
+    if (form.value.name) {
+      console.log('form name');
+      this.cards = this.allCards.filter((card) => {
+        console.log(card.name);
+        return card.name.indexOf(form.value.name[0]) !== -1;
+      });
+    }
+    // if (form.value.cardType) {
+    //   console.log('cardtype', form.value.cardType);
+    //   this.cards = this.allCards.filter((card) => {
+    //     return form.value.cardType.includes(card.superType);
+    //   })
+    // }
 
-    // this.getCards(form);
+    console.log(this.cards);
   }
 
   getCards(formData: FormGroup | null): void {
