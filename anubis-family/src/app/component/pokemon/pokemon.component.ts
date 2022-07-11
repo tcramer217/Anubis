@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {map} from 'rxjs/operators';
 import {PokemonResponse} from '../../model/pokemonResponse';
 import {Card} from '../../model/card';
-import {animate, state, style, transition, trigger} from "@angular/animations";
-import {Form, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 const POKE_BASE_CARDS_API: string = 'https://api.pokemontcg.io/v2/cards';
 // https://docs.pokemontcg.io/
+
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',

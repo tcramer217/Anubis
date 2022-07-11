@@ -9,7 +9,7 @@ export interface Card {
   attacks: Attack[],
   hp: string,
   types: PokemonType[],
-  superType: 'Trainer' | 'Energy' | 'Pokémon'
+  supertype: 'Trainer' | 'Energy' | 'Pokémon'
 }
 
 export interface Attack {
