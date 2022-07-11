@@ -38,7 +38,7 @@ export class PokemonCardComponent implements OnInit {
     images: {
       small: ''
     },
-    superType: 'Pokemon'
+    superType: 'Pokémon'
   };
 
   cardClass: string = 'colorless';

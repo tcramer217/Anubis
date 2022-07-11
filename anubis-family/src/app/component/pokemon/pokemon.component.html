@@ -18,9 +18,11 @@
       </div>
     </form>
   </div>
-  <div class="row row-cols-3 g-2 g-lg-3">
-    <div *ngFor="let card of this.cards; trackBy: trackByFn" class="col">
-      <app-pokemon-card [card]="card"></app-pokemon-card>
+  <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+    <div class="row row-cols-3 g-2 g-lg-3">
+      <div *ngFor="let card of this.cards; trackBy: trackByFn" class="col">
+        <app-pokemon-card [card]="card"></app-pokemon-card>
+      </div>
     </div>
-  </div>
+  </cdk-virtual-scroll-viewport>
 </div>

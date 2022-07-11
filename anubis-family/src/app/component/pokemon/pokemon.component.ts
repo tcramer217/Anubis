@@ -19,12 +19,12 @@ export class PokemonComponent implements OnInit {
 
   cards: Card[] = [];
   allCards: Card[] = [];
-  cardTypes: string[] = ['Energy', 'Trainer', 'Pokemon'];
+  cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
 
   constructor(private httpClient: HttpClient, private formBuilder: FormBuilder) {
     this.searchForm = this.formBuilder.group({
       name: ['', [Validators.maxLength(25)]],
-      cardType: [['Pokemon'],],
+      cardType: [[],],
     });
   }
 
@@ -63,18 +63,17 @@ export class PokemonComponent implements OnInit {
     }
     console.log('form: ', form);
     if (form.value.name) {
-      console.log('form name');
       this.cards = this.allCards.filter((card) => {
-        console.log(card.name);
         return card.name.indexOf(form.value.name[0]) !== -1;
       });
     }
-    // if (form.value.cardType) {
-    //   console.log('cardtype', form.value.cardType);
-    //   this.cards = this.allCards.filter((card) => {
-    //     return form.value.cardType.includes(card.superType);
-    //   })
-    // }
+    if (form.value.cardType) {
+      console.log('cardtype', form.value.cardType[0]);
+      this.cards = this.cards.filter((card) => {
+        console.log('cardsupertypes:', card);
+        return form.value.cardType[0] === card.supertype;
+      })
+    }
 
     console.log(this.cards);
   }

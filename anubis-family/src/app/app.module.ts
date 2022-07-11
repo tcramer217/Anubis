@@ -29,6 +29,7 @@ import { TaskCreateComponent } from './component/task/task-create/task-create.co
 import { PokemonComponent } from './component/pokemon/pokemon.component';
 import { PokemonCardComponent } from './component/pokemon/pokemon-card/pokemon-card.component';
 import { PokemonSearchComponent } from './component/pokemon/pokemon-search/pokemon-search.component';
+import {ScrollingModule} from "@angular/cdk/scrolling";
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { PokemonSearchComponent } from './component/pokemon/pokemon-search/pokem
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
+    ScrollingModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
