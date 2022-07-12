@@ -1,8 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Card} from "../../../model/card";
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {stringifyTask} from '@angular/compiler-cli/ngcc/src/execution/tasks/utils';
-// import {PokemonType} from '../../../model/pokemonType';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -38,7 +36,7 @@ export class PokemonCardComponent implements OnInit {
     images: {
       small: ''
     },
-    superType: 'Pokémon'
+    supertype: 'Pokémon'
   };
 
   cardClass: string = 'colorless';
