@@ -4,6 +4,7 @@ import {Card} from '../../model/card';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {PokemonSearchService} from '../../service/pokemon-search.service';
 import {ArrayDataSource, DataSource} from '@angular/cdk/collections';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-pokemon',
@@ -17,7 +18,7 @@ export class PokemonComponent implements OnInit {
   cards: Card[] = [];
   allCards: Card[] = [];
   cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
-  ds: DataSource<Card> = new ArrayDataSource(this.allCards);
+  ds: DataSource<Card> = new MatTableDataSource(this.allCards);
 
   constructor(
     private httpClient: HttpClient,
@@ -43,38 +44,13 @@ export class PokemonComponent implements OnInit {
     this.getCards(form);
   }
 
-  // doFilter(form: FormGroup): void {
-  //   console.log('doFilter:', form);
-  //   if (!form.valid){
-  //     console.log('forminvalid')
-  //     this.cards = this.allCards;
-  //     return;
-  //   }
-  //
-  //   console.log('form.value.name', form.value.name);
-  //   this.cards = this.allCards;
-  //   if (form.value.name) {
-  //     this.cards = this.cards.filter((card) => {
-  //       console.log('card is:', card);
-  //       return card.name.indexOf(form.value.name) !== -1;
-  //     });
-  //   }
-  //   if (form.value.cardType) {
-  //     if (typeof form.value.cardType[0] === 'undefined') {
-  //       this.cards = this.allCards;
-  //     } else {
-  //       this.cards = this.cards.filter((card) => {
-  //         return form.value.cardType.includes(card.supertype);
-  //       });
-  //     }
-  //   }
-  // }
-
   getCards(formData: FormGroup | null): void {
     this.searchService.getCards(formData)
       .subscribe((response) => {
         this.cards = response.data;
         this.allCards = this.cards;
+        this.ds = new ArrayDataSource(this.cards);
+        console.log('this.ds:', this.ds);
       });
   }
 

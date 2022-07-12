@@ -24,7 +24,7 @@
   </div>
   <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
     <div class="row row-cols-3 g-2 g-lg-3">
-      <div *cdkVirtualFor="let card of cards; trackBy: trackByFn" class="col">
+      <div *cdkVirtualFor="let card of ds; trackBy: trackByFn" class="col">
         <app-pokemon-card [card]="card"></app-pokemon-card>
       </div>
     </div>
