@@ -31,7 +31,7 @@ export class PokemonComponent implements OnInit {
     this.getCards(null);
   }
 
-  private buildPokeQuery(form: FormGroup | null): string {
+  private static buildPokeQuery(form: FormGroup | null): string {
     let qString = 'q=set.id:base1 ';
     if (form === null || !form.valid) {
       return 'q=set.id:base1&orderBy=name';
