@@ -73,6 +73,9 @@ export class PokemonCardComponent implements OnInit {
       case 'Psychic':
         this.cardClass = 'psychic';
         break;
+      case 'Water':
+        this.cardClass = 'water';
+        break;
       case 'Energy':
       default:
         this.cardClass = 'colorless';
@@ -90,4 +93,4 @@ export class PokemonCardComponent implements OnInit {
 
 }
 
-export type PokemonType = 'Colorless' | 'Energy' | 'Fire' | 'Grass' | 'Poison' | 'Psychic';
+export type PokemonType = 'Colorless' | 'Energy' | 'Fire' | 'Grass' | 'Poison' | 'Psychic' | 'Water';
