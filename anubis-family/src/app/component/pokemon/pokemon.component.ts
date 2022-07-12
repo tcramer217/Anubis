@@ -31,13 +31,29 @@ export class PokemonComponent implements OnInit {
     this.getCards(null);
   }
 
-  private static buildPokeQuery(form: FormGroup | null): string {
-    let qString = 'q=subtypes:basic set.id:base1 ';
+  private buildPokeQuery(form: FormGroup | null): string {
+    let qString = 'q=set.id:base1 ';
     if (form === null || !form.valid) {
       return 'q=set.id:base1&orderBy=name';
     }
     if (form.value.name !== '') {
-      qString += 'name:' + form.value.name + '*';
+      qString += 'name:' + form.value.name + '* ';
+    }
+
+    if (form.value.cardType.length > 0) {
+      if (form.value.cardType.length === 1) {
+        qString += 'supertype:' + form.value.cardType[0] + ' ';
+      } else {
+        qString += '(supertype:';
+        form.value.cardType.forEach((type:any, index:number) => {
+          if (index === 0) {
+            qString += '' + type + ' ';
+          } else {
+            qString += ' OR supertype:' + type + ' ';
+          }
+        })
+        qString += ')'
+      }
     }
 
     qString += '&orderBy=name';
@@ -58,15 +74,21 @@ export class PokemonComponent implements OnInit {
       this.cards = this.allCards;
       return;
     }
+
+    this.cards = this.allCards;
     if (form.value.name) {
-      this.cards = this.allCards.filter((card) => {
+      this.cards = this.cards.filter((card) => {
         return card.name.indexOf(form.value.name[0]) !== -1;
       });
     }
     if (form.value.cardType) {
-      this.cards = this.cards.filter((card) => {
-        return form.value.cardType[0] === card.supertype;
-      })
+      if (typeof form.value.cardType[0] === 'undefined') {
+        this.cards = this.allCards;
+      } else {
+        this.cards = this.cards.filter((card) => {
+          return form.value.cardType.includes(card.supertype);
+        });
+      }
     }
   }
 
