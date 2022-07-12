@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {PokemonResponse} from '../../model/pokemonResponse';
 import {Card} from '../../model/card';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
-const POKE_BASE_CARDS_API: string = 'https://api.pokemontcg.io/v2/cards';
-// https://docs.pokemontcg.io/
+import {PokemonSearchService} from '../../service/pokemon-search.service';
+import {ArrayDataSource, DataSource} from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-pokemon',
@@ -19,8 +17,13 @@ export class PokemonComponent implements OnInit {
   cards: Card[] = [];
   allCards: Card[] = [];
   cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
+  ds: DataSource<Card> = new ArrayDataSource(this.allCards);
 
-  constructor(private httpClient: HttpClient, private formBuilder: FormBuilder) {
+  constructor(
+    private httpClient: HttpClient,
+    private formBuilder: FormBuilder,
+    private searchService: PokemonSearchService
+  ) {
     this.searchForm = this.formBuilder.group({
       name: ['', [Validators.maxLength(25)]],
       cardType: [[],],
@@ -29,35 +32,6 @@ export class PokemonComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCards(null);
-  }
-
-  private static buildPokeQuery(form: FormGroup | null): string {
-    let qString = 'q=set.id:base1 ';
-    if (form === null || !form.valid) {
-      return 'q=set.id:base1&orderBy=name';
-    }
-    if (form.value.name !== '') {
-      qString += 'name:' + form.value.name + '* ';
-    }
-
-    if (form.value.cardType.length > 0) {
-      if (form.value.cardType.length === 1) {
-        qString += 'supertype:' + form.value.cardType[0] + ' ';
-      } else {
-        qString += '(supertype:';
-        form.value.cardType.forEach((type:any, index:number) => {
-          if (index === 0) {
-            qString += '' + type + ' ';
-          } else {
-            qString += ' OR supertype:' + type + ' ';
-          }
-        })
-        qString += ')'
-      }
-    }
-
-    qString += '&orderBy=name';
-    return qString;
   }
 
   doSearch(form: FormGroup): void {
@@ -69,31 +43,35 @@ export class PokemonComponent implements OnInit {
     this.getCards(form);
   }
 
-  doFilter(form: FormGroup): void {
-    if (!form.valid){
-      this.cards = this.allCards;
-      return;
-    }
-
-    this.cards = this.allCards;
-    if (form.value.name) {
-      this.cards = this.cards.filter((card) => {
-        return card.name.indexOf(form.value.name[0]) !== -1;
-      });
-    }
-    if (form.value.cardType) {
-      if (typeof form.value.cardType[0] === 'undefined') {
-        this.cards = this.allCards;
-      } else {
-        this.cards = this.cards.filter((card) => {
-          return form.value.cardType.includes(card.supertype);
-        });
-      }
-    }
-  }
+  // doFilter(form: FormGroup): void {
+  //   console.log('doFilter:', form);
+  //   if (!form.valid){
+  //     console.log('forminvalid')
+  //     this.cards = this.allCards;
+  //     return;
+  //   }
+  //
+  //   console.log('form.value.name', form.value.name);
+  //   this.cards = this.allCards;
+  //   if (form.value.name) {
+  //     this.cards = this.cards.filter((card) => {
+  //       console.log('card is:', card);
+  //       return card.name.indexOf(form.value.name) !== -1;
+  //     });
+  //   }
+  //   if (form.value.cardType) {
+  //     if (typeof form.value.cardType[0] === 'undefined') {
+  //       this.cards = this.allCards;
+  //     } else {
+  //       this.cards = this.cards.filter((card) => {
+  //         return form.value.cardType.includes(card.supertype);
+  //       });
+  //     }
+  //   }
+  // }
 
   getCards(formData: FormGroup | null): void {
-    this.httpClient.get<PokemonResponse>(POKE_BASE_CARDS_API + '?' + PokemonComponent.buildPokeQuery(formData))
+    this.searchService.getCards(formData)
       .subscribe((response) => {
         this.cards = response.data;
         this.allCards = this.cards;

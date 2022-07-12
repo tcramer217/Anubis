@@ -5,13 +5,13 @@
         <div class="col-lg-2">
           <mat-form-field >
             <mat-label>Name:</mat-label>
-            <input matInput formControlName="name" placeholder="Pokemon" (keyup)="doFilter(searchForm)"/>
+            <input matInput formControlName="name" placeholder="Pokemon" />
           </mat-form-field>
         </div>
         <div class="col-lg-2">
           <mat-form-field>
             <mat-label>Card Type:</mat-label>
-            <mat-select formControlName="cardType" (selectionChange)="doFilter(searchForm)" multiple>
+            <mat-select formControlName="cardType" multiple>
               <mat-option *ngFor="let cardType of cardTypes" [value]="cardType">{{cardType}}</mat-option>
             </mat-select>
           </mat-form-field>
@@ -24,7 +24,7 @@
   </div>
   <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
     <div class="row row-cols-3 g-2 g-lg-3">
-      <div *cdkVirtualFor="let card of this.cards; trackBy: trackByFn" class="col">
+      <div *cdkVirtualFor="let card of cards; trackBy: trackByFn" class="col">
         <app-pokemon-card [card]="card"></app-pokemon-card>
       </div>
     </div>
