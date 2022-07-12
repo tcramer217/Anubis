@@ -3,7 +3,12 @@ package com.anubis.family.api.controller;
 import com.anubis.core.constants.TaskType;
 import com.anubis.core.entity.family.Task;
 import com.anubis.core.service.task.TaskService;
+import com.anubis.family.api.model.IsCompleteDTO;
+import com.anubis.family.api.model.response.MessageResponse;
+import com.anubis.core.service.family.FamilyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +19,9 @@ public class TaskController {
 
     @Autowired
     TaskService<Task> taskService;
+
+    @Autowired
+    FamilyMemberService familyMemberService;
 
     @GetMapping
     public List<Task> getTasks() {
@@ -33,6 +41,19 @@ public class TaskController {
     @GetMapping("/types/name")
     public List<String> getTaskTypeNames() {
         return TaskType.Name.getNames();
+    }
+
+    @PostMapping("/complete")
+    public ResponseEntity<?> markTaskComplete(@RequestBody IsCompleteDTO isComplete) {
+        if (isComplete.getTaskId() > 0) {
+            if (isComplete.getIsComplete()) {
+                getTaskService().markTaskCompleted(isComplete.getTaskId());
+            } else {
+                getTaskService().markTaskIncomplete(isComplete.getTaskId());
+            }
+            return ResponseEntity.ok().body(new MessageResponse("Successful Update to Task Completion Status."));
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     public TaskService<Task> getTaskService() {

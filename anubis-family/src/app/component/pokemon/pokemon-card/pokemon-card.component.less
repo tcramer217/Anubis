@@ -1,0 +1,57 @@
+.pokemon-card {
+  box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  height: 330px;
+  width: 240px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  backface-visibility: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
+
+.front {
+  -webkit-transform:rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.colorless {
+  background-color: lightgray;
+}
+
+.fire {
+  background-color: orangered;
+}
+
+.poison {
+  background-color: palevioletred;
+}
+
+.psychic {
+  background-color: purple;
+}
+
+.grass {
+  background-color: lawngreen;
+}
+
+.water {
+  background-color: deepskyblue;
+}

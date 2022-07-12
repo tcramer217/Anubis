@@ -1,6 +1,7 @@
 package com.anubis.core.service.task;
 
 import com.anubis.core.dao.TaskRepo;
+import com.anubis.core.entity.family.DailyTask;
 import com.anubis.core.entity.family.FamilyMember;
 import com.anubis.core.entity.family.Task;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,19 +24,40 @@ public class TaskServiceImpl<T extends Task> implements TaskService<T> {
     }
 
     @Override
+    public T findById(long taskId) {
+        return getTaskRepo().findTaskById(taskId);
+    }
+
+    @Override
+    public void markTaskCompleted(long taskId) {
+        T taskForUpdate = findById(taskId);
+        taskForUpdate.setComplete(true);
+        getTaskRepo().save(taskForUpdate);
+    }
+
+    @Override
+    public void markTaskIncomplete(long taskId) {
+        T taskForUpdate = findById(taskId);
+        taskForUpdate.setComplete(false);
+        getTaskRepo().save(taskForUpdate);
+    }
+
+    @Override
     public List<T> getAllTasks() {
         return getTaskRepo().findAllTasks();
     }
 
 //    @Override
-//    public List<T> getTasksByDiscriminator() {
-//        return getTaskRepo().findTasksByDiscriminator(null);
+//    public List<DailyTask> getDailyTasksForFamily(long familyId) {
+//        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamily(familyId);
+//        return tasks;
 //    }
-
-    @Override
-    public List<T> getTasksForFamilyMember(FamilyMember familyMemberId) {
-        return null;
-    }
+//
+//    @Override
+//    public List<DailyTask> getDailyTasksForFamilyMember(FamilyMember familyMemberId) {
+//        List<DailyTask> tasks = getTaskRepo().findDailyTasksForFamilyMember(familyMemberId);
+//        return tasks;
+//    }
 
     @Autowired
     public TaskRepo<T> getTaskRepo() {
