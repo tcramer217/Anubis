@@ -1,14 +1,16 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {PokemonSearchService} from '../../service/pokemon-search.service';
 import PokemonDataSource from "../../util/PokemonDataSource";
 import {Card} from "../../model/card";
+import {MyDataSource} from '../../util/MyDataSource';
 
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
   styleUrls: ['./pokemon.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PokemonComponent implements OnInit {
 
@@ -18,6 +20,7 @@ export class PokemonComponent implements OnInit {
   allCards: Card[] = [];
   cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
   ds: PokemonDataSource = new PokemonDataSource(this.searchService);
+  mds = new MyDataSource();
 
   constructor(
     private httpClient: HttpClient,
@@ -31,7 +34,7 @@ export class PokemonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ds.getCards();
+    // this.ds.getCards();
     // this.getCards(null);
   }
 

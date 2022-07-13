@@ -17,7 +17,9 @@ export class PokemonSearchService {
   ) {
   }
 
-  getCards(formData: FormGroup | null): Observable<any> {
-    return this.httpClient.get<any>(POKE_BASE_CARDS_API + '?' + PokemonQueryBuilder.buildPokeQuery(formData))
+  getCards(page: number = 1, pageSize: number = 10, formData: FormGroup | null): Observable<any> {
+    console.log('getting page data for page:', page, pageSize);
+    page = page + 1;
+    return this.httpClient.get<any>(POKE_BASE_CARDS_API + '?' + PokemonQueryBuilder.buildPokeQuery(page, pageSize, formData))
   }
 }
