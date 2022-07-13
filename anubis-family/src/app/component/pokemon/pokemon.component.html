@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 16px">
   <div class="search" style="margin-bottom: 16px">
-    <form [formGroup]="searchForm" (ngSubmit)="doSearch(searchForm)">
+    <form [formGroup]="searchForm">
       <div class="row g-3">
         <div class="col-lg-2">
           <mat-form-field >
@@ -17,18 +17,18 @@
           </mat-form-field>
         </div>
         <div class="col-lg-2">
-          <button mat-raised-button color="primary">Search</button>
+          <button mat-raised-button color="primary" (click)="doSearch(searchForm)">Search</button>
         </div>
       </div>
     </form>
   </div>
-  <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
-<!--    <div class="row row-cols-3 g-2 g-lg-3">-->
-      <div *cdkVirtualFor="let card of ds; trackBy: trackByFn" class="example-item">
-<!--        <app-pokemon-card [card]="card"></app-pokemon-card>-->
-        {{card ? card.name : 'LOADING'}}
+  <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+    <div class="row row-cols-3 g-2 g-lg-3">
+      <div *cdkVirtualFor="let card of ds; trackBy: trackByFn" class="col">
+        <app-pokemon-card [card]="card"></app-pokemon-card>
+<!--        {{card ? card.name : 'LOADING'}}-->
       </div>
-<!--    </div>-->
+    </div>
   </cdk-virtual-scroll-viewport>
 
   <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">

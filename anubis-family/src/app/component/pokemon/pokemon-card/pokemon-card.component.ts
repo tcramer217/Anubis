@@ -45,6 +45,7 @@ export class PokemonCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('this.card is:', this.card);
     if (typeof this.card.showDetails === 'undefined') {
       this.card.showDetails = 'default';
     }

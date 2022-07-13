@@ -7,7 +7,7 @@ import {catchError, finalize} from "rxjs/operators";
 export default class PokemonDataSource extends DataSource<any> {
 
   private _length = 102;
-  private _pageSize = 50;
+  private _pageSize = 10;
   private _cachedData = new Array<string>(this._length);
   private _fetchedPages = new Set<number>();
   private readonly _dataStream = new BehaviorSubject<(string | undefined)[]>(this._cachedData);
@@ -52,13 +52,12 @@ export default class PokemonDataSource extends DataSource<any> {
         catchError(() => of([]))
       )
       .subscribe((data) => {
-        console.log('loading data...', data);
         this._cachedData.splice(
           page * this._pageSize,
           this._pageSize,
           ...data.data,
         );
-        // this._cachedData.push(...data.data);
+        console.log('cachedData:', this._cachedData);
         this._dataStream.next(this._cachedData);
     })
   }
