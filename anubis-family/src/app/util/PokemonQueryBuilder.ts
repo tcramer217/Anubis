@@ -5,7 +5,7 @@ export default class PokemonQueryBuilder {
   public static buildPokeQuery(form: FormGroup | null): string {
     let qString = 'q=set.id:base1 ';
     if (form === null || !form.valid) {
-      return 'q=set.id:base1&orderBy=name';
+      return 'q=set.id:base1&orderBy=name&pageSize=10';
     }
     if (form.value.name !== '') {
       qString += 'name:' + form.value.name + '* ';
@@ -27,7 +27,8 @@ export default class PokemonQueryBuilder {
       }
     }
 
-    qString += '&orderBy=name';
+    qString += '&orderBy=name&pageSize=10';
+    console.log('qString:', qString);
     return qString;
   }
 }

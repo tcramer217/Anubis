@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Card} from '../../model/card';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {PokemonSearchService} from '../../service/pokemon-search.service';
-import {ArrayDataSource, DataSource} from '@angular/cdk/collections';
-import {MatTableDataSource} from '@angular/material/table';
+import PokemonDataSource from "../../util/PokemonDataSource";
+import {Card} from "../../model/card";
 
 @Component({
   selector: 'app-pokemon',
@@ -18,7 +17,7 @@ export class PokemonComponent implements OnInit {
   cards: Card[] = [];
   allCards: Card[] = [];
   cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
-  ds: DataSource<Card> = new MatTableDataSource(this.allCards);
+  ds: PokemonDataSource = new PokemonDataSource(this.searchService);
 
   constructor(
     private httpClient: HttpClient,
@@ -32,26 +31,28 @@ export class PokemonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getCards(null);
+    this.ds.getCards();
+    // this.getCards(null);
   }
 
   doSearch(form: FormGroup): void {
-    if (!form.valid){
-      this.getCards(null);
-      return;
-    }
-
-    this.getCards(form);
+    // if (!form.valid){
+    //   this.getCards(null);
+    //   return;
+    // }
+    //
+    // this.getCards(form);
   }
 
   getCards(formData: FormGroup | null): void {
-    this.searchService.getCards(formData)
-      .subscribe((response) => {
-        this.cards = response.data;
-        this.allCards = this.cards;
-        this.ds = new ArrayDataSource(this.cards);
-        console.log('this.ds:', this.ds);
-      });
+    // this.searchService.getCards(formData)
+    //   .subscribe((response) => {
+    //     console.log('response', response);
+    //     this.cards = response;
+    //     this.allCards = this.cards;
+    //     this.ds = new PokemonDataSource(this.searchService);
+    //     console.log('this.ds:', this.ds);
+    //   });
   }
 
   trackByFn(index: number): number {
