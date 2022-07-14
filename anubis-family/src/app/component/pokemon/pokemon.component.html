@@ -25,14 +25,14 @@
   <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
     <div class="row row-cols-3 g-2 g-lg-3">
       <div *cdkVirtualFor="let card of ds; trackBy: trackByFn" class="col">
-        <app-pokemon-card [card]="card"></app-pokemon-card>
-<!--        {{card ? card.name : 'LOADING'}}-->
+        <ng-container *ngIf="card">
+          <app-pokemon-card [card]="card"></app-pokemon-card>
+        </ng-container>
+        <ng-container *ngIf="!card">
+          LOADING...
+        </ng-container>
       </div>
     </div>
-  </cdk-virtual-scroll-viewport>
-
-  <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-    <div *cdkVirtualFor="let item of mds" class="example-item">{{item || 'Loading...'}}</div>
   </cdk-virtual-scroll-viewport>
 
 </div>

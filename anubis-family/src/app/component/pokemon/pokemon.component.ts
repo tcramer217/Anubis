@@ -12,7 +12,7 @@ import {MyDataSource} from '../../util/MyDataSource';
   styleUrls: ['./pokemon.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PokemonComponent implements OnInit {
+export class PokemonComponent {
 
   searchForm: FormGroup;
 
@@ -20,7 +20,6 @@ export class PokemonComponent implements OnInit {
   allCards: Card[] = [];
   cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
   ds: PokemonDataSource = new PokemonDataSource(this.searchService);
-  mds = new MyDataSource();
 
   constructor(
     private httpClient: HttpClient,
@@ -33,29 +32,8 @@ export class PokemonComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    // this.ds.getCards();
-    // this.getCards(null);
-  }
-
   doSearch(form: FormGroup): void {
-    // if (!form.valid){
-    //   this.getCards(null);
-    //   return;
-    // }
-    //
-    // this.getCards(form);
-  }
-
-  getCards(formData: FormGroup | null): void {
-    // this.searchService.getCards(formData)
-    //   .subscribe((response) => {
-    //     console.log('response', response);
-    //     this.cards = response;
-    //     this.allCards = this.cards;
-    //     this.ds = new PokemonDataSource(this.searchService);
-    //     console.log('this.ds:', this.ds);
-    //   });
+    this.ds.getCards(0, 10, form);
   }
 
   trackByFn(index: number): number {
