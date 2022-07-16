@@ -11,22 +11,22 @@ export default class PokemonDataSource extends DataSource<any> {
   private _pageSize = 10;
   private _cachedData = new Array<string>(this._length);
   private _fetchedPages = new Set<number>();
+  private readonly _form;
   private readonly _dataStream = new BehaviorSubject<(string | undefined)[]>(this._cachedData);
   private readonly _subscription = new Subscription();
 
-  constructor(private searchService: PokemonSearchService) {
+  constructor(private formGroup: FormGroup, private searchService: PokemonSearchService) {
     super();
+    this._form = formGroup;
   }
 
   connect(collectionViewer: CollectionViewer): Observable<any> {
     this._subscription.add(
       collectionViewer.viewChange.subscribe(range => {
-        console.log('range:', range);
         const startPage = this._getPageForIndex(range.start);
         const endPage = this._getPageForIndex(range.end - 1);
-        console.log('startPage: {}, endPage: {}', startPage, endPage);
         for (let i = startPage; i <= endPage; i++) {
-          this._getCards(i, this._pageSize, null);
+          this._getCards(i, this._pageSize, this._form);
         }
       }),
     );
@@ -42,14 +42,8 @@ export default class PokemonDataSource extends DataSource<any> {
   }
 
   private _getCards(page: number, pageSize: number, form: FormGroup | null): void {
-    if (form !== null) {
-      this._fetchedPages.clear();
-      this._cachedData = new Array(this._length);
-      this._dataStream.next(this._cachedData);
-      this._applyCards(page, pageSize, form);
-    }
+
     if (this._fetchedPages.has(page)) {
-      console.log('this', this);
       return;
     }
     this._fetchedPages.add(page);
@@ -63,19 +57,21 @@ export default class PokemonDataSource extends DataSource<any> {
         catchError(() => of([]))
       )
       .subscribe((data) => {
-        console.log('responseData:', data);
-        console.log('page:', page);
         this._cachedData.splice(
           page * this._pageSize,
           this._pageSize,
           ...data.data,
         );
-        console.log('cachedData:', this._cachedData);
         this._dataStream.next(this._cachedData);
       });
   }
 
-  public getCards(page:number, pageSize:number, form: FormGroup | null): void {
+  public getCards(page:number, pageSize:number, form: FormGroup | null, isSearch?: boolean): void {
+    if(isSearch) {
+        this._fetchedPages.clear();
+        this._cachedData = new Array(this._length);
+        this._dataStream.next(this._cachedData);
+    }
     this._getCards(page, pageSize, form);
   }
 

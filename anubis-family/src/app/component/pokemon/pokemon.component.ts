@@ -19,7 +19,7 @@ export class PokemonComponent {
   cards: Card[] = [];
   allCards: Card[] = [];
   cardTypes: string[] = ['Energy', 'Trainer', 'Pokémon'];
-  ds: PokemonDataSource = new PokemonDataSource(this.searchService);
+  ds: PokemonDataSource;
 
   constructor(
     private httpClient: HttpClient,
@@ -30,10 +30,11 @@ export class PokemonComponent {
       name: ['', [Validators.maxLength(25)]],
       cardType: [[],],
     });
+    this.ds = new PokemonDataSource(this.searchForm, this.searchService);
   }
 
   doSearch(form: FormGroup): void {
-    this.ds.getCards(0, 10, form);
+    this.ds.getCards(0, 10, form, true);
   }
 
   trackByFn(index: number): number {

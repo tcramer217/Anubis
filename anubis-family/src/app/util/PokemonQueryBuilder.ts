@@ -27,8 +27,7 @@ export default class PokemonQueryBuilder {
       }
     }
 
-    qString += '&orderBy=name&pageSize=10';
-    console.log('qString:', qString);
+    qString += '&orderBy=name&page=' + page + '&pageSize=' + pageSize;
     return qString;
   }
 }
