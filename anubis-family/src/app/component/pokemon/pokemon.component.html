@@ -1,32 +1,48 @@
-<div class="container" style="margin-top: 16px">
-  <div class="search" style="margin-bottom: 16px">
-    <form [formGroup]="searchForm" (ngSubmit)="doSearch(searchForm)">
+<div class="search-container container" style="margin-top: 16px">
+  <div class="search container" style="margin-bottom: 16px">
+    <form [formGroup]="searchForm">
       <div class="row g-3">
-        <div class="col-lg-2">
+        <div class="col-3">
           <mat-form-field >
             <mat-label>Name:</mat-label>
-            <input matInput formControlName="name" placeholder="Pokemon" (keyup)="doFilter(searchForm)"/>
+            <input matInput formControlName="name" placeholder="Pokemon" />
           </mat-form-field>
         </div>
-        <div class="col-lg-2">
+        <div class="col-3">
           <mat-form-field>
             <mat-label>Card Type:</mat-label>
-            <mat-select formControlName="cardType" (selectionChange)="doFilter(searchForm)" multiple>
+            <mat-select formControlName="cardType" multiple>
               <mat-option *ngFor="let cardType of cardTypes" [value]="cardType">{{cardType}}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
+        <div class="col-3">
+          <mat-form-field>
+            <mat-label>Pokémon Type:</mat-label>
+            <mat-select formControlName="pokemonType" multiple>
+              <mat-option *ngFor="let pokemonType of pokemonTypes" [value]="pokemonType">{{pokemonType}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row justify-content-end g-3">
         <div class="col-lg-2">
-          <button mat-raised-button color="primary">Search</button>
+          <button mat-raised-button color="primary" (click)="doSearch(searchForm)">Search</button>
         </div>
       </div>
     </form>
   </div>
-  <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
+  <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
     <div class="row row-cols-3 g-2 g-lg-3">
-      <div *cdkVirtualFor="let card of this.cards; trackBy: trackByFn" class="col">
-        <app-pokemon-card [card]="card"></app-pokemon-card>
+      <div *cdkVirtualFor="let card of ds; trackBy: trackByFn" class="col">
+        <ng-container *ngIf="card">
+          <app-pokemon-card [card]="card"></app-pokemon-card>
+        </ng-container>
+        <ng-container *ngIf="!card">
+          LOADING...
+        </ng-container>
       </div>
     </div>
   </cdk-virtual-scroll-viewport>
+
 </div>
