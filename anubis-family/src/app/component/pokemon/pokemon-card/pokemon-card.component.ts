@@ -92,4 +92,8 @@ export class PokemonCardComponent implements OnInit {
 
 }
 
-export type PokemonType = 'Colorless' | 'Energy' | 'Fire' | 'Grass' | 'Poison' | 'Psychic' | 'Water';
+export const CardTypes = ['Energy', 'Trainer', 'Pokémon'] as const;
+export type CardType = typeof CardTypes[number];
+
+export const PokemonTypes = ['Colorless', 'Energy', 'Fire', 'Grass', 'Poison', 'Psychic', 'Water'] as const;
+export type PokemonType = typeof PokemonTypes[number];// 'Colorless' | 'Energy' | 'Fire' | 'Grass' | 'Poison' | 'Psychic' | 'Water';

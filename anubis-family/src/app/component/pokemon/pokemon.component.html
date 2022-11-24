@@ -1,14 +1,14 @@
-<div class="container" style="margin-top: 16px">
-  <div class="search" style="margin-bottom: 16px">
+<div class="search-container container" style="margin-top: 16px">
+  <div class="search container" style="margin-bottom: 16px">
     <form [formGroup]="searchForm">
       <div class="row g-3">
-        <div class="col-lg-2">
+        <div class="col-3">
           <mat-form-field >
             <mat-label>Name:</mat-label>
             <input matInput formControlName="name" placeholder="Pokemon" />
           </mat-form-field>
         </div>
-        <div class="col-lg-2">
+        <div class="col-3">
           <mat-form-field>
             <mat-label>Card Type:</mat-label>
             <mat-select formControlName="cardType" multiple>
@@ -16,6 +16,16 @@
             </mat-select>
           </mat-form-field>
         </div>
+        <div class="col-3">
+          <mat-form-field>
+            <mat-label>Pokémon Type:</mat-label>
+            <mat-select formControlName="pokemonType" multiple>
+              <mat-option *ngFor="let pokemonType of pokemonTypes" [value]="pokemonType">{{pokemonType}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row justify-content-end g-3">
         <div class="col-lg-2">
           <button mat-raised-button color="primary" (click)="doSearch(searchForm)">Search</button>
         </div>

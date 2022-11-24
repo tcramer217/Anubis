@@ -26,6 +26,21 @@ export default class PokemonQueryBuilder {
         qString += ')'
       }
     }
+    if (form.value.pokemonType.length > 0) {
+      if (form.value.pokemonType.length === 1) {
+        qString += 'types:' + form.value.pokemonType[0] + ' ';
+      } else {
+        qString += '(types:';
+        form.value.pokemonType.forEach((type:any, index:number) => {
+          if (index === 0) {
+            qString += '' + type + ' ';
+          } else {
+            qString += ' OR types:' + type + ' ';
+          }
+        })
+        qString += ')'
+      }
+    }
 
     qString += '&orderBy=name&page=' + page + '&pageSize=' + pageSize;
     return qString;
